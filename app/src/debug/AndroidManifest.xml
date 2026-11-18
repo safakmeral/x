@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  DEBUG BUILDS ONLY. G-18: metric CSV export, started with adb. Exported so the adb shell can start it;
+  it only writes a CSV of numbers and codes into the app's private folder. Not part of release builds.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity
+            android:name=".metrics.MetricsExportActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- G-20 device check: fixed 3-step "Sen yap" sequence in Settings, started with adb. -->
+        <activity
+            android:name=".accessibility.ExecutorDemoActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+</manifest>

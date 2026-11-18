@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  G-19 (NFG-29, NFG-53): narrowest settings for on-request screen reading.
+  - canRetrieveWindowContent: read the accessibility tree, only while a task runs (ScreenReader).
+  - flagRetrieveInteractiveWindows: list windows so the assistant's own overlays and the
+    keyboard can be skipped (NFG-40) and system dialogs above the app are seen.
+  - Window events only: the service never reads them; Android 10-11 keep their node cache
+    fresh only with these events delivered. No screenshots, no key filtering, no view ids,
+    no unimportant views, no touch exploration.
+  G-20 (FG-20, TK-14): canPerformGestures for "Sen yap" taps/scrolls, used only as the fallback
+  when an element's own accessibility action is not available, and only inside a running task.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged|typeWindowsChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRetrieveInteractiveWindows"
+    android:canPerformGestures="true"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/a11y_service_description"
+    android:notificationTimeout="100"
+    android:summary="@string/a11y_service_summary" />

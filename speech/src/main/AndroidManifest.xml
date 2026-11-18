@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- No permissions here: RECORD_AUDIO is declared by :app when speech input arrives (G-07). -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- G-08: see installed text-to-speech engines (package visibility, API 30+); no permission needed. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+</manifest>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  G-22 / G-23: "Sen yap" step narration (FG-22), the one question when a step goes wrong (FG-24,
+  NFG-30) and handing the task to the user (FG-26, FG-27). Short, plain sentences (NFG-05).
+  Typed text and numbers are never read out (V-23).
+-->
+<resources>
+    <string name="step_tapped_named">“%1$s” yazan yere dokundum.</string>
+    <string name="step_tapped">Ekrandaki seçeneğe dokundum.</string>
+    <string name="step_long_pressed_named">“%1$s” yazan yere uzun bastım.</string>
+    <string name="step_long_pressed">Ekrandaki seçeneğe uzun bastım.</string>
+    <string name="step_typed_named">“%1$s” alanına yazdım.</string>
+    <string name="step_typed">Yazı alanına yazdım.</string>
+    <string name="step_scrolled_down">Sayfayı aşağı kaydırdım.</string>
+    <string name="step_scrolled_up">Sayfayı yukarı kaydırdım.</string>
+    <string name="step_scrolled_left">Sayfayı sola kaydırdım.</string>
+    <string name="step_scrolled_right">Sayfayı sağa kaydırdım.</string>
+    <string name="step_went_back">Bir önceki sayfaya döndüm.</string>
+    <string name="step_went_home">Ana ekrana döndüm.</string>
+    <string name="step_opened">%1$s uygulamasını açtım.</string>
+
+    <string name="step_searching_down">Ekranda göremedim, aşağı kaydırıp bakıyorum.</string>
+    <string name="step_searching_up">Ekranda göremedim, yukarı kaydırıp bakıyorum.</string>
+    <string name="step_searching_left">Ekranda göremedim, sola kaydırıp bakıyorum.</string>
+    <string name="step_searching_right">Ekranda göremedim, sağa kaydırıp bakıyorum.</string>
+
+    <string name="step_screen_changed">Ekran değişti, durdum. Ne yapmamı istersiniz?</string>
+    <string name="step_not_found_named">“%1$s” yazan yeri bulamadım, durdum. Ekranda nerede olduğunu biliyor musunuz?</string>
+    <string name="step_not_found">Aradığım yeri bulamadım, durdum. Ekranda nerede olduğunu biliyor musunuz?</string>
+    <string name="step_no_reaction">Ekran beklediğim gibi değişmedi, durdum. Yeniden deneyeyim mi?</string>
+    <string name="step_unexpected_undone">Beklemediğim bir sayfa açıldı, geri döndüm. Ne yapmamı istersiniz?</string>
+    <string name="step_unexpected">Beklemediğim bir sayfa açıldı, durdum. Ne yapmamı istersiniz?</string>
+
+    <string name="step_handover_choice">Burada seçimi siz yapın: istediğinize dokunun. Yardım isterseniz baloncuğa dokunun.</string>
+    <string name="step_handover_secret">Burası şifre gibi gizli bir alan. Buraya yalnız siz yazabilirsiniz.</string>
+    <string name="step_handover_not_found">Aradığımı bulamadım. Buradan sonrasını siz yapabilirsiniz. Yardım isterseniz baloncuğa dokunun.</string>
+    <string name="step_handover_unsure">Ne yapacağımdan emin değilim, burada duruyorum. Buradan sonrasını siz yapabilirsiniz.</string>
+    <string name="step_budget_exceeded">Bu iş beklediğimden uzun sürdü, burada duruyorum. Buradan sonrasını siz yapabilirsiniz. Yardım isterseniz baloncuğa dokunun.</string>
+
+    <string name="step_refused_no_task">Şu an açık bir görev yok.</string>
+    <string name="step_refused_not_editable">Buraya yazı yazılamıyor, durdum.</string>
+    <string name="step_refused_disabled">Bu seçenek şu an kapalı, durdum.</string>
+    <string name="step_refused_not_allowed">Bu uygulamada işlem yapmama izin verilmiyor, durdum.</string>
+    <string name="step_failed">Bu adımı yapamadım, durdum.</string>
+</resources>

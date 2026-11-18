@@ -1,0 +1,23 @@
+.gradle/
+.kotlin/
+build/
+local.properties
+.idea/
+*.iml
+captures/
+# G-12: native build output and Whisper models (large binaries; downloaded, never committed)
+.cxx/
+ggml-*.bin
+speech/src/androidTest/assets/whisper/
+speech/third_party/whisper.cpp/bindings/javascript/package.json
+# G-43: embedding model files (118 MB ONNX + tokenizer; downloaded by tools/gomme-model-indir.ps1)
+models/
+# G-13: speech measurement audio (human recordings, exported clips) never enters the repo
+docs/olcum/kayitlar/
+docs/olcum/**/*.wav
+# Telifli makale PDF'leri ve tam metinleri (yayıncı hakkı; depoya girmez)
+makaleler/
+docs/arastirma/metin/
+# Word kilit/geçici dosyaları ve yerel ayarlar
+~$*
+.claude/settings.local.json

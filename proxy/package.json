@@ -1,0 +1,13 @@
+{
+  "name": "yasli-asistan-vekil",
+  "version": "1.0.0",
+  "private": true,
+  "description": "G-33 proxy: Cloudflare Worker between the app and Gemini/Groq. No runtime dependencies.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

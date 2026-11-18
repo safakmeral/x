@@ -1,0 +1,48 @@
+# G-43 benzerlik denemesi: Türkçe kısa komut çiftleri. Sütunlar: etiket<TAB>komut A<TAB>komut B
+# AYNI = aynı niyet (eş anlamlı / farklı söyleyiş), FARKLI = farklı niyet (çoğu ortak sözcük taşır).
+# Maskeli biçimler ([KISI_1] gibi) tarif şablonlarının cihazdaki hâlini temsil eder. Kişisel veri yok.
+AYNI	WhatsApp'ı aç	WhatsApp'ı açar mısın
+AYNI	Ayarları aç	Ayarlara gir
+AYNI	Kamerayı aç	Fotoğraf çekmek istiyorum
+AYNI	Sesi aç	Sesi yükselt
+AYNI	Sesi kıs	Sesi azalt
+AYNI	Yazıları büyüt	Yazı boyutunu büyüt
+AYNI	Ekranı daha parlak yap	Parlaklığı artır
+AYNI	Wi-Fi'yi aç	İnterneti aç
+AYNI	Alarm kur	Saat kurmak istiyorum
+AYNI	Sabah yedide alarm kur	Yarın sabah yedi için alarm kur
+AYNI	Galeriyi aç	Fotoğraflarıma bakmak istiyorum
+AYNI	Hava nasıl	Bugün hava durumu nasıl
+AYNI	[KISI_1] ara	[KISI_1]'i ara
+AYNI	[KISI_1] ara	[KISI_1] ile telefonda konuşmak istiyorum
+AYNI	[KISI_1]'e mesaj at	[KISI_1]'e mesaj gönder
+AYNI	[KISI_1]'e WhatsApp'tan yaz	WhatsApp'tan [KISI_1]'e mesaj yaz
+AYNI	[KISI_1]'e görüntülü ara	[KISI_1] ile görüntülü konuş
+AYNI	Son gelen mesajı oku	Son mesajı bana oku
+AYNI	Bildirimleri kapat	Bildirimleri sustur
+AYNI	Telefonu sessize al	Telefonu sessiz moda al
+AYNI	Bluetooth'u aç	Bluetooth'u etkinleştir
+AYNI	El fenerini aç	Feneri yak
+AYNI	Rehberi aç	Kişilerimi göster
+AYNI	Uygulamayı kapat	Bu uygulamadan çık
+AYNI	Ana ekrana dön	Ana sayfaya git
+FARKLI	WhatsApp'ı aç	WhatsApp'ı kapat
+FARKLI	Sesi aç	Sesi kıs
+FARKLI	Wi-Fi'yi aç	Wi-Fi'yi kapat
+FARKLI	Bluetooth'u aç	Bluetooth'u kapat
+FARKLI	[KISI_1] ara	[KISI_1]'e mesaj at
+FARKLI	[KISI_1] ara	[KISI_1]'in fotoğrafını göster
+FARKLI	[KISI_1]'e mesaj at	[KISI_1]'den gelen mesajı oku
+FARKLI	Kamerayı aç	Galeriyi aç
+FARKLI	Alarm kur	Alarmı sil
+FARKLI	Ayarları aç	Hava durumuna bak
+FARKLI	Yazıları büyüt	Ekranı daha parlak yap
+FARKLI	Son gelen mesajı oku	Mesajı sil
+FARKLI	Telefonu sessize al	Telefonu kapat
+FARKLI	Fotoğraf çek	Fotoğrafı gönder
+FARKLI	El fenerini aç	Kamerayı aç
+FARKLI	Rehberi aç	Yeni kişi ekle
+FARKLI	Hava nasıl	Saat kaç
+FARKLI	[KISI_1]'e görüntülü ara	[KISI_1]'e sesli mesaj gönder
+FARKLI	Bildirimleri kapat	Bildirimleri oku
+FARKLI	Ana ekrana dön	Geri git

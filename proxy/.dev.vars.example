@@ -1,0 +1,5 @@
+# Example only. Copy to `.dev.vars` for local `wrangler dev` (that file is git-ignored).
+# Real keys go to Cloudflare with `npx wrangler secret put <NAME>`, never into the repo.
+GEMINI_API_KEY=buraya-gemini-anahtari
+GROQ_API_KEY=buraya-groq-anahtari
+ACCESS_CODES=enAz12KarakterlikKod

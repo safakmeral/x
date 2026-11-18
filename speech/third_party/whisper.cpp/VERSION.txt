@@ -1,0 +1,14 @@
+whisper.cpp (vendored source, G-12)
+Upstream:  https://github.com/ggml-org/whisper.cpp
+Tag:       v1.9.5
+Commit:    d1be6fde11ac6e0407606b4e42fe72d34add8037
+License:   MIT (see LICENSE in this folder; covers the bundled ggml as well)
+
+Kept unmodified: CMakeLists.txt, LICENSE, AUTHORS, cmake/, include/, src/, ggml/,
+bindings/javascript/package-tmpl.json (the top-level CMakeLists.txt always configures it).
+Removed to save space (not built for Android CPU): ggml/src/ggml-{blas,cann,cuda,et,hexagon,hip,metal,
+musa,opencl,openvino,rpc,sycl,virtgpu,vulkan,webgpu,zdnn,zendnn}, examples/, tests/, models/, samples/,
+bindings/ (except the template above), scripts/, docs.
+
+To upgrade: clone the new tag, copy the same folders, update this file, rebuild and rerun
+WhisperDeviceTest on the phone.

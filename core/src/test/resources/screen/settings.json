@@ -1,0 +1,37 @@
+[
+  {
+    "id": 99, "kind": "ACCESSIBILITY_OVERLAY", "title": "TelefonAsistaniOverlay", "package": "tr.yasliasistan.app",
+    "root": {"class": "android.widget.FrameLayout", "bounds": [900, 1800, 1080, 1980], "children": [
+      {"class": "android.widget.Button", "text": "Dur", "clickable": true, "bounds": [900, 1800, 1080, 1980]}
+    ]}
+  },
+  {
+    "id": 7, "kind": "APPLICATION", "package": "com.android.settings", "active": true,
+    "root": {"class": "android.widget.FrameLayout", "bounds": [0, 0, 1080, 2340], "children": [
+      {"class": "android.widget.LinearLayout", "bounds": [0, 80, 1080, 240], "children": [
+        {"class": "android.widget.TextView", "text": "Ayarlar", "heading": true, "bounds": [40, 100, 600, 220]},
+        {"class": "android.widget.ImageButton", "desc": "Ara", "clickable": true, "bounds": [840, 100, 960, 220]},
+        {"class": "android.widget.ImageButton", "clickable": true, "bounds": [960, 100, 1080, 220]}
+      ]},
+      {"class": "android.widget.ImageView", "bounds": [0, 240, 1080, 400]},
+      {"class": "android.widget.TextView", "text": "Gizli eski yazı", "visible": false, "bounds": [0, 0, 0, 0]},
+      {"class": "androidx.recyclerview.widget.RecyclerView", "scrollable": true, "bounds": [0, 400, 1080, 2340], "children": [
+        {"class": "android.widget.LinearLayout", "clickable": true, "collectionItem": true, "bounds": [0, 400, 1080, 600], "children": [
+          {"class": "android.widget.ImageView", "bounds": [40, 440, 160, 560]},
+          {"class": "android.widget.TextView", "text": "Bağlantılar", "bounds": [200, 420, 1000, 500]},
+          {"class": "android.widget.TextView", "text": "Wi-Fi  •  Bluetooth", "bounds": [200, 500, 1000, 580]}
+        ]},
+        {"class": "android.widget.LinearLayout", "clickable": true, "collectionItem": true, "bounds": [0, 600, 1080, 800], "children": [
+          {"class": "android.widget.TextView", "text": "Ekran", "bounds": [200, 620, 1000, 700]},
+          {"class": "android.widget.Switch", "checkable": true, "checked": true, "clickable": true, "bounds": [900, 640, 1040, 760]}
+        ]}
+      ]}
+    ]}
+  },
+  {
+    "id": 12, "kind": "INPUT_METHOD", "package": "com.samsung.android.honeyboard",
+    "root": {"class": "android.widget.FrameLayout", "bounds": [0, 1500, 1080, 2340], "children": [
+      {"class": "android.widget.TextView", "text": "klavyeOnerisi", "clickable": true, "bounds": [0, 1500, 360, 1600]}
+    ]}
+  }
+]

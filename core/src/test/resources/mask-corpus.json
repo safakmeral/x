@@ -1,0 +1,4957 @@
+{
+ "surum": 1,
+ "aciklama": "G-03 maskeleme test korpusu. Kurallar: docs/MASKELEME.md. Tüm kişi, numara, adres ve hesap değerleri UYDURMADIR.",
+ "uydurma_deger_araliklari": {
+  "kisi": "Yalnız 'Test' soyadlı/ekli uydurma kişiler",
+  "telefon": "0599 000 xx xx (tahsis edilmemiş GSM öneki) ve 0212 000 xx xx (0 ile başlayan abone numarası geçersizdir)",
+  "tckn": "1000000xxxx dizisi, sağlama basamakları geçerli, test amaçlı",
+  "iban": "TR + banka kodu 00000 (hiçbir bankaya ait değil), mod-97 geçerli",
+  "kart": "4000 0000 0000 0xxx test BIN aralığı, Luhn geçerli",
+  "eposta": "example.com / example.org / example.net (RFC 2606 ayrılmış alan adları)",
+  "adres": "Deneme/Örnek/Test/Lale/Papatya adlı uydurma yerler; koordinatlar uydurma"
+ },
+ "ayarlar": {
+  "niyet_esigi_sozcuk": 15,
+  "en_kisa_rakam_dizisi": 4,
+  "sayi_sozcugu_esigi": 3,
+  "baglam_en_fazla_sozcuk": 2,
+  "adres_sola_en_fazla": 3,
+  "eposta_sola_en_fazla": 4,
+  "sozluk_onek_en_kisa": 4,
+  "gizli_rakam_en_kisa": 3
+ },
+ "rehber": [
+  {
+   "id": "c1",
+   "ad": "Ayşe Test",
+   "telefonlar": [
+    "0599 000 00 01"
+   ]
+  },
+  {
+   "id": "c2",
+   "ad": "Mehmet Test",
+   "telefonlar": [
+    "0599 000 00 02"
+   ]
+  },
+  {
+   "id": "c3",
+   "ad": "Zeynep Test",
+   "telefonlar": [
+    "0599 000 00 03"
+   ]
+  },
+  {
+   "id": "c4",
+   "ad": "Osman Test",
+   "telefonlar": [
+    "0599 000 00 04"
+   ]
+  },
+  {
+   "id": "c5",
+   "ad": "Elif Test",
+   "telefonlar": [
+    "0599 000 00 05"
+   ]
+  },
+  {
+   "id": "c6",
+   "ad": "Hasan Test",
+   "telefonlar": [
+    "0599 000 00 06"
+   ]
+  },
+  {
+   "id": "c7",
+   "ad": "Deniz Test",
+   "telefonlar": [
+    "0599 000 00 07"
+   ]
+  },
+  {
+   "id": "c8",
+   "ad": "Ali Test",
+   "telefonlar": [
+    "0599 000 00 08"
+   ]
+  },
+  {
+   "id": "c9",
+   "ad": "Ali Testçi",
+   "telefonlar": [
+    "0599 000 00 09"
+   ]
+  },
+  {
+   "id": "c10",
+   "ad": "Hatice Test",
+   "telefonlar": [
+    "0599 000 00 10"
+   ]
+  },
+  {
+   "id": "c11",
+   "ad": "Can Test",
+   "telefonlar": [
+    "0599 000 00 11"
+   ]
+  },
+  {
+   "id": "c12",
+   "ad": "Emine Test",
+   "telefonlar": [
+    "0599 000 00 12"
+   ]
+  },
+  {
+   "id": "c13",
+   "ad": "İbrahim Test",
+   "telefonlar": [
+    "0599 000 00 13"
+   ]
+  },
+  {
+   "id": "c14",
+   "ad": "Şükrü Test",
+   "telefonlar": [
+    "0599 000 00 14"
+   ]
+  }
+ ],
+ "sozlukler": {
+  "komut": [
+   "acaba",
+   "acil",
+   "adres",
+   "adı",
+   "aktar",
+   "akşam",
+   "al",
+   "alarm",
+   "alt",
+   "alıcı",
+   "ama",
+   "ambulans",
+   "ana",
+   "ara",
+   "aradı",
+   "arama",
+   "aramak",
+   "aramış",
+   "arar",
+   "arasana",
+   "aray",
+   "arayın",
+   "artır",
+   "at",
+   "ayar",
+   "ayarla",
+   "az",
+   "azalt",
+   "aç",
+   "açar",
+   "açsana",
+   "açık",
+   "açıl",
+   "aşağı",
+   "bak",
+   "bakar",
+   "bakkal",
+   "bana",
+   "bas",
+   "bağla",
+   "bağlan",
+   "ben",
+   "beni",
+   "benim",
+   "bildirim",
+   "bir",
+   "biraz",
+   "biri",
+   "bluetooth",
+   "bu",
+   "bugün",
+   "bul",
+   "bunu",
+   "buraya",
+   "büyük",
+   "büyüt",
+   "cevapsız",
+   "cuma",
+   "cumartesi",
+   "da",
+   "daha",
+   "dakika",
+   "de",
+   "defa",
+   "değil",
+   "değiştir",
+   "dinle",
+   "diye",
+   "doktor",
+   "dokun",
+   "durum",
+   "dön",
+   "dün",
+   "düğme",
+   "e-posta",
+   "eczane",
+   "ekle",
+   "ekran",
+   "en",
+   "eposta",
+   "eski",
+   "et",
+   "evet",
+   "evim",
+   "forma",
+   "fotoğraf",
+   "galeri",
+   "gece",
+   "gelen",
+   "geri",
+   "gibi",
+   "giden",
+   "gir",
+   "git",
+   "gönder",
+   "görüntülü",
+   "göster",
+   "güncelle",
+   "hafta",
+   "hangi",
+   "harita",
+   "hastane",
+   "hatırlat",
+   "hatırlatıcı",
+   "hava",
+   "hayır",
+   "hem",
+   "hemen",
+   "hepsi",
+   "her",
+   "hesap",
+   "ile",
+   "ilet",
+   "ilk",
+   "indir",
+   "internet",
+   "itfaiye",
+   "için",
+   "kaldır",
+   "kamera",
+   "kapa",
+   "kapat",
+   "kapıcı",
+   "kargo",
+   "kayded",
+   "kaydet",
+   "kayıt",
+   "kere",
+   "kez",
+   "ki",
+   "kim",
+   "kimi",
+   "kimin",
+   "kimlik",
+   "kişi",
+   "komşu",
+   "kontrol",
+   "konum",
+   "kopyala",
+   "kur",
+   "kurar",
+   "kutu",
+   "küçük",
+   "küçült",
+   "kıs",
+   "kısar",
+   "link",
+   "lira",
+   "liste",
+   "lütfen",
+   "mail",
+   "market",
+   "menü",
+   "merhaba",
+   "merkez",
+   "mesaj",
+   "mi",
+   "misin",
+   "mod",
+   "mu",
+   "musun",
+   "mü",
+   "mı",
+   "mısın",
+   "nasıl",
+   "ne",
+   "neden",
+   "nerede",
+   "neydi",
+   "niye",
+   "numara",
+   "o",
+   "oku",
+   "okur",
+   "olarak",
+   "ona",
+   "onu",
+   "oraya",
+   "parlaklık",
+   "paylaş",
+   "pazar",
+   "pazartesi",
+   "perşembe",
+   "poliklinik",
+   "polis",
+   "posta",
+   "randevu",
+   "rehber",
+   "resim",
+   "saat",
+   "saatini",
+   "sabah",
+   "salı",
+   "sana",
+   "saniye",
+   "sayfa",
+   "sağ",
+   "sen",
+   "seni",
+   "ses",
+   "sesi",
+   "sesli",
+   "seç",
+   "sil",
+   "sms",
+   "sol",
+   "son",
+   "sonra",
+   "sonuç",
+   "sorgula",
+   "söyle",
+   "taksi",
+   "takvim",
+   "tamam",
+   "tarif",
+   "tc",
+   "telefon",
+   "titreşim",
+   "tuş",
+   "tuşla",
+   "tüm",
+   "uygulama",
+   "uyku",
+   "uçak",
+   "var",
+   "ve",
+   "ver",
+   "veya",
+   "video",
+   "whatsapp",
+   "wifi",
+   "ya",
+   "yakın",
+   "yap",
+   "yapar",
+   "yardım",
+   "yarın",
+   "yaz",
+   "yazar",
+   "yazı",
+   "yeni",
+   "yok",
+   "yolla",
+   "yukarı",
+   "yükselt",
+   "zil",
+   "çal",
+   "çarşamba",
+   "çağır",
+   "çek",
+   "çok",
+   "önce",
+   "öğle",
+   "üst",
+   "şarj",
+   "şimdi",
+   "şu",
+   "şunu",
+   "şöyle"
+  ],
+  "akrabalik": [
+   "anne",
+   "baba",
+   "oğul",
+   "oğl",
+   "kız",
+   "torun",
+   "gelin",
+   "damat",
+   "eş",
+   "babaanne",
+   "anneanne",
+   "kardeş"
+  ],
+  "hitap": [
+   "hanım",
+   "bey",
+   "abla",
+   "abi",
+   "ağabey",
+   "amca",
+   "dayı",
+   "teyze",
+   "hala",
+   "enişte",
+   "yenge",
+   "dede",
+   "nine",
+   "hoca",
+   "usta",
+   "efendi"
+  ],
+  "ekler": {
+   "'i": [
+    "ı",
+    "i",
+    "u",
+    "ü",
+    "yı",
+    "yi",
+    "yu",
+    "yü",
+    "nı",
+    "ni",
+    "nu",
+    "nü",
+    "mı",
+    "mi",
+    "mu",
+    "mü",
+    "ımı",
+    "imi",
+    "umu",
+    "ümü",
+    "sını",
+    "sini",
+    "sunu",
+    "sünü",
+    "leri",
+    "ları",
+    "gili"
+   ],
+   "'e": [
+    "a",
+    "e",
+    "ya",
+    "ye",
+    "na",
+    "ne",
+    "ma",
+    "me",
+    "ıma",
+    "ime",
+    "uma",
+    "üme",
+    "sına",
+    "sine",
+    "suna",
+    "süne",
+    "lere",
+    "lara",
+    "gile"
+   ],
+   "'de": [
+    "da",
+    "de",
+    "ta",
+    "te",
+    "nda",
+    "nde",
+    "mda",
+    "mde",
+    "ımda",
+    "imde",
+    "umda",
+    "ümde",
+    "lerde",
+    "larda",
+    "gilde"
+   ],
+   "'den": [
+    "dan",
+    "den",
+    "tan",
+    "ten",
+    "ndan",
+    "nden",
+    "mdan",
+    "mden",
+    "ımdan",
+    "imden",
+    "umdan",
+    "ümden",
+    "lerden",
+    "lardan",
+    "gilden"
+   ],
+   "'in": [
+    "ın",
+    "in",
+    "un",
+    "ün",
+    "nın",
+    "nin",
+    "nun",
+    "nün",
+    "mın",
+    "min",
+    "mun",
+    "mün",
+    "ımın",
+    "imin",
+    "umun",
+    "ümün",
+    "sının",
+    "sinin",
+    "lerin",
+    "ların",
+    "gilin"
+   ],
+   "'le": [
+    "la",
+    "le",
+    "yla",
+    "yle",
+    "ıyla",
+    "iyle",
+    "uyla",
+    "üyle",
+    "mla",
+    "mle",
+    "ımla",
+    "imle",
+    "umla",
+    "ümle",
+    "lerle",
+    "larla",
+    "gille"
+   ],
+   "": [
+    "m",
+    "ım",
+    "im",
+    "um",
+    "üm",
+    "cığım",
+    "ciğim",
+    "cuğum",
+    "cüğüm",
+    "cım",
+    "cim",
+    "cum",
+    "cüm",
+    "gil",
+    "giller",
+    "ler",
+    "lar",
+    "lerim",
+    "larım",
+    "sı",
+    "si",
+    "su",
+    "sü",
+    "mız",
+    "miz"
+   ]
+  },
+  "yumusama": {
+   "p": "b",
+   "ç": "c",
+   "t": "d",
+   "k": "ğ"
+  },
+  "kisi_yuvasi_tetikleyicileri": {
+   "'i": [
+    "ara",
+    "arar",
+    "arasana",
+    "arayın",
+    "arayabilir",
+    "aramak",
+    "görüntülü"
+   ],
+   "'e": [
+    "mesaj",
+    "sms"
+   ],
+   "'in": [
+    "numarası",
+    "numarasını"
+   ]
+  },
+  "dikte": {
+   "once_isaretleri": [
+    "diye"
+   ],
+   "sonra_isaretleri": [
+    "de ki",
+    "yaz ki",
+    "söyle ki",
+    "şunu yaz",
+    "şöyle yaz"
+   ],
+   "iki_nokta_sozcukleri": [
+    "mesaj",
+    "yaz",
+    "de",
+    "söyle",
+    "not"
+   ],
+   "fiiller": [
+    "mesaj",
+    "yaz",
+    "at",
+    "gönder",
+    "yolla",
+    "söyle",
+    "de",
+    "sms",
+    "whatsapp"
+   ]
+  },
+  "adres": {
+   "anahtarlar": [
+    "mahalle",
+    "mahallesi",
+    "mah",
+    "mah.",
+    "sokak",
+    "sokağı",
+    "sokağa",
+    "sok",
+    "sok.",
+    "sk",
+    "sk.",
+    "cadde",
+    "caddesi",
+    "cad",
+    "cad.",
+    "cd",
+    "cd.",
+    "bulvar",
+    "bulvarı",
+    "apartman",
+    "apartmanı",
+    "apt",
+    "apt.",
+    "site",
+    "sitesi",
+    "blok",
+    "bloğu",
+    "köy",
+    "köyü"
+   ],
+   "numara_gostergeleri": [
+    "no",
+    "no:",
+    "numara",
+    "kat",
+    "daire",
+    "d:",
+    "daire:",
+    "blok"
+   ]
+  },
+  "sayi_sozcukleri": {
+   "sıfır": 0,
+   "bir": 1,
+   "iki": 2,
+   "üç": 3,
+   "dört": 4,
+   "beş": 5,
+   "altı": 6,
+   "yedi": 7,
+   "sekiz": 8,
+   "dokuz": 9,
+   "on": 10,
+   "yirmi": 20,
+   "otuz": 30,
+   "kırk": 40,
+   "elli": 50,
+   "altmış": 60,
+   "yetmiş": 70,
+   "seksen": 80,
+   "doksan": 90,
+   "yüz": 100,
+   "bin": 1000,
+   "milyon": 1000000
+  },
+  "ozel_terimler": {
+   "tek": [
+    "ilaç",
+    "ilac",
+    "tansiyon",
+    "insülin",
+    "insulin",
+    "diyabet",
+    "kolesterol",
+    "kalp",
+    "kanser",
+    "kemoterapi",
+    "diyaliz",
+    "astım",
+    "alzheimer",
+    "demans",
+    "parkinson",
+    "felç",
+    "depresyon",
+    "antidepresan",
+    "psikiyatri",
+    "onkoloji",
+    "kardiyoloji",
+    "nöroloji",
+    "üroloji",
+    "jinekoloji",
+    "tahlil",
+    "tomografi",
+    "ameliyat",
+    "reçete",
+    "hastalık",
+    "hastalığ",
+    "hastayım",
+    "hepatit",
+    "gebelik",
+    "hamile",
+    "genetik",
+    "namaz",
+    "oruç",
+    "oruc",
+    "cami",
+    "kilise",
+    "sinagog",
+    "cemevi",
+    "tarikat",
+    "mezhep",
+    "imsakiye",
+    "sahur",
+    "iftar",
+    "kandil",
+    "sendika",
+    "dernek",
+    "vakıf",
+    "sabıka",
+    "cezaevi",
+    "mahkeme",
+    "hapis"
+   ],
+   "obek": [
+    [
+     "şeker",
+     "hastal"
+    ],
+    [
+     "kalp",
+     "kriz"
+    ],
+    [
+     "kan",
+     "tahlil"
+    ],
+    [
+     "engelli",
+     "rapor"
+    ],
+    [
+     "işitme",
+     "cihaz"
+    ]
+   ]
+  },
+  "gizli": {
+   "tek_basina": [
+    [
+     "doğrulama",
+     "kod"
+    ],
+    [
+     "tek",
+     "kullanımlık"
+    ],
+    [
+     "kimseyle",
+     "paylaşma"
+    ],
+    [
+     "kimse",
+     "ile",
+     "paylaşma"
+    ]
+   ],
+   "rakamla_gizli_bilgi": [
+    "şifre",
+    "parola",
+    "pin",
+    "cvv",
+    "cvc"
+   ],
+   "rakamla_dogrulama_kodu": [
+    "kod",
+    "otp"
+   ],
+   "haric": [
+    [
+     "posta",
+     "kod"
+    ]
+   ]
+  },
+  "durum": [
+   "Açık",
+   "Kapalı",
+   "Cevapsız",
+   "Gelen",
+   "Giden",
+   "Fotoğraf",
+   "Video",
+   "Sesli mesaj",
+   "Okundu",
+   "Dün",
+   "Bugün",
+   "Pazartesi",
+   "Salı",
+   "Çarşamba",
+   "Perşembe",
+   "Cuma",
+   "Cumartesi",
+   "Pazar",
+   "Bağlı değil",
+   "Bağlı",
+   "Varsayılan",
+   "Otomatik",
+   "Yok"
+  ],
+  "eposta_tld": [
+   "com",
+   "net",
+   "org",
+   "tr",
+   "edu",
+   "gov",
+   "info",
+   "co"
+  ]
+ },
+ "ornekler": [
+  {
+   "id": "K-001",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "ayşeyi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i ara",
+    "esleme": {
+     "[KISI_1]": "Ayşe Test"
+    }
+   }
+  },
+  {
+   "id": "K-002",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "mehmede mesaj at",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e mesaj at",
+    "esleme": {
+     "[KISI_1]": "Mehmet Test"
+    }
+   }
+  },
+  {
+   "id": "K-003",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "zeynebi görüntülü ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i görüntülü ara",
+    "esleme": {
+     "[KISI_1]": "Zeynep Test"
+    }
+   }
+  },
+  {
+   "id": "K-004",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Osman'a WhatsApp'tan mesaj gönder",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e WhatsApp'tan mesaj gönder",
+    "esleme": {
+     "[KISI_1]": "Osman Test"
+    }
+   }
+  },
+  {
+   "id": "K-005",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "elifin numarasını göster",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'in numarasını göster",
+    "esleme": {
+     "[KISI_1]": "Elif Test"
+    }
+   }
+  },
+  {
+   "id": "K-006",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "hasan testi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i ara",
+    "esleme": {
+     "[KISI_1]": "Hasan Test"
+    }
+   }
+  },
+  {
+   "id": "K-007",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "mehmet amcama mesaj yaz",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1] amcama mesaj yaz",
+    "esleme": {
+     "[KISI_1]": "Mehmet Test"
+    }
+   }
+  },
+  {
+   "id": "K-008",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "aliyi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i ara",
+    "esleme": {
+     "[KISI_1]": "Ali"
+    }
+   }
+  },
+  {
+   "id": "K-009",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "sukruyu ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i ara",
+    "esleme": {
+     "[KISI_1]": "Şükrü Test"
+    }
+   }
+  },
+  {
+   "id": "K-010",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "ibrahimle görüntülü konuşmak istiyorum",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'le görüntülü konuşmak istiyorum",
+    "esleme": {
+     "[KISI_1]": "İbrahim Test"
+    }
+   }
+  },
+  {
+   "id": "K-011",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "gülten test hanıma mesaj at",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1] hanıma mesaj at",
+    "esleme": {
+     "[KISI_1]": "Gülten Test"
+    }
+   }
+  },
+  {
+   "id": "K-012",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "selin teste mesaj at",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e mesaj at",
+    "esleme": {
+     "[KISI_1]": "Selin Teste"
+    },
+    "ekli": [
+     "[KISI_1]"
+    ]
+   }
+  },
+  {
+   "id": "K-013",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Yarın Gülten Test ile buluşacağım, hatırlatıcı kur",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Yarın [KISI_1] ile buluşacağım, hatırlatıcı kur",
+    "esleme": {
+     "[KISI_1]": "Gülten Test"
+    }
+   }
+  },
+  {
+   "id": "K-014",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI",
+    "ASIRI_MASKE"
+   ],
+   "kaynak": "ses",
+   "girdi": "deniz fotoğraflarını göster",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1] fotoğraflarını göster",
+    "esleme": {
+     "[KISI_1]": "Deniz Test"
+    }
+   }
+  },
+  {
+   "id": "K-015",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI",
+    "ASIRI_MASKE"
+   ],
+   "kaynak": "ses",
+   "girdi": "canım kızıma mesaj at",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1] kızıma mesaj at",
+    "esleme": {
+     "[KISI_1]": "Can Test"
+    }
+   }
+  },
+  {
+   "id": "K-016",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "hatice teyzemi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1] teyzemi ara",
+    "esleme": {
+     "[KISI_1]": "Hatice Test"
+    }
+   }
+  },
+  {
+   "id": "K-017",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Emine Test'i ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i ara",
+    "esleme": {
+     "[KISI_1]": "Emine Test"
+    }
+   }
+  },
+  {
+   "id": "K-018",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "ali testçinin numarasını oku",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'in numarasını oku",
+    "esleme": {
+     "[KISI_1]": "Ali Testçi"
+    }
+   }
+  },
+  {
+   "id": "K-019",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "kerem test beyi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1] beyi ara",
+    "esleme": {
+     "[KISI_1]": "Kerem Test"
+    }
+   }
+  },
+  {
+   "id": "K-020",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "nurten testi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i ara",
+    "esleme": {
+     "[KISI_1]": "Nurten Testi"
+    },
+    "ekli": [
+     "[KISI_1]"
+    ]
+   }
+  },
+  {
+   "id": "K-021",
+   "tur": "komut",
+   "kategoriler": [
+    "KISI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Ayşe Test'in doğum gününü takvime ekle",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'in doğum gününü takvime ekle",
+    "esleme": {
+     "[KISI_1]": "Ayşe Test"
+    }
+   }
+  },
+  {
+   "id": "T-001",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "0599 000 00 15'i ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1]'i ara",
+    "esleme": {
+     "[TEL_1]": "0599 000 00 15"
+    }
+   }
+  },
+  {
+   "id": "T-002",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "05990000016 numarasını ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1] numarasını ara",
+    "esleme": {
+     "[TEL_1]": "05990000016"
+    }
+   }
+  },
+  {
+   "id": "T-003",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "+90 599 000 00 17 numarasına mesaj gönder",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1] numarasına mesaj gönder",
+    "esleme": {
+     "[TEL_1]": "+90 599 000 00 17"
+    }
+   }
+  },
+  {
+   "id": "T-004",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "sıfır beş yüz doksan dokuz sıfır sıfır sıfır sıfır sıfır on sekiz ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1] ara",
+    "esleme": {
+     "[TEL_1]": "sıfır beş yüz doksan dokuz sıfır sıfır sıfır sıfır sıfır on sekiz"
+    }
+   }
+  },
+  {
+   "id": "T-005",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "(0212) 000 00 19 numarasını ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1] numarasını ara",
+    "esleme": {
+     "[TEL_1]": "(0212) 000 00 19"
+    }
+   }
+  },
+  {
+   "id": "T-006",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "0599-000-00-20 kimin numarası",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1] kimin numarası",
+    "esleme": {
+     "[TEL_1]": "0599-000-00-20"
+    }
+   }
+  },
+  {
+   "id": "T-007",
+   "tur": "ekran",
+   "kategoriler": [
+    "TEL"
+   ],
+   "paket": "com.samsung.android.dialer",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Son aramalar"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "0599 000 00 21"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Cevapsız"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "10:05"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Son aramalar",
+     "[TEL_1]",
+     "Cevapsız",
+     "10:05"
+    ],
+    "esleme": {
+     "[TEL_1]": "0599 000 00 21"
+    }
+   }
+  },
+  {
+   "id": "T-008",
+   "tur": "ekran",
+   "kategoriler": [
+    "TEL",
+    "KISI"
+   ],
+   "paket": "com.samsung.android.app.contacts",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Ayşe Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "0599 000 00 01"
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Ara"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[KISI_1]",
+     "[TEL_1]",
+     "Ara"
+    ],
+    "esleme": {
+     "[KISI_1]": "Ayşe Test",
+     "[TEL_1]": "0599 000 00 01"
+    }
+   }
+  },
+  {
+   "id": "T-009",
+   "tur": "ekran",
+   "kategoriler": [
+    "TEL",
+    "METIN"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "BILDIRIM",
+     "metin": "0599 000 00 22"
+    },
+    {
+     "rol": "BILDIRIM",
+     "metin": "Kargonuz yola çıktı"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[TEL_1]",
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[TEL_1]": "0599 000 00 22",
+     "[METIN_1]": "Kargonuz yola çıktı"
+    }
+   }
+  },
+  {
+   "id": "T-010",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "ayşenin numarası 0599 000 00 01 mi",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'in numarası [TEL_1] mi",
+    "esleme": {
+     "[KISI_1]": "Ayşe Test",
+     "[TEL_1]": "0599 000 00 01"
+    }
+   }
+  },
+  {
+   "id": "T-011",
+   "tur": "ekran",
+   "kategoriler": [
+    "TEL"
+   ],
+   "paket": "com.samsung.android.app.contacts",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Yeni numara: 0599 000 00 23"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Yeni numara: [TEL_1]"
+    ],
+    "esleme": {
+     "[TEL_1]": "0599 000 00 23"
+    }
+   }
+  },
+  {
+   "id": "T-012",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "0090 599 000 00 24'ü rehbere ekle",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1]'i rehbere ekle",
+    "esleme": {
+     "[TEL_1]": "0090 599 000 00 24"
+    }
+   }
+  },
+  {
+   "id": "T-013",
+   "tur": "komut",
+   "kategoriler": [
+    "TEL",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "sıfır iki yüz on iki sıfır sıfır sıfır sıfır sıfır yirmi altı ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1] ara",
+    "esleme": {
+     "[TEL_1]": "sıfır iki yüz on iki sıfır sıfır sıfır sıfır sıfır yirmi altı"
+    }
+   }
+  },
+  {
+   "id": "P-001",
+   "tur": "komut",
+   "kategoriler": [
+    "EPOSTA"
+   ],
+   "kaynak": "yazi",
+   "girdi": "ayse.test@example.com adresine e-posta gönder",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[EPOSTA_1] adresine e-posta gönder",
+    "esleme": {
+     "[EPOSTA_1]": "ayse.test@example.com"
+    }
+   }
+  },
+  {
+   "id": "P-002",
+   "tur": "komut",
+   "kategoriler": [
+    "EPOSTA"
+   ],
+   "kaynak": "ses",
+   "girdi": "ayşe nokta test et example nokta com adresine mail at",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[EPOSTA_1] adresine mail at",
+    "esleme": {
+     "[EPOSTA_1]": "ayşe nokta test et example nokta com"
+    }
+   }
+  },
+  {
+   "id": "P-003",
+   "tur": "ekran",
+   "kategoriler": [
+    "EPOSTA"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Hesap: ayse.test@example.com"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Hesap: [EPOSTA_1]"
+    ],
+    "esleme": {
+     "[EPOSTA_1]": "ayse.test@example.com"
+    }
+   }
+  },
+  {
+   "id": "P-004",
+   "tur": "ekran",
+   "kategoriler": [
+    "EPOSTA",
+    "GIRIS"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "mehmet.test@example.org"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[EPOSTA_1]"
+    ],
+    "esleme": {
+     "[EPOSTA_1]": "mehmet.test@example.org"
+    }
+   }
+  },
+  {
+   "id": "P-005",
+   "tur": "ekran",
+   "kategoriler": [
+    "EPOSTA"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Hesaplar"
+    },
+    {
+     "rol": "OZET",
+     "metin": "osman.test@example.net"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Hesaplar",
+     "[EPOSTA_1]"
+    ],
+    "esleme": {
+     "[EPOSTA_1]": "osman.test@example.net"
+    }
+   }
+  },
+  {
+   "id": "P-006",
+   "tur": "komut",
+   "kategoriler": [
+    "EPOSTA"
+   ],
+   "kaynak": "yazi",
+   "girdi": "E-postamı elif.test@example.com olarak değiştir",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "E-postamı [EPOSTA_1] olarak değiştir",
+    "esleme": {
+     "[EPOSTA_1]": "elif.test@example.com"
+    }
+   }
+  },
+  {
+   "id": "P-007",
+   "tur": "komut",
+   "kategoriler": [
+    "EPOSTA"
+   ],
+   "kaynak": "ses",
+   "girdi": "hasan test et example nokta com nokta tr adresine mail gönder",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[EPOSTA_1] adresine mail gönder",
+    "esleme": {
+     "[EPOSTA_1]": "hasan test et example nokta com nokta tr"
+    }
+   }
+  },
+  {
+   "id": "P-008",
+   "tur": "birlesik",
+   "kategoriler": [
+    "EPOSTA",
+    "TUTARLILIK",
+    "GIRIS"
+   ],
+   "kaynak": "yazi",
+   "girdi": "zeynep.test@example.com adresine yaz",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Alıcı"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "zeynep.test@example.com"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[EPOSTA_1] adresine yaz",
+    "dugumler": [
+     "Alıcı",
+     "[EPOSTA_1]"
+    ],
+    "esleme": {
+     "[EPOSTA_1]": "zeynep.test@example.com"
+    }
+   }
+  },
+  {
+   "id": "P-009",
+   "tur": "ekran",
+   "kategoriler": [
+    "EPOSTA",
+    "METIN"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "BILDIRIM",
+     "metin": "Yeni e-posta: ali.test@example.com"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Yeni e-posta: ali.test@example.com"
+    }
+   }
+  },
+  {
+   "id": "P-010",
+   "tur": "komut",
+   "kategoriler": [
+    "EPOSTA"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Bana gelen postayı info.test@example.org'a ilet",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Bana gelen postayı [EPOSTA_1]'e ilet",
+    "esleme": {
+     "[EPOSTA_1]": "info.test@example.org"
+    }
+   }
+  },
+  {
+   "id": "C-001",
+   "tur": "komut",
+   "kategoriler": [
+    "TCKN"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Kimlik numaram 10000000146, forma yaz",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Kimlik numaram [TCKN_1], forma yaz",
+    "esleme": {
+     "[TCKN_1]": "10000000146"
+    }
+   }
+  },
+  {
+   "id": "C-002",
+   "tur": "komut",
+   "kategoriler": [
+    "TCKN"
+   ],
+   "kaynak": "ses",
+   "girdi": "tc kimlik numaram 10000000214",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "tc kimlik numaram [TCKN_1]",
+    "esleme": {
+     "[TCKN_1]": "10000000214"
+    }
+   }
+  },
+  {
+   "id": "C-003",
+   "tur": "komut",
+   "kategoriler": [
+    "TCKN",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "kimlik numaram bir sıfır sıfır sıfır sıfır sıfır sıfır sıfır üç sekiz iki",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "kimlik numaram [TCKN_1]",
+    "esleme": {
+     "[TCKN_1]": "bir sıfır sıfır sıfır sıfır sıfır sıfır sıfır üç sekiz iki"
+    }
+   }
+  },
+  {
+   "id": "C-004",
+   "tur": "ekran",
+   "kategoriler": [
+    "TCKN",
+    "GIRIS"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "10000000450"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[TCKN_1]"
+    ],
+    "esleme": {
+     "[TCKN_1]": "10000000450"
+    }
+   }
+  },
+  {
+   "id": "C-005",
+   "tur": "ekran",
+   "kategoriler": [
+    "TCKN"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "T.C. Kimlik No: 10000000528"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "T.C. Kimlik No: [TCKN_1]"
+    ],
+    "esleme": {
+     "[TCKN_1]": "10000000528"
+    }
+   }
+  },
+  {
+   "id": "C-006",
+   "tur": "ekran",
+   "kategoriler": [
+    "TCKN",
+    "METIN"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "BILDIRIM",
+     "metin": "Randevunuz alındı. T.C. 10000000696"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Randevunuz alındı. T.C. 10000000696"
+    }
+   }
+  },
+  {
+   "id": "C-007",
+   "tur": "komut",
+   "kategoriler": [
+    "TCKN"
+   ],
+   "kaynak": "yazi",
+   "girdi": "10000000764 numarasıyla e-devlete gir",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TCKN_1] numarasıyla e-devlete gir",
+    "esleme": {
+     "[TCKN_1]": "10000000764"
+    }
+   }
+  },
+  {
+   "id": "C-008",
+   "tur": "komut",
+   "kategoriler": [
+    "TCKN",
+    "SAYI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Bu numara 12345678901 ne?",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Bu numara [SAYI_1] ne?",
+    "esleme": {
+     "[SAYI_1]": "12345678901"
+    }
+   }
+  },
+  {
+   "id": "C-009",
+   "tur": "komut",
+   "kategoriler": [
+    "TCKN"
+   ],
+   "kaynak": "ses",
+   "girdi": "annemin kimlik numarası 10000000832",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "annemin kimlik numarası [TCKN_1]",
+    "esleme": {
+     "[TCKN_1]": "10000000832"
+    }
+   }
+  },
+  {
+   "id": "C-010",
+   "tur": "birlesik",
+   "kategoriler": [
+    "TCKN",
+    "GIRIS"
+   ],
+   "kaynak": "ses",
+   "girdi": "kimlik numaramı bu kutuya yaz 10000000900",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "T.C. Kimlik Numarası"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": ""
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "kimlik numaramı bu kutuya yaz [TCKN_1]",
+    "dugumler": [
+     "T.C. Kimlik Numarası",
+     ""
+    ],
+    "esleme": {
+     "[TCKN_1]": "10000000900"
+    }
+   }
+  },
+  {
+   "id": "C-011",
+   "tur": "ekran",
+   "kategoriler": [
+    "TCKN"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "10000001068"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[TCKN_1]"
+    ],
+    "esleme": {
+     "[TCKN_1]": "10000001068"
+    }
+   }
+  },
+  {
+   "id": "I-001",
+   "tur": "komut",
+   "kategoriler": [
+    "IBAN"
+   ],
+   "kaynak": "yazi",
+   "girdi": "TR20 0000 0000 0000 0000 0000 01 numaralı hesaba 500 lira gönder",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[IBAN_1] numaralı hesaba 500 lira gönder",
+    "esleme": {
+     "[IBAN_1]": "TR20 0000 0000 0000 0000 0000 01"
+    }
+   }
+  },
+  {
+   "id": "I-002",
+   "tur": "komut",
+   "kategoriler": [
+    "IBAN"
+   ],
+   "kaynak": "yazi",
+   "girdi": "TR900000000000000000000002 ibanını kızıma gönder",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[IBAN_1] ibanını kızıma gönder",
+    "esleme": {
+     "[IBAN_1]": "TR900000000000000000000002"
+    }
+   }
+  },
+  {
+   "id": "I-003",
+   "tur": "ekran",
+   "kategoriler": [
+    "IBAN",
+    "GIRIS"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "TR63 0000 0000 0000 0000 0000 03"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[IBAN_1]"
+    ],
+    "esleme": {
+     "[IBAN_1]": "TR63 0000 0000 0000 0000 0000 03"
+    }
+   }
+  },
+  {
+   "id": "I-004",
+   "tur": "ekran",
+   "kategoriler": [
+    "IBAN"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "IBAN: TR36 0000 0000 0000 0000 0000 04"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "IBAN: [IBAN_1]"
+    ],
+    "esleme": {
+     "[IBAN_1]": "TR36 0000 0000 0000 0000 0000 04"
+    }
+   }
+  },
+  {
+   "id": "I-005",
+   "tur": "ekran",
+   "kategoriler": [
+    "IBAN",
+    "METIN"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Iban TR09 0000 0000 0000 0000 0000 05 Ayşe Test"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Iban TR09 0000 0000 0000 0000 0000 05 Ayşe Test"
+    }
+   }
+  },
+  {
+   "id": "I-006",
+   "tur": "komut",
+   "kategoriler": [
+    "IBAN",
+    "SAYI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "TR00 0000 0000 0000 0000 0000 01 hesabını kontrol et",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[SAYI_1] hesabını kontrol et",
+    "esleme": {
+     "[SAYI_1]": "TR00 0000 0000 0000 0000 0000 01"
+    }
+   }
+  },
+  {
+   "id": "I-007",
+   "tur": "komut",
+   "kategoriler": [
+    "IBAN"
+   ],
+   "kaynak": "yazi",
+   "girdi": "ibanım tr790000000000000000000006",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "ibanım [IBAN_1]",
+    "esleme": {
+     "[IBAN_1]": "tr790000000000000000000006"
+    }
+   }
+  },
+  {
+   "id": "I-008",
+   "tur": "birlesik",
+   "kategoriler": [
+    "IBAN",
+    "TUTARLILIK",
+    "GIRIS"
+   ],
+   "kaynak": "yazi",
+   "girdi": "TR52 0000 0000 0000 0000 0000 07 hesabına gönder",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "TR520000000000000000000007"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[IBAN_1] hesabına gönder",
+    "dugumler": [
+     "[IBAN_1]"
+    ],
+    "esleme": {
+     "[IBAN_1]": "TR52 0000 0000 0000 0000 0000 07"
+    }
+   }
+  },
+  {
+   "id": "I-009",
+   "tur": "ekran",
+   "kategoriler": [
+    "IBAN"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "OZET",
+     "metin": "TR25 0000 0000 0000 0000 0000 08"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[IBAN_1]"
+    ],
+    "esleme": {
+     "[IBAN_1]": "TR25 0000 0000 0000 0000 0000 08"
+    }
+   }
+  },
+  {
+   "id": "I-010",
+   "tur": "komut",
+   "kategoriler": [
+    "IBAN",
+    "KISI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Hesap: TR95 0000 0000 0000 0000 0000 09 Alıcı: Elif Test",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Hesap: [IBAN_1] Alıcı: [KISI_1]",
+    "esleme": {
+     "[IBAN_1]": "TR95 0000 0000 0000 0000 0000 09",
+     "[KISI_1]": "Elif Test"
+    }
+   }
+  },
+  {
+   "id": "I-011",
+   "tur": "ekran",
+   "kategoriler": [
+    "IBAN",
+    "METIN"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "BILDIRIM",
+     "metin": "TR68 0000 0000 0000 0000 0000 10 hesabınıza 1.250 TL yatırıldı"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "TR68 0000 0000 0000 0000 0000 10 hesabınıza 1.250 TL yatırıldı"
+    }
+   }
+  },
+  {
+   "id": "R-001",
+   "tur": "komut",
+   "kategoriler": [
+    "KART"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Kart numaram 4000 0000 0000 0010",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Kart numaram [KART_1]",
+    "esleme": {
+     "[KART_1]": "4000 0000 0000 0010"
+    }
+   }
+  },
+  {
+   "id": "R-002",
+   "tur": "ekran",
+   "kategoriler": [
+    "KART",
+    "GIRIS"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "4000 0000 0000 0028"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[KART_1]"
+    ],
+    "esleme": {
+     "[KART_1]": "4000 0000 0000 0028"
+    }
+   }
+  },
+  {
+   "id": "R-003",
+   "tur": "ekran",
+   "kategoriler": [
+    "KART",
+    "GIRIS"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "4000000000000036"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[KART_1]"
+    ],
+    "esleme": {
+     "[KART_1]": "4000000000000036"
+    }
+   }
+  },
+  {
+   "id": "R-004",
+   "tur": "komut",
+   "kategoriler": [
+    "KART",
+    "SAYI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "4000 0000 0000 0044 son kullanma 12/27",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KART_1] son kullanma [SAYI_1]",
+    "esleme": {
+     "[KART_1]": "4000 0000 0000 0044",
+     "[SAYI_1]": "12/27"
+    }
+   }
+  },
+  {
+   "id": "R-005",
+   "tur": "komut",
+   "kategoriler": [
+    "KART",
+    "KOD"
+   ],
+   "kaynak": "yazi",
+   "girdi": "4000 0000 0000 0051 cvv 123",
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "GIZLI_BILGI"
+   }
+  },
+  {
+   "id": "R-006",
+   "tur": "komut",
+   "kategoriler": [
+    "KART",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "kart numaram dört sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır altı dokuz",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "kart numaram [KART_1]",
+    "esleme": {
+     "[KART_1]": "dört sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır sıfır altı dokuz"
+    }
+   }
+  },
+  {
+   "id": "R-007",
+   "tur": "komut",
+   "kategoriler": [
+    "KART",
+    "SAYI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "4000 0000 0000 0001 kartını kaydet",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[SAYI_1] kartını kaydet",
+    "esleme": {
+     "[SAYI_1]": "4000 0000 0000 0001"
+    }
+   }
+  },
+  {
+   "id": "R-008",
+   "tur": "ekran",
+   "kategoriler": [
+    "KART",
+    "SAYI"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Kart •••• 4821"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Kart •••• [SAYI_1]"
+    ],
+    "esleme": {
+     "[SAYI_1]": "4821"
+    }
+   }
+  },
+  {
+   "id": "R-009",
+   "tur": "ekran",
+   "kategoriler": [
+    "KART",
+    "METIN"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Kartım 4000 0000 0000 0077 bunu kaydet"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Kartım 4000 0000 0000 0077 bunu kaydet"
+    }
+   }
+  },
+  {
+   "id": "R-010",
+   "tur": "birlesik",
+   "kategoriler": [
+    "KART",
+    "TUTARLILIK",
+    "GIRIS"
+   ],
+   "kaynak": "yazi",
+   "girdi": "4000 0000 0000 0085 numaralı kartı ekle",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "4000 0000 0000 0085"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KART_1] numaralı kartı ekle",
+    "dugumler": [
+     "[KART_1]"
+    ],
+    "esleme": {
+     "[KART_1]": "4000 0000 0000 0085"
+    }
+   }
+  },
+  {
+   "id": "R-011",
+   "tur": "komut",
+   "kategoriler": [
+    "KART"
+   ],
+   "kaynak": "yazi",
+   "girdi": "4000 0000 0000 0093'u kaydet",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KART_1]'i kaydet",
+    "esleme": {
+     "[KART_1]": "4000 0000 0000 0093"
+    }
+   }
+  },
+  {
+   "id": "A-001",
+   "tur": "komut",
+   "kategoriler": [
+    "ADRES",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "deneme mahallesi papatya sokak numara on iki adresine taksi çağır",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[ADRES_1] adresine taksi çağır",
+    "esleme": {
+     "[ADRES_1]": "deneme mahallesi papatya sokak numara on iki"
+    }
+   }
+  },
+  {
+   "id": "A-002",
+   "tur": "komut",
+   "kategoriler": [
+    "ADRES"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Test Sokak No:5 Daire:3 adresine git",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[ADRES_1] adresine git",
+    "esleme": {
+     "[ADRES_1]": "Test Sokak No:5 Daire:3"
+    }
+   }
+  },
+  {
+   "id": "A-003",
+   "tur": "ekran",
+   "kategoriler": [
+    "ADRES"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Deneme Mah. Lale Sk. No:12 D:4 Kadıköy/İstanbul"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[ADRES_1]"
+    ],
+    "esleme": {
+     "[ADRES_1]": "Deneme Mah. Lale Sk. No:12 D:4 Kadıköy/İstanbul"
+    }
+   }
+  },
+  {
+   "id": "A-004",
+   "tur": "komut",
+   "kategoriler": [
+    "ADRES"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Evim Örnek Caddesi 25 numara, oraya nasıl giderim",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Evim [ADRES_1], oraya nasıl giderim",
+    "esleme": {
+     "[ADRES_1]": "Örnek Caddesi 25 numara"
+    }
+   }
+  },
+  {
+   "id": "A-005",
+   "tur": "komut",
+   "kategoriler": [
+    "ADRES"
+   ],
+   "kaynak": "yazi",
+   "girdi": "41.00001, 29.00001 konumuna git",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[ADRES_1] konumuna git",
+    "esleme": {
+     "[ADRES_1]": "41.00001, 29.00001"
+    }
+   }
+  },
+  {
+   "id": "A-006",
+   "tur": "ekran",
+   "kategoriler": [
+    "ADRES"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Teslimat adresi: Deneme Mahallesi Test Sokak No 7"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Teslimat adresi: [ADRES_1]"
+    ],
+    "esleme": {
+     "[ADRES_1]": "Deneme Mahallesi Test Sokak No 7"
+    }
+   }
+  },
+  {
+   "id": "A-007",
+   "tur": "komut",
+   "kategoriler": [
+    "ADRES",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "test apartmanı kat üç daire beşe kargo gönder",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[ADRES_1]'e kargo gönder",
+    "esleme": {
+     "[ADRES_1]": "test apartmanı kat üç daire beş"
+    }
+   }
+  },
+  {
+   "id": "A-008",
+   "tur": "ekran",
+   "kategoriler": [
+    "ADRES",
+    "GIRIS"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "Lale Sokak No 3"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[ADRES_1]"
+    ],
+    "esleme": {
+     "[ADRES_1]": "Lale Sokak No 3"
+    }
+   }
+  },
+  {
+   "id": "A-009",
+   "tur": "ekran",
+   "kategoriler": [
+    "ADRES"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Ev adresi"
+    },
+    {
+     "rol": "OZET",
+     "metin": "Papatya Mah. 1. Sokak No 9"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Ev adresi",
+     "[ADRES_1]"
+    ],
+    "esleme": {
+     "[ADRES_1]": "Papatya Mah. 1. Sokak No 9"
+    }
+   }
+  },
+  {
+   "id": "A-010",
+   "tur": "birlesik",
+   "kategoriler": [
+    "ADRES",
+    "GIRIS"
+   ],
+   "kaynak": "ses",
+   "girdi": "evime taksi çağır",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Nereye?"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "Örnek Cad. No 14"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "evime taksi çağır",
+    "dugumler": [
+     "Nereye?",
+     "[ADRES_1]"
+    ],
+    "esleme": {
+     "[ADRES_1]": "Örnek Cad. No 14"
+    }
+   }
+  },
+  {
+   "id": "A-011",
+   "tur": "komut",
+   "kategoriler": [
+    "ADRES"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Kargo Deneme Köyü 12'ye gelsin",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Kargo [ADRES_1]'e gelsin",
+    "esleme": {
+     "[ADRES_1]": "Deneme Köyü 12"
+    }
+   }
+  },
+  {
+   "id": "S-001",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "müşteri numaram 77889900",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "müşteri numaram [SAYI_1]",
+    "esleme": {
+     "[SAYI_1]": "77889900"
+    }
+   }
+  },
+  {
+   "id": "S-002",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Doğum tarihim 12.03.1950",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Doğum tarihim [SAYI_1]",
+    "esleme": {
+     "[SAYI_1]": "12.03.1950"
+    }
+   }
+  },
+  {
+   "id": "S-003",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "1950 doğumluyum",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[SAYI_1] doğumluyum",
+    "esleme": {
+     "[SAYI_1]": "1950"
+    }
+   }
+  },
+  {
+   "id": "S-004",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "99 TST 001 plakalı aracı sorgula",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[SAYI_1] plakalı aracı sorgula",
+    "esleme": {
+     "[SAYI_1]": "99 TST 001"
+    }
+   }
+  },
+  {
+   "id": "S-005",
+   "tur": "ekran",
+   "kategoriler": [
+    "SAYI"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Sipariş no: 556677"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Sipariş no: [SAYI_1]"
+    ],
+    "esleme": {
+     "[SAYI_1]": "556677"
+    }
+   }
+  },
+  {
+   "id": "S-006",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Abone numaram 4455-6677",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Abone numaram [SAYI_1]",
+    "esleme": {
+     "[SAYI_1]": "4455-6677"
+    }
+   }
+  },
+  {
+   "id": "S-007",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "abone numaram iki bin yüz on iki",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "abone numaram [SAYI_1]",
+    "esleme": {
+     "[SAYI_1]": "iki bin yüz on iki"
+    }
+   }
+  },
+  {
+   "id": "S-008",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI",
+    "YAZIYLA_SAYI",
+    "ASIRI_MASKE"
+   ],
+   "kaynak": "ses",
+   "girdi": "üç yüz elli lira",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[SAYI_1] lira",
+    "esleme": {
+     "[SAYI_1]": "üç yüz elli"
+    }
+   }
+  },
+  {
+   "id": "S-009",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "4821'i tuşla",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[SAYI_1]'i tuşla",
+    "esleme": {
+     "[SAYI_1]": "4821"
+    }
+   }
+  },
+  {
+   "id": "S-010",
+   "tur": "ekran",
+   "kategoriler": [
+    "SAYI"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "12.03.2024"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[SAYI_1]"
+    ],
+    "esleme": {
+     "[SAYI_1]": "12.03.2024"
+    }
+   }
+  },
+  {
+   "id": "S-011",
+   "tur": "komut",
+   "kategoriler": [
+    "SAYI",
+    "ASIRI_MASKE"
+   ],
+   "kaynak": "ses",
+   "girdi": "2025 fotoğraflarını göster",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[SAYI_1] fotoğraflarını göster",
+    "esleme": {
+     "[SAYI_1]": "2025"
+    }
+   }
+  },
+  {
+   "id": "M-001",
+   "tur": "komut",
+   "kategoriler": [
+    "METIN",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "ayşeye yarın geliyorum diye mesaj at",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e [METIN_1] diye mesaj at",
+    "esleme": {
+     "[KISI_1]": "Ayşe Test",
+     "[METIN_1]": "yarın geliyorum"
+    }
+   }
+  },
+  {
+   "id": "M-002",
+   "tur": "komut",
+   "kategoriler": [
+    "METIN",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "elife de ki akşam yemeğe gel",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e de ki [METIN_1]",
+    "esleme": {
+     "[KISI_1]": "Elif Test",
+     "[METIN_1]": "akşam yemeğe gel"
+    }
+   }
+  },
+  {
+   "id": "M-003",
+   "tur": "komut",
+   "kategoriler": [
+    "METIN",
+    "KISI",
+    "OZEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Mehmet'e mesaj: İlaçlarını almayı unutma",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e mesaj: [METIN_1]",
+    "esleme": {
+     "[KISI_1]": "Mehmet Test",
+     "[METIN_1]": "İlaçlarını almayı unutma"
+    }
+   }
+  },
+  {
+   "id": "M-004",
+   "tur": "ekran",
+   "kategoriler": [
+    "METIN",
+    "KISI"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Sohbetler"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Ayşe Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Yarın pazara gidelim mi?"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "14:32"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Mehmet Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Fotoğraf"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Dün"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Sohbetler",
+     "[KISI_1]",
+     "[METIN_1]",
+     "14:32",
+     "[KISI_2]",
+     "Fotoğraf",
+     "Dün"
+    ],
+    "esleme": {
+     "[KISI_1]": "Ayşe Test",
+     "[METIN_1]": "Yarın pazara gidelim mi?",
+     "[KISI_2]": "Mehmet Test"
+    }
+   }
+  },
+  {
+   "id": "M-005",
+   "tur": "ekran",
+   "kategoriler": [
+    "METIN",
+    "KISI",
+    "GIRIS"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Zeynep Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Bugün eve geç geleceğim"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Tamam"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": ""
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Mesaj yazın"
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Gönder"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[KISI_1]",
+     "[METIN_1]",
+     "[METIN_2]",
+     "",
+     "Mesaj yazın",
+     "Gönder"
+    ],
+    "esleme": {
+     "[KISI_1]": "Zeynep Test",
+     "[METIN_1]": "Bugün eve geç geleceğim",
+     "[METIN_2]": "Tamam"
+    }
+   }
+  },
+  {
+   "id": "M-006",
+   "tur": "ekran",
+   "kategoriler": [
+    "METIN",
+    "KISI"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "BILDIRIM",
+     "metin": "Hasan Test"
+    },
+    {
+     "rol": "BILDIRIM",
+     "metin": "Akşam maç var, gel"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[KISI_1]",
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[KISI_1]": "Hasan Test",
+     "[METIN_1]": "Akşam maç var, gel"
+    }
+   }
+  },
+  {
+   "id": "M-007",
+   "tur": "komut",
+   "kategoriler": [
+    "METIN",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "osmana selam söyle diye yaz",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e [METIN_1] diye yaz",
+    "esleme": {
+     "[KISI_1]": "Osman Test",
+     "[METIN_1]": "selam söyle"
+    }
+   }
+  },
+  {
+   "id": "M-008",
+   "tur": "komut",
+   "kategoriler": [
+    "METIN"
+   ],
+   "kaynak": "ses",
+   "girdi": "yarın doktora gideceğim diye kızıma mesaj gönder",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[METIN_1] diye kızıma mesaj gönder",
+    "esleme": {
+     "[METIN_1]": "yarın doktora gideceğim"
+    }
+   }
+  },
+  {
+   "id": "M-009",
+   "tur": "komut",
+   "kategoriler": [
+    "METIN"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Şu linki aç https://example.com/davet?ad=test",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "Şu linki aç [METIN_1]",
+    "esleme": {
+     "[METIN_1]": "https://example.com/davet?ad=test"
+    }
+   }
+  },
+  {
+   "id": "M-010",
+   "tur": "ekran",
+   "kategoriler": [
+    "METIN"
+   ],
+   "paket": "com.sec.android.gallery3d",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Albümler"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Torunumun düğünü"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Albümler",
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Torunumun düğünü"
+    }
+   }
+  },
+  {
+   "id": "M-011",
+   "tur": "birlesik",
+   "kategoriler": [
+    "METIN",
+    "TUTARLILIK",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "ayşeye tamam geliyorum diye yaz",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Ayşe Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "tamam geliyorum"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e [METIN_1] diye yaz",
+    "dugumler": [
+     "[KISI_1]",
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[KISI_1]": "Ayşe Test",
+     "[METIN_1]": "tamam geliyorum"
+    }
+   }
+  },
+  {
+   "id": "M-012",
+   "tur": "ekran",
+   "kategoriler": [
+    "METIN",
+    "OZEL"
+   ],
+   "paket": "com.sec.android.app.clockpackage",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Alarm ekle"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "08:00"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Tansiyon ilacı"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Alarm ekle",
+     "08:00",
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Tansiyon ilacı"
+    }
+   }
+  },
+  {
+   "id": "M-013",
+   "tur": "ekran",
+   "kategoriler": [
+    "METIN"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Wi-Fi"
+    },
+    {
+     "rol": "OZET",
+     "metin": "Ev_Agi_5G"
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Telefon adı"
+    },
+    {
+     "rol": "OZET",
+     "metin": "Gülsen Test'in Galaxy A15"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Wi-Fi",
+     "[METIN_1]",
+     "Telefon adı",
+     "[METIN_2]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Ev_Agi_5G",
+     "[METIN_2]": "Gülsen Test'in Galaxy A15"
+    }
+   }
+  },
+  {
+   "id": "G-001",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "METIN"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "Merhaba Ayşe nasılsın"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Merhaba Ayşe nasılsın"
+    }
+   }
+  },
+  {
+   "id": "G-002",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "NEGATIF"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Ara"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": ""
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Ara",
+     ""
+    ],
+    "esleme": {}
+   }
+  },
+  {
+   "id": "G-003",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "PAROLA"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Parola"
+    },
+    {
+     "rol": "PAROLA",
+     "metin": "••••••"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Parola",
+     ""
+    ],
+    "esleme": {}
+   }
+  },
+  {
+   "id": "G-004",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "PAROLA"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "PAROLA",
+     "metin": "gizli123"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     ""
+    ],
+    "esleme": {}
+   }
+  },
+  {
+   "id": "G-005",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "KISI"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Alıcı"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "Ayşe Test"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Alıcı",
+     "[KISI_1]"
+    ],
+    "esleme": {
+     "[KISI_1]": "Ayşe Test"
+    }
+   }
+  },
+  {
+   "id": "G-006",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "TEL"
+   ],
+   "paket": "com.samsung.android.dialer",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "0599 000 00 25"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[TEL_1]"
+    ],
+    "esleme": {
+     "[TEL_1]": "0599 000 00 25"
+    }
+   }
+  },
+  {
+   "id": "G-007",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "METIN"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "Tamam"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Tamam"
+    }
+   }
+  },
+  {
+   "id": "G-008",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "METIN",
+    "OZEL"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "kardiyoloji randevusu"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "kardiyoloji randevusu"
+    }
+   }
+  },
+  {
+   "id": "G-009",
+   "tur": "birlesik",
+   "kategoriler": [
+    "GIRIS",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "bu kutuya adımı yaz",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Ad Soyad"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "Elif Test"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "bu kutuya adımı yaz",
+    "dugumler": [
+     "Ad Soyad",
+     "[KISI_1]"
+    ],
+    "esleme": {
+     "[KISI_1]": "Elif Test"
+    }
+   }
+  },
+  {
+   "id": "G-010",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "PAROLA",
+    "KOD"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Şifre"
+    },
+    {
+     "rol": "PAROLA",
+     "metin": "••••"
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Giriş yap"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Şifre",
+     "",
+     "Giriş yap"
+    ],
+    "esleme": {}
+   }
+  },
+  {
+   "id": "G-011",
+   "tur": "ekran",
+   "kategoriler": [
+    "GIRIS",
+    "METIN"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "Akşam 7'de gel"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[METIN_1]": "Akşam 7'de gel"
+    }
+   }
+  },
+  {
+   "id": "O-001",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "tansiyon ilacımı hatırlat",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] hatırlat",
+    "esleme": {
+     "[OZEL_1]": "tansiyon ilacımı"
+    }
+   }
+  },
+  {
+   "id": "O-002",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "insülin saatimi kur",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] saatimi kur",
+    "esleme": {
+     "[OZEL_1]": "insülin"
+    }
+   }
+  },
+  {
+   "id": "O-003",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "kardiyoloji randevumu göster",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] randevumu göster",
+    "esleme": {
+     "[OZEL_1]": "kardiyoloji"
+    }
+   }
+  },
+  {
+   "id": "O-004",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "namaz vakitlerini göster",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] vakitlerini göster",
+    "esleme": {
+     "[OZEL_1]": "namaz"
+    }
+   }
+  },
+  {
+   "id": "O-005",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "kanser tahlil sonuçlarımı aç",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] sonuçlarımı aç",
+    "esleme": {
+     "[OZEL_1]": "kanser tahlil"
+    }
+   }
+  },
+  {
+   "id": "O-006",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "depresyon ilacımın adı neydi",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] adı neydi",
+    "esleme": {
+     "[OZEL_1]": "depresyon ilacımın"
+    }
+   }
+  },
+  {
+   "id": "O-007",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "diyaliz merkezini ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] merkezini ara",
+    "esleme": {
+     "[OZEL_1]": "diyaliz"
+    }
+   }
+  },
+  {
+   "id": "O-008",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "oruç saatlerini göster",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] saatlerini göster",
+    "esleme": {
+     "[OZEL_1]": "oruç"
+    }
+   }
+  },
+  {
+   "id": "O-009",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Kalp krizi geçirenlere ilk yardım videosu aç",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] geçirenlere ilk yardım videosu aç",
+    "esleme": {
+     "[OZEL_1]": "Kalp krizi"
+    }
+   }
+  },
+  {
+   "id": "O-010",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Sendika toplantısını takvime ekle",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] toplantısını takvime ekle",
+    "esleme": {
+     "[OZEL_1]": "Sendika"
+    }
+   }
+  },
+  {
+   "id": "O-011",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "şeker hastalığım için hatırlatıcı kur",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] için hatırlatıcı kur",
+    "esleme": {
+     "[OZEL_1]": "şeker hastalığım"
+    }
+   }
+  },
+  {
+   "id": "O-012",
+   "tur": "komut",
+   "kategoriler": [
+    "OZEL"
+   ],
+   "kaynak": "ses",
+   "girdi": "psikiyatri polikliniğini ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[OZEL_1] polikliniğini ara",
+    "esleme": {
+     "[OZEL_1]": "psikiyatri"
+    }
+   }
+  },
+  {
+   "id": "D-001",
+   "tur": "ekran",
+   "kategoriler": [
+    "KOD"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "BILDIRIM",
+     "metin": "Doğrulama kodunuz: 482913. Kimseyle paylaşmayın."
+    }
+   ],
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "D-002",
+   "tur": "birlesik",
+   "kategoriler": [
+    "KOD"
+   ],
+   "kaynak": "ses",
+   "girdi": "gelen kodu oku",
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "BILDIRIM",
+     "metin": "Giriş kodunuz 5521"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "D-003",
+   "tur": "komut",
+   "kategoriler": [
+    "KOD",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "kod dört sekiz iki bir gir",
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "D-004",
+   "tur": "komut",
+   "kategoriler": [
+    "KOD"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Şifrem 1234, gir",
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "GIZLI_BILGI"
+   }
+  },
+  {
+   "id": "D-005",
+   "tur": "ekran",
+   "kategoriler": [
+    "KOD"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "123456 tek kullanımlık şifrenizdir"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "D-006",
+   "tur": "ekran",
+   "kategoriler": [
+    "KOD"
+   ],
+   "paket": "com.samsung.android.messaging",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Bu kodu kimseyle paylaşmayın"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "D-007",
+   "tur": "komut",
+   "kategoriler": [
+    "KOD",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "pin kodum bir iki üç dört",
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "GIZLI_BILGI"
+   }
+  },
+  {
+   "id": "D-008",
+   "tur": "ekran",
+   "kategoriler": [
+    "KOD"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "BILDIRIM",
+     "metin": "WhatsApp kodunuz: 112-233"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "D-009",
+   "tur": "komut",
+   "kategoriler": [
+    "KOD"
+   ],
+   "kaynak": "yazi",
+   "girdi": "kartın cvv'si 321",
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "GIZLI_BILGI"
+   }
+  },
+  {
+   "id": "D-010",
+   "tur": "ekran",
+   "kategoriler": [
+    "KOD",
+    "NEGATIF"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Şifre ve güvenlik"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Şifre ve güvenlik"
+    ],
+    "esleme": {}
+   }
+  },
+  {
+   "id": "D-011",
+   "tur": "ekran",
+   "kategoriler": [
+    "KOD"
+   ],
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Doğrulama kodunu girin"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": ""
+    }
+   ],
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "D-012",
+   "tur": "komut",
+   "kategoriler": [
+    "KOD"
+   ],
+   "kaynak": "yazi",
+   "girdi": "dogrulama kodu 7788 geldi",
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "U-001",
+   "tur": "birlesik",
+   "kategoriler": [
+    "TUTARLILIK",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "ayşeyi ara",
+   "paket": "com.samsung.android.app.contacts",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Kişiler"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Ayşe Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Mehmet Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Ali Test"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i ara",
+    "dugumler": [
+     "Kişiler",
+     "[KISI_1]",
+     "[KISI_2]",
+     "[KISI_3]"
+    ],
+    "esleme": {
+     "[KISI_1]": "Ayşe Test",
+     "[KISI_2]": "Mehmet Test",
+     "[KISI_3]": "Ali Test"
+    }
+   }
+  },
+  {
+   "id": "U-002",
+   "tur": "birlesik",
+   "kategoriler": [
+    "TUTARLILIK",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "aliyi ara",
+   "paket": "com.samsung.android.app.contacts",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Ali Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Ali Testçi"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'i ara",
+    "dugumler": [
+     "[KISI_2]",
+     "[KISI_3]"
+    ],
+    "esleme": {
+     "[KISI_1]": "Ali",
+     "[KISI_2]": "Ali Test",
+     "[KISI_3]": "Ali Testçi"
+    }
+   }
+  },
+  {
+   "id": "U-003",
+   "tur": "birlesik",
+   "kategoriler": [
+    "TUTARLILIK",
+    "TEL",
+    "KISI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "0599 000 00 02 numarasını kaydet",
+   "paket": "com.samsung.android.app.contacts",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Mehmet Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "0599 000 00 02"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1] numarasını kaydet",
+    "dugumler": [
+     "[KISI_1]",
+     "[TEL_1]"
+    ],
+    "esleme": {
+     "[TEL_1]": "0599 000 00 02",
+     "[KISI_1]": "Mehmet Test"
+    }
+   }
+  },
+  {
+   "id": "U-004",
+   "tur": "birlesik",
+   "kategoriler": [
+    "TUTARLILIK",
+    "TEL"
+   ],
+   "kaynak": "yazi",
+   "girdi": "05990000003'ü ara",
+   "paket": "com.samsung.android.dialer",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "+90 599 000 00 03"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[TEL_1]'i ara",
+    "dugumler": [
+     "[TEL_1]"
+    ],
+    "esleme": {
+     "[TEL_1]": "05990000003"
+    }
+   }
+  },
+  {
+   "id": "U-005",
+   "tur": "birlesik",
+   "kategoriler": [
+    "TUTARLILIK",
+    "KISI",
+    "METIN",
+    "GIRIS"
+   ],
+   "kaynak": "ses",
+   "girdi": "hasana mesaj at",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Hasan Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Merhaba"
+    },
+    {
+     "rol": "DUZENLENEBILIR",
+     "metin": "Merhaba"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e mesaj at",
+    "dugumler": [
+     "[KISI_1]",
+     "[METIN_1]",
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[KISI_1]": "Hasan Test",
+     "[METIN_1]": "Merhaba"
+    }
+   }
+  },
+  {
+   "id": "U-006",
+   "tur": "birlesik",
+   "kategoriler": [
+    "TUTARLILIK",
+    "KISI",
+    "METIN"
+   ],
+   "kaynak": "ses",
+   "girdi": "zeynebe mesaj at",
+   "paket": "com.whatsapp",
+   "dugumler": [
+    {
+     "rol": "LISTE",
+     "metin": "Zeynep Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Görüşürüz"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Elif Test"
+    },
+    {
+     "rol": "LISTE",
+     "metin": "Görüşürüz"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "[KISI_1]'e mesaj at",
+    "dugumler": [
+     "[KISI_1]",
+     "[METIN_1]",
+     "[KISI_2]",
+     "[METIN_1]"
+    ],
+    "esleme": {
+     "[KISI_1]": "Zeynep Test",
+     "[METIN_1]": "Görüşürüz",
+     "[KISI_2]": "Elif Test"
+    }
+   }
+  },
+  {
+   "id": "N-001",
+   "tur": "komut",
+   "kategoriler": [
+    "NIYET",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "şimdi şöyle bir durum var dün akşam komşumuz gülten test geldi telefonumu kurcaladı sesi kısıldı galiba sesi açar mısın",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "NIYET",
+    "cikti": "şimdi şöyle bir durum var dün akşam komşumuz [METIN_1] telefonumu [METIN_2] sesi [METIN_3] sesi açar mısın",
+    "esleme": {
+     "[METIN_1]": "gülten test geldi",
+     "[METIN_2]": "kurcaladı",
+     "[METIN_3]": "kısıldı galiba"
+    }
+   }
+  },
+  {
+   "id": "N-002",
+   "tur": "komut",
+   "kategoriler": [
+    "NIYET",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "kızım bak bana dün mehmet test diye biri aradı numarası kayıtlı değil onu rehbere kaydeder misin acaba",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "NIYET",
+    "cikti": "kızım bak bana dün [KISI_1] diye biri aradı numarası kayıtlı değil onu rehbere kaydeder misin acaba",
+    "esleme": {
+     "[KISI_1]": "Mehmet Test"
+    }
+   }
+  },
+  {
+   "id": "N-003",
+   "tur": "komut",
+   "kategoriler": [
+    "NIYET",
+    "KISI"
+   ],
+   "kaynak": "ses",
+   "girdi": "dün pazarda karşılaştığım nurhan test hanımın verdiği tarifi kaydettim onu bulamıyorum galeride olabilir mi bakar mısın",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "NIYET",
+    "cikti": "dün pazarda [METIN_1] [KISI_1] hanımın [METIN_2] tarifi kaydettim onu [METIN_3] galeride [METIN_4] mi bakar mısın",
+    "esleme": {
+     "[METIN_1]": "karşılaştığım",
+     "[KISI_1]": "Nurhan Test",
+     "[METIN_2]": "verdiği",
+     "[METIN_3]": "bulamıyorum",
+     "[METIN_4]": "olabilir"
+    }
+   }
+  },
+  {
+   "id": "N-004",
+   "tur": "komut",
+   "kategoriler": [
+    "NIYET",
+    "KISI"
+   ],
+   "kaynak": "yazi",
+   "girdi": "Merhaba, ben Gülsen Test, bugün torunum bana bir video gönderdi ama açılmıyor, nasıl açarım bunu söyler misin",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "NIYET",
+    "cikti": "Merhaba, ben [KISI_1], bugün torunum bana bir video gönderdi ama açılmıyor, nasıl açarım bunu söyler misin",
+    "esleme": {
+     "[KISI_1]": "Gülsen Test"
+    }
+   }
+  },
+  {
+   "id": "X-001",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "ayarları aç",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "ayarları aç",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-002",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "sesi biraz aç",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "sesi biraz aç",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-003",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "wifiyi kapat",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "wifiyi kapat",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-004",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "yazi",
+   "girdi": "saat 7'de alarm kur",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "saat 7'de alarm kur",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-005",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "parlaklığı artır",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "parlaklığı artır",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-006",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "son fotoğrafı göster",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "son fotoğrafı göster",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-007",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "yazıları büyüt",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "yazıları büyüt",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-008",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "hava durumunu söyle",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "hava durumunu söyle",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-009",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "yazi",
+   "girdi": "112'yi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "112'yi ara",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-010",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "eczaneyi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "eczaneyi ara",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-011",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "annemi ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "annemi ara",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-012",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "beş dakika sonra hatırlat",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "beş dakika sonra hatırlat",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-013",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "yazi",
+   "girdi": "saat 14:30'da alarm kur",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "saat 14:30'da alarm kur",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-014",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "sesi 15 yap",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "sesi 15 yap",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-015",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "kaynak": "ses",
+   "girdi": "babamı görüntülü ara",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "babamı görüntülü ara",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-016",
+   "tur": "komut",
+   "kategoriler": [
+    "NEGATIF",
+    "YAZIYLA_SAYI"
+   ],
+   "kaynak": "ses",
+   "girdi": "on iki kere çalsın",
+   "beklenen": {
+    "sonuc": "GONDER",
+    "kip": "TAM",
+    "cikti": "on iki kere çalsın",
+    "esleme": {}
+   }
+  },
+  {
+   "id": "X-017",
+   "tur": "ekran",
+   "kategoriler": [
+    "NEGATIF"
+   ],
+   "paket": "com.android.settings",
+   "dugumler": [
+    {
+     "rol": "ARAYUZ",
+     "metin": "Ayarlar"
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Bağlantılar"
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Ses ve titreşim"
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Bildirimler"
+    },
+    {
+     "rol": "ARAYUZ",
+     "metin": "Ekran"
+    },
+    {
+     "rol": "OZET",
+     "metin": "Açık"
+    },
+    {
+     "rol": "OZET",
+     "metin": "Kapalı"
+    }
+   ],
+   "beklenen": {
+    "sonuc": "GONDER",
+    "dugumler": [
+     "Ayarlar",
+     "Bağlantılar",
+     "Ses ve titreşim",
+     "Bildirimler",
+     "Ekran",
+     "Açık",
+     "Kapalı"
+    ],
+    "esleme": {}
+   }
+  },
+  {
+   "id": "Y-001",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Ayşe Test"
+   },
+   "yanit": "[KISI_1]'i arıyorum.",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Ayşe Test'i arıyorum."
+   }
+  },
+  {
+   "id": "Y-002",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Osman Test"
+   },
+   "yanit": "[KISI_1]'e mesaj yazayım mı?",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Osman Test'e mesaj yazayım mı?"
+   }
+  },
+  {
+   "id": "Y-003",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Ali"
+   },
+   "yanit": "[KISI_1]'in numarası iki kişide kayıtlı.",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Ali'nin numarası iki kişide kayıtlı."
+   }
+  },
+  {
+   "id": "Y-004",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[TEL_1]": "0599 000 00 14"
+   },
+   "yanit": "[TEL_1]'i arayayım mı?",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "0599 000 00 14'ü arayayım mı?"
+   }
+  },
+  {
+   "id": "Y-005",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[TEL_1]": "0599 000 00 10"
+   },
+   "yanit": "[TEL_1]'e mesaj gönderiyorum.",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "0599 000 00 10'a mesaj gönderiyorum."
+   }
+  },
+  {
+   "id": "Y-006",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[ADRES_1]": "Deneme Mahallesi Papatya Sokak No 12"
+   },
+   "yanit": "[ADRES_1]'e taksi çağırıyorum.",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Deneme Mahallesi Papatya Sokak No 12'ye taksi çağırıyorum."
+   }
+  },
+  {
+   "id": "Y-007",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Ayşe Test",
+    "[METIN_1]": "Yarın geliyorum"
+   },
+   "yanit": "[KISI_1]'e \"[METIN_1]\" yazıyorum.",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Ayşe Test'e \"Yarın geliyorum\" yazıyorum."
+   }
+  },
+  {
+   "id": "Y-008",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Ayşe Test"
+   },
+   "yanit": "[KISI_7]'yi arıyorum.",
+   "beklenen": {
+    "sonuc": "RED",
+    "neden": "BILINMEYEN_YER_TUTUCU"
+   }
+  },
+  {
+   "id": "Y-009",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Hasan Test"
+   },
+   "yanit": "[KISI_1]'yle görüntülü arama başlatıyorum.",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Hasan Test'le görüntülü arama başlatıyorum."
+   }
+  },
+  {
+   "id": "Y-010",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Selin Teste"
+   },
+   "yanit": "[KISI_1]'e mesaj gönderiyorum.",
+   "ekli": [
+    "[KISI_1]"
+   ],
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Selin Teste mesaj gönderiyorum."
+   }
+  },
+  {
+   "id": "Y-011",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Osman Test"
+   },
+   "yanit": "[KISI_1]'den gelen mesajı okuyorum.",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Osman Test'ten gelen mesajı okuyorum."
+   }
+  },
+  {
+   "id": "Y-012",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Ayşe Test"
+   },
+   "yanit": "[KISI]'yi ara",
+   "beklenen": {
+    "sonuc": "RED",
+    "neden": "BILINMEYEN_YER_TUTUCU"
+   }
+  },
+  {
+   "id": "Y-013",
+   "tur": "geri_cozme",
+   "kategoriler": [
+    "GERI_COZME"
+   ],
+   "esleme": {
+    "[KISI_1]": "Zeynep Test",
+    "[KISI_2]": "Elif Test"
+   },
+   "yanit": "[KISI_2] mi [KISI_1] mi?",
+   "beklenen": {
+    "sonuc": "TAMAM",
+    "metin": "Elif Test mi Zeynep Test mi?"
+   }
+  },
+  {
+   "id": "Z-001",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "[KISI_1]'i ara"
+   ],
+   "esleme": {
+    "[KISI_1]": "Ayşe Test"
+   },
+   "beklenen": {
+    "sonuc": "GONDER"
+   }
+  },
+  {
+   "id": "Z-002",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "Ayşe'yi ara"
+   ],
+   "esleme": {},
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "REHBER_ADI"
+   }
+  },
+  {
+   "id": "Z-003",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "0599 000 00 01 numarasını ara"
+   ],
+   "esleme": {},
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "TEL"
+   }
+  },
+  {
+   "id": "Z-014",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "müşteri no 77889900"
+   ],
+   "esleme": {},
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "RAKAM_DIZISI"
+   }
+  },
+  {
+   "id": "Z-004",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "ayse.test@example.com adresine yaz"
+   ],
+   "esleme": {},
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "EPOSTA"
+   }
+  },
+  {
+   "id": "Z-005",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "[KISI_2]'yi ara"
+   ],
+   "esleme": {
+    "[KISI_1]": "Ayşe Test"
+   },
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "BILINMEYEN_YER_TUTUCU"
+   }
+  },
+  {
+   "id": "Z-006",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "sıfır beş yüz doksan dokuz ara"
+   ],
+   "esleme": {},
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "YAZIYLA_SAYI"
+   }
+  },
+  {
+   "id": "Z-007",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "tansiyon ilacımı hatırlat"
+   ],
+   "esleme": {},
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "OZEL_TERIM"
+   }
+  },
+  {
+   "id": "Z-008",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "Sohbetler",
+    "[KISI_1]",
+    "[METIN_1]",
+    "14:32"
+   ],
+   "esleme": {
+    "[KISI_1]": "Ayşe Test",
+    "[METIN_1]": "Yarın pazara gidelim mi?"
+   },
+   "beklenen": {
+    "sonuc": "GONDER"
+   }
+  },
+  {
+   "id": "Z-009",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "Doğrulama kodunuz [SAYI_1]"
+   ],
+   "esleme": {
+    "[SAYI_1]": "482913"
+   },
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "DOGRULAMA_KODU"
+   }
+  },
+  {
+   "id": "Z-010",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "saat 14:30'da [KISI_1]'e hatırlat"
+   ],
+   "esleme": {
+    "[KISI_1]": "Elif Test"
+   },
+   "beklenen": {
+    "sonuc": "GONDER"
+   }
+  },
+  {
+   "id": "Z-011",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "Deneme Mahallesi Papatya Sokak adresine git"
+   ],
+   "esleme": {},
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "ADRES"
+   }
+  },
+  {
+   "id": "Z-012",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "TR20 0000 0000 0000 0000 0000 01"
+   ],
+   "esleme": {},
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "IBAN"
+   }
+  },
+  {
+   "id": "Z-013",
+   "tur": "son_denetim",
+   "kategoriler": [
+    "SON_DENETIM"
+   ],
+   "giden": [
+    "Hesap [IBAN_1], alıcı Mehmet"
+   ],
+   "esleme": {
+    "[IBAN_1]": "TR90 0000 0000 0000 0000 0000 02"
+   },
+   "beklenen": {
+    "sonuc": "ENGELLE",
+    "neden": "REHBER_ADI"
+   }
+  }
+ ]
+}

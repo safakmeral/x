@@ -1,0 +1,139 @@
+BST401 Hafta-2 Geri Bildirim: Şafak M (Yaşlılar için Telefon Asistanı)
+Genel değerlendirme
+Hafta-2 belgeniz Hafta-1 geri bildirimine çok ciddi bir yanıt. Belgeyi kendi kaynaklarınızdan yeniden kurmuşsunuz. Araştırma soruları, literatürden tasarım kararlarına giden bağ (Tablo 2), risk dereceleri, SMS kapsam kararı, Play politikası notu, etik ve KVKK planı, akademik takvime oturan iş-zaman planı ve yapay zekâ kullanım beyanı yerinde. Proje artık savunulabilir bir çerçeveye kavuştu.
+Belgedeki sayıları kaynak PDF'lerle tek tek karşılaştırdım; kontrol ettiklerimin hepsi doğru:
+ElderBench: %78,31, %38,15 ve %49,80
+MobileSafetyBench: %70
+Pop-up saldırısı: %86
+AutoDroid: %51,7
+AppAgent: %84,4
+WePilot: 12 yaşlıdan 11'i
+ExplorAR: 80,9 sn, 18,3 sn, 34,4 sn ve yaş ortalaması 65,6
+Sharifi vd.: STAQ veri kümesi, 514 örnek
+Google Play politikasındaki aktarımınız da Play Console Yardım sayfasıyla örtüşüyor.
+Mimari diyagramınız (Şekil 2) metinle birebir uyumlu ve size ait. Belgeniz başka bir öğrencinin metniyle örtüşmüyor; yalnızca ortak kaynakların kaynakça kalıpları benzer, bu da doğal.
+Şimdi kalan iş, proje henüz kâğıt üzerindeyken iki kararı netleştirmek: etik yol ve kullanıcı çalışmasının yükü. Bunlar netleşince geliştirmeye güvenle başlayabilirsiniz.
+Hafta-1 geri bildirimine uyum
+#
+Hafta-1'deki sorun
+Durum
+Hafta-2'de ne yaptınız
+1
+Başka bir öğrencinin dosya ve metinlerinin kullanılması
+✅
+Metin, tablolar ve şekiller yeniden hazırlanmış; dosyalar size ait; yapay zekâ beyanında açıkça belirtilmiş.
+2
+Excel'de kalan yapay zekâ notları
+✅
+Not kalmamış; Özet sayfasındaki "KONTROL ET" formülleri sizin denetim formülleriniz.
+3
+Altı kaynağın yalnızca özetinin okunması, Mahmood PDF'inin eksikliği, EasyAsk'ın iki kez yer alması
+✅
+"Okunan sürüm" sütunu eklenmiş (12 yayıncı, 13 arXiv sürümü); Mahmood eklenmiş; tekrar kaldırılmış.
+4
+Etik kurul ve KVKK planının olmaması
+⚠️
+Ayrıntılı plan hazır (Tablo 5, Yol A / Yol B); karar danışman görüşmesini bekliyor. Aşağıda Esas Sorun 1.
+5
+SMS doğrulama kodunun okunması riski
+✅
+Kapsamdan çıkarılmış; kod görülünce işlem yapılmaması ve rakamların maskelenmesi tanımlanmış (Bölüm 5.4).
+6
+Araştırma soruları, plan ve kapağın olmaması
+✅
+AS1–AS3 ölçümlere bağlı; plan akademik takvime göre; kapak var.
+7
+Sharifi vd. veri kümesinin "OATS" yazılması
+✅
+"STAQ" olarak düzeltilmiş; başlık, yazar sırası ve ASSETS '26 DOI'si PDF ile aynı.
+–
+Kaynakça biçimi (sıra, DOI, bağlantılar, makale numaraları, yatay tablo)
+✅
+Alfabetik sıra, DOI'ler, NeurIPS/ICML/ICLR bağlantıları ve Irfan'ın makale numarası tamam; Tablo 1 yatay sayfada. Birkaç küçük eksik aşağıda.
+Esas sorunlar: 
+Hafta-1'e göre liste çok kısaldı. Kalan iki konu kod yazmaya başlamadan netleşmeli; ikisi de Bahar dönemindeki kullanıcı çalışmasını doğrudan belirliyor.
+1. Etik kurul yolunun seçilmesi
+Sorun: Bölüm 6.2'de iki yolu da hazırlamışsınız ama hangisinin izleneceği belli değil. Güz planınızın ilk aşaması (Güz 0, 4–15 Kasım) bu karara bağlı.
+Neden önemli: Yol A seçilirse başvuru belgeleri Güz 1–2'de hazırlanmalı; kurul takvimi gecikirse Bahar'daki kullanıcı çalışması kayar. Yol B seçilirse AS1–AS3'ün sistem düzeyinde nasıl yanıtlanacağı (komut seti, riskli görev seti, sahte pop-up senaryoları) şimdiden ayrıntılandırılmalı. AS2 ve AS3'teki "anlaşılırlık" ve "yardımsız tamamlama" ölçümleri insan katılımcı olmadan yapılamaz.
+Adım adım ne yapmalısınız:
+Bölüm 6.2'deki soru listesiyle danışman görüşmesine gelin ve kararı yazılı olarak not edin.
+Yol A çıkarsa: protokol, bilgilendirilmiş onam formu ve aydınlatma metni taslaklarını Güz 1 sonuna kadar hazırlayın; kurulun toplantı tarihlerini plana işleyin.
+Yol B çıkarsa: AS2 ve AS3'ü sistem düzeyinde ölçülebilir biçimde yeniden yazın. Örneğin AS3 için "riskli görev setinde yanlışlıkla gerçekleşen işlem oranı", AS1 için "STAQ benzeri Türkçe komut setinde niyetin doğru anlaşılma oranı" gibi.
+Seçilen yolu belgenin başına, AS'lerin hemen altına tek cümleyle ekleyin ve Tablo 6'yı güncelleyin.
+2. Kullanıcı çalışmasının yükü ve AS1'in tasarımdaki yeri
+Sorun: Tablo 4'te üç karşılaştırma var: netleştirmeli ve netleştirmesiz sürüm, iki yardım kipi ve riskli senaryolar. Ama desen yalnızca iki kipin sırasını dengeliyor; netleştirme karşılaştırmasının hangi oturumda ve hangi görevlerle yapılacağı yazılmamış. Ayrıca 65 yaş üstü katılımcıdan iki adet 40 dakikalık oturumda sekiz görev, riskli senaryolar, SUS ve anlaşılırlık ölçeği beklemek ağır bir yük.
+Neden önemli: Yorgunluk, son görevlerin sonuçlarını bozar ve kip karşılaştırmasını gürültülü hale getirir. AS1'in deseni yazılmazsa savunmada "bu soruyu nasıl yanıtladınız?" sorusuna net bir cevabınız olmaz.
+Adım adım ne yapmalısınız:
+Her oturum için dakika dakika bir akış yazın (karşılama, alıştırma, görevler, anket, mola). Toplamı 40 dakikayı aşıyorsa görev sayısını azaltın.
+AS1'i ayrı bir kısa blok olarak tanımlayın. Örneğin her katılımcıya eksik ifade edilmiş 2–3 komut, bir kez netleştirmeli bir kez netleştirmesiz sürümle verilsin. Ya da AS1'i çevrim dışı olarak, katılımcıların kaydedilmiş komutları üzerinde ölçün.
+Riskli senaryoları (AS3) kurgusal ve kısa tutun; her katılımcıya en fazla 2 senaryo verin.
+Tablo 4'e "oturum akışı" adında bir satır ve AS1 için ayrı bir "desen" satırı ekleyin.
+Bahar 1–2'deki pilot çalışmayı 1–2 genç yetişkinle süre ölçmek için kullanın, süreyi buna göre düzeltin.
+Küçük düzeltmeler
+Bunlar projeyi durdurmaz ama bir sonraki teslimde düzeltilmiş olmalı.
+Yer
+Mevcut durum
+Öneri
+Bölüm 3 (Li vd.) ve Bölüm 4.2
+"Adım adım izletmek öğrenmeyi hızlandırıyor ama kalıcılığı azaltıyor"
+ExplorAR uzun süreli akılda kalmayı ölçmüyor; ölçtüğü şey öğrenmenin hemen ardından yardımsız tamamlama süresi. Öneri: "Adım adım AR talimatı öğrenme sırasında en hızlısıydı, ancak öğrenmenin hemen ardından yapılan yardımsız denemede ExplorAR'ın gerisinde kaldı (34,4 sn'ye karşı 18,3 sn)."
+Kaynakça: Xu vd. (2025)
+EMNLP bildirisi, DOI ve sayfa aralığı yok
+Diğer EMNLP kaynaklarınızdaki gibi sayfa aralığını ve 10.18653/v1/2025.emnlp-main.… biçimindeki DOI'yi ACL Anthology sayfasından ekleyin.
+Kaynakça: Li vd. (2025)
+MM '25 bildirisi, sayfa aralığı yok
+ACM Digital Library sayfasındaki sayfa aralığını ekleyin.
+Bölüm 9 (Yapay zekâ beyanı)
+Şekiller "hazırlanmasında" deniyor
+Şekil 2 bir görsel üretim aracıyla çizildiyse bunu ve hangi aracın kullanıldığını tek cümleyle belirtin; savunmada şekli düzenlenebilir bir kaynaktan (ör. draw.io) yeniden üretebilmeniz iyi olur.
+Projenin gelişimi ve geleceği
+Projeniz bitirme projesinin ötesine taşınabilecek bir zemine sahip. Aşağıdakiler bu dönemin zorunlu işleri değil; raporun "Gelecek çalışmalar" bölümünü ve olası bir yayını besleyecek yönler.
+1. Play politikasıyla uyumlu bir "Sen yap" sürümü. Politika, dil modelinin eylemi kendi başına planlayıp yürütmesini yasaklıyor ama insanın tanımladığı sabit betikleri serbest bırakıyor. Sizin üç katmanlı kararınızda kayıtlı görev tarifleri tam da bu alana yakın. Bir yakının ya da kullanıcının onayladığı görev tarifinin tekrar edilmesi, deterministik otomasyon olarak savunulabilir. "Mağazaya çıkabilecek güvenli bir ajan nasıl olur?" sorusu kendi başına küçük bir katkı olur.
+2. Türkçe yaşlı komut veri kümesi. İncelemenizde Türkçe konuşan yaşlılarla yapılmış bir çalışma bulamadığınızı yazıyorsunuz. Etik onayı alınmış, anonimleştirilmiş 200–300 komutluk küçük bir Türkçe komut seti, ElderBench ve STAQ'ın Türkçe karşılığı olarak başka araştırmacıların da kullanabileceği bir çıktı olur.
+3. Cihaz üzerinde konuşma tanımanın Türkçe yaşlı konuşmasındaki başarımı. Whisper'ın küçük sürümlerinin telefonda hız ve kelime hata oranı karşılaştırması (tiny, base, small), AS1'in alt ölçümünü bağımsız bir bulguya çevirebilir.
+4. Aile katmanının genişletilmesi. WePilot'taki gibi, yaşlı takıldığında bir yakının uzaktan görev tarifi kaydedip göndermesi. Bu, kayıtlı görev kütüphanesini politika açısından da güçlendirir, çünkü tarifi bir insan tanımlamış olur.
+5. Yayın hedefi. Bahar sonunda sayılarınız elinizdeyse ulusal bir kongre bildirisi (ör. UYMS veya benzeri bir yazılım ya da insan-bilgisayar etkileşimi toplantısı) gerçekçi bir hedef. Bunu danışmanınızla birlikte değerlendirin.
+Önerilen kaynaklar
+Kaynak sayınız yeterli. Aşağıdakiler, kullandığınız ama henüz kaynağını göstermediğiniz yöntemlerin temel kaynakları; şu kaynakçaları da incelemeniz iyi olur:
+Whisper'ın kendisi. Planda cihaz üzerinde Whisper sürümlerini karşılaştıracaksınız ama modelin özgün makalesine atıf yok. Radford, A., Kim, J. W., Xu, T., Brockman, G., McLeavey, C., & Sutskever, I. (2023). Robust speech recognition via large-scale weak supervision. In Proceedings of the 40th International Conference on Machine Learning (PMLR Vol. 202, pp. 28492–28518). https://proceedings.mlr.press/v202/radford23a.html
+SUS ölçeği. Tablo 4'te SUS ölçüyorsunuz; ölçeğin kaynağı gösterilmeli. Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In P. W. Jordan, B. Thomas, B. A. Weerdmeester, & I. L. McClelland (Eds.), Usability evaluation in industry (pp. 189–194). Taylor & Francis.
+SUS puanlarının yorumu. Küçük örneklemde elde edeceğiniz SUS ortalamasını "iyi/kabul edilebilir" diye yorumlamak için kullanılan referans. Bangor, A., Kortum, P. T., & Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human–Computer Interaction, 24(6), 574–594. https://doi.org/10.1080/10447310802205776
+SUS'un Türkçe uyarlamasını kullanacaksanız, hangi Türkçe sürümü kullandığınızı ve onun kaynağını da ekleyin.
+
+Yol haritası
+Kendi Tablo 6'nızı temel aldım; yalnızca bu geri bildirimden doğan işleri ekledim.
+Aşama
+Tarih
+Bu geri bildirimden eklenen iş
+Güz 0
+4–15 Kasım
+Danışman görüşmesi; Yol A / Yol B kararının yazılı notu. Küçük düzeltmeler (ExplorAR cümlesi, iki kaynakça girişi, yapay zekâ beyanındaki şekil notu).
+Güz 1
+16–29 Kasım
+Tablo 4'e oturum akışı ve AS1 deseni satırları. Yol A ise başvuru belgelerinin taslakları; Yol B ise AS2–AS3'ün sistem düzeyinde yeniden yazılması.
+Güz 2–3
+30 Kasım–25 Aralık
+Planınızdaki geliştirme işleri. Ek olarak Whisper sürümlerinin telefonda hız ölçümü tablosu.
+Final
+26 Aralık–10 Ocak
+Ara rapor taslağına bu belgenin güncel sürümünü taşıyın.
+Güz 4–5
+11 Ocak–7 Şubat
+Planınızdaki işler. Güvenlik testlerinde riskli görev setini AS3 senaryolarıyla aynı tutun ki laboratuvar ve kullanıcı sonuçları karşılaştırılabilsin.
+Bahar 1–2
+–
+Pilotta oturum süresini ölçün; 40 dakikayı aşıyorsa görev sayısını azaltın.
+Bir sonraki teslimde özellikle görmek istediklerim: etik kararının notu, güncellenmiş Tablo 4 ve çalışan Android iskeletinden birkaç ekran görüntüsü ya da kısa bir video.
+Kontrol listesi
+Danışman görüşmesi yapıldı; Yol A veya Yol B kararı belgeye ve Tablo 6'ya işlendi.
+Yol A ise başvuru belgelerinin taslakları hazır; Yol B ise AS2–AS3 sistem düzeyinde yeniden yazıldı
+Tablo 4'e dakika dakika oturum akışı eklendi; toplam süre 40 dakikayı aşmıyor
+AS1 (netleştirmeli ve netleştirmesiz) için ayrı desen yazıldı
+ExplorAR cümlesi "öğrenmenin hemen ardından yardımsız tamamlama" biçiminde düzeltildi (Bölüm 3 ve 4.2)
+Xu vd. (2025) kaynakçaya DOI ve sayfa aralığıyla eklendi
+Li vd. (2025) kaynakçaya sayfa aralığıyla eklendi
+Radford vd. (2023), Brooke (1996) ve Bangor vd. (2008) kaynakları incelendi, kullanılıyorsa eklendi
+Yapay zekâ beyanına Şekil 2'nin nasıl üretildiği eklendi
+Çalışan Android iskeletinden ekran görüntüsü veya kısa video bir sonraki teslime eklendi
+
+[Belgede 0 gömülü görsel var: []]

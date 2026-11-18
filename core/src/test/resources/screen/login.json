@@ -1,0 +1,19 @@
+[
+  {
+    "id": 3, "kind": "APPLICATION", "package": "com.example.shop", "active": true,
+    "root": {"class": "android.widget.FrameLayout", "bounds": [0, 0, 1080, 2340], "children": [
+      {"class": "android.widget.EditText", "text": "ali@example.com", "editable": true, "clickable": true, "inputType": 33, "bounds": [40, 300, 1040, 420]},
+      {"class": "android.widget.EditText", "hint": "Adınız", "editable": true, "clickable": true, "inputType": 1, "bounds": [40, 440, 1040, 560]},
+      {"class": "android.widget.EditText", "text": "Sifre123!", "desc": "Sifre123!", "hint": "Sifre123!", "password": true, "editable": true, "clickable": true, "inputType": 129, "bounds": [40, 580, 1040, 700]},
+      {"class": "android.widget.EditText", "text": "Gizli456", "editable": true, "clickable": true, "inputType": 145, "bounds": [40, 720, 1040, 840]},
+      {"class": "android.widget.EditText", "text": "4321", "editable": true, "clickable": true, "inputType": 18, "bounds": [40, 860, 1040, 980]},
+      {"class": "android.view.View", "text": "4111111111111111", "sensitive": true, "bounds": [40, 1000, 1040, 1100]},
+      {"class": "android.widget.Button", "clickable": true, "bounds": [40, 1200, 1040, 1320], "children": [
+        {"class": "android.widget.TextView", "text": "Giriş yap", "bounds": [400, 1220, 700, 1300]}
+      ]},
+      {"class": "android.widget.Button", "text": "Kayıt ol", "clickable": true, "bounds": [40, 1340, 1040, 1460], "children": [
+        {"class": "android.widget.TextView", "text": "Kayıt ol", "bounds": [400, 1360, 700, 1440]}
+      ]}
+    ]}
+  }
+]

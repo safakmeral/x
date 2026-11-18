@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- G-21 touch dot and scroll arrow (V-05: yellow ring with a dark edge). -->
+<resources>
+    <dimen name="trace_ring_radius">30dp</dimen>
+    <!-- Width of the yellow stroke -->
+    <dimen name="trace_stroke">8dp</dimen>
+    <!-- Dark edge on each side of the yellow stroke -->
+    <dimen name="trace_edge">3dp</dimen>
+    <dimen name="trace_arrow_head">32dp</dimen>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- G-39: layered answer to "neden?" (FG-15, NFG-09). Short, plain sentences (NFG-05). -->
+<resources>
+    <string name="explain_because">%1$s Bu yüzden %2$s.</string>
+    <string name="explain_you_asked">Bunu siz istediniz.</string>
+    <string name="explain_indirect_volume_up">Sesi duyamadığınızı söylediniz.</string>
+    <string name="explain_indirect_volume_down">Sesin çok yüksek olduğunu söylediniz.</string>
+    <string name="explain_indirect_brightness_up">Ekranın karanlık olduğunu söylediniz.</string>
+    <string name="explain_indirect_brightness_down">Ekranın çok parlak olduğunu söylediniz.</string>
+    <string name="explain_indirect_text_up">Yazıların küçük geldiğini söylediniz.</string>
+    <string name="explain_indirect_text_down">Yazıların büyük geldiğini söylediniz.</string>
+    <string name="explain_previous_reference">\"Onu\" deyince az önce sözü geçeni anladım: %1$s.</string>
+    <string name="explain_screen_reference">\"Bunu\" deyince ekranda seçili olan \"%1$s\" ögesini anladım.</string>
+    <string name="explain_repeated">Son yaptığım işi yinelememi istediniz.</string>
+    <string name="explain_done_open_app">%1$s uygulamasını açtım</string>
+    <string name="explain_done_call">%1$s için arama ekranını açtım</string>
+    <string name="explain_done_message">%1$s için mesaj ekranını açtım</string>
+    <string name="explain_done_volume_up">sesi açtım</string>
+    <string name="explain_done_volume_down">sesi kıstım</string>
+    <string name="explain_done_volume_show">ses ayarını gösterdim</string>
+    <string name="explain_done_display">ekran ayarlarını açtım</string>
+    <string name="explain_done_permission">rehber izni ekranını açtım</string>
+    <string name="explain_done_other">istediğiniz işi yaptım</string>
+    <string name="explain_asked_several">Söylediğinize uyan birden çok seçenek vardı; hangisini istediğinizi bilmem gerekiyordu.</string>
+    <string name="explain_asked_missing">Komutta kimin ya da neyin istendiği eksikti.</string>
+    <string name="explain_cannot_do">Bu isteği nasıl yapacağımı bilmiyorum.</string>
+    <string name="explain_nothing_recent">Az önce yaptığım bir iş yok.</string>
+    <string name="explain_screen_basis">Ekranda \"%1$s\" yazan ögeyi görüyorum.</string>
+    <string name="explain_app_basis">Telefonunuzda %1$s adlı uygulama yüklü.</string>
+    <string name="explain_contact_basis">Rehberinizde söylediğiniz ada uyan kişi %1$s.</string>
+    <string name="explain_contact_basis_inexact">Söylediğiniz ad rehberde tam olarak yoktu; en yakını %1$s.</string>
+    <string name="explain_confirm_note">Bu tür işleri, yanlışlık olmasın diye önce size sorarım.</string>
+    <string name="explain_undo_note">Bu iş kolayca geri alınabilir.</string>
+    <string name="explain_ask_detail">Tahmin edip yanlış iş yapmamak için soruyorum.</string>
+    <string name="explain_cannot_do_detail">Telefondaki kurallarım bu isteği karşılamıyor; başka sözcüklerle söylemeyi deneyebilirsiniz.</string>
+    <string name="explain_no_more_detail">Bundan başka söyleyebileceğim bir ayrıntı yok.</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFFFFF</color>
+    <color name="icon_background">#FF0B3D91</color>
+    <color name="icon_foreground">#FFFFD400</color>
+
+    <!-- Overlays (G-06): high contrast; V-05 yellow highlight, red reserved for errors -->
+    <color name="overlay_ink">#FF111111</color>
+    <color name="overlay_paper">#FFFFFFFF</color>
+    <color name="overlay_accent">#FF0B3D91</color>
+    <color name="overlay_highlight">#FFFFD400</color>
+</resources>

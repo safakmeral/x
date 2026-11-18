@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- All user-facing text is Turkish and lives here. -->
+<resources>
+    <string name="app_name">Telefon Asistanı</string>
+    <string name="home_title">Merhaba</string>
+    <string name="home_body">Ben telefon asistanınızım. Size telefonunuzu kullanırken yardım edeceğim.</string>
+
+    <!-- Home: accessibility status (G-05) -->
+    <string name="home_needs_permission">Size yardım edebilmem için bir izin açmanız gerekiyor.</string>
+    <string name="home_start_setup">İzni aç</string>
+    <string name="home_ready">Hazırım. Asistan açık.</string>
+
+    <!-- Accessibility disclosure, shown before any settings screen (NFG-65) -->
+    <string name="a11y_disclosure_title">Önce bilmeniz gerekenler</string>
+    <string name="a11y_disclosure_why">Telefonda size yol gösterebilmem ve isterseniz sizin yerinize dokunabilmem için \"Erişilebilirlik\" izni gerekiyor.</string>
+    <string name="a11y_disclosure_reads_title">Ne yaparım?</string>
+    <string name="a11y_disclosure_reads">Yalnız siz benden bir iş istediğinizde, o iş için ekrandaki yazılara ve düğmelere bakarım. Size yol gösteririm ya da dokunurum.</string>
+    <string name="a11y_disclosure_not_title">Ne yapmam?</string>
+    <string name="a11y_disclosure_not">Siz istemedikçe ekranınıza bakmam. Ekranın fotoğrafını çekmem. Şifrelerinizi okumam. Banka uygulamalarına dokunmam.</string>
+    <string name="a11y_disclosure_data">Ekrandan gördüklerim telefonunuzda kalır. İnternete bir şey gönderilecekse sizden ayrıca izin isterim.</string>
+    <string name="a11y_disclosure_off">Bu izni istediğiniz zaman Ayarlar\'dan kapatabilirsiniz.</string>
+    <string name="a11y_disclosure_accept">Kabul ediyorum, ayarları aç</string>
+    <string name="a11y_disclosure_decline">Şimdi değil</string>
+
+    <!-- After consent: guidance while the user is in Settings (TK-15) -->
+    <string name="a11y_waiting_title">Son bir adım</string>
+    <string name="a11y_waiting_steps">Açılan ekranda \"Telefon Asistanı\" yazısına dokunun. Sonra düğmeyi açın ve \"İzin ver\" deyin.</string>
+    <string name="a11y_restricted_title">Düğme gri ve açılmıyorsa</string>
+    <string name="a11y_restricted_steps">Aşağıdaki düğmeye basın. Sağ üstteki üç noktaya dokunun. \"Kısıtlı ayarlara izin ver\" seçin. Sonra buraya dönüp tekrar deneyin.</string>
+    <string name="a11y_open_settings_again">Ayarları yeniden aç</string>
+    <string name="a11y_open_app_info">Uygulama ayarlarını aç</string>
+    <string name="a11y_cancel">Vazgeç</string>
+    <string name="a11y_settings_unavailable">Ayarlar açılamadı. Lütfen Ayarlar\'dan \"Erişilebilirlik\" bölümüne kendiniz girin.</string>
+
+    <!-- Floating bubble and stop button (G-06, NFG-02: text labels, not icons) -->
+    <string name="bubble_label_idle">Konuş</string>
+    <string name="bubble_label_listening">Dinliyorum</string>
+    <string name="bubble_description_idle">Konuş. Benden bir şey istemek için dokunun. Yerini değiştirmek için basılı tutup sürükleyin.</string>
+    <string name="bubble_description_listening">Sizi dinliyorum. Mikrofon açık.</string>
+    <string name="stop_label">Dur</string>
+    <string name="stop_description">Dur. Asistanı hemen durdurur.</string>
+
+    <!-- Voice input (G-07): notices after a bubble tap -->
+    <string name="voice_notice_needs_mic">Sizi duyabilmem için mikrofon izni gerekiyor.</string>
+    <string name="voice_notice_pack_missing">İnternetsiz konuşma için Türkçe dil paketi gerekiyor.</string>
+    <string name="voice_notice_pack_downloading">Türkçe dil paketi henüz iniyor. Biraz sonra tekrar deneyin.</string>
+    <string name="voice_notice_not_supported">Bu telefonda internetsiz Türkçe ses tanıma yok.</string>
+    <string name="voice_notice_nothing_heard">Sizi duyamadım. Tekrar denemek için \"Konuş\" düğmesine dokunun.</string>
+    <string name="voice_notice_busy">Mikrofon şu an başka bir uygulamada. Biraz sonra tekrar deneyin.</string>
+    <string name="voice_notice_blocked">Mikrofon açılamadı. Tekrar denemek için \"Konuş\" düğmesine dokunun.</string>
+    <string name="voice_notice_failed">Bir sorun oldu. Tekrar denemek için \"Konuş\" düğmesine dokunun.</string>
+
+    <!-- Dialog sentences (G-09/G-11, NFG-05: short, one question, no percentages) -->
+    <string name="dialog_progress">Bakıyorum…</string>
+    <string name="dialog_done">Tamam, bitti.</string>
+    <string name="dialog_cancelled">Tamam, yapmıyorum.</string>
+    <string name="dialog_stopped">Durdum.</string>
+    <string name="dialog_confirm_again">Evet mi, hayır mı?</string>
+    <string name="dialog_not_heard">Sizi duyamadım. Tekrar denemek için \"Konuş\" düğmesine dokunun.</string>
+    <string name="dialog_failed">Bunu yapamadım.</string>
+    <string name="dialog_closing">Tamam, kapatıyorum.</string>
+
+    <!-- Decision engine sentences (G-10/G-11) -->
+    <string name="decision_opening_app">%1$s uygulamasını açıyorum.</string>
+    <string name="decision_confirm_open_app">%1$s uygulamasını açayım mı?</string>
+    <string name="decision_choose_app">Hangisini açayım: %1$s?</string>
+    <string name="decision_or">ya da</string>
+    <string name="decision_too_many">Birden çok uygulama buldum. Adını tam söyler misiniz?</string>
+    <string name="decision_cannot_do">Bunu henüz yapamıyorum.</string>
+    <string name="app_opened">%1$s açıldı.</string>
+
+    <!-- Typed command (G-11, FG-04) -->
+    <string name="type_button">Yazarak söyle</string>
+    <string name="type_button_description">Yazarak söyle. Konuşmak yerine yazmak için dokunun.</string>
+    <string name="type_title">Ne yapmamı istersiniz?</string>
+    <string name="type_hint">Buraya yazın. Örnek: Ayarları aç</string>
+    <string name="type_send">Gönder</string>
+    <string name="type_cancel">Vazgeç</string>
+
+    <!-- Yes/no buttons of the confirmation question (FG-07, UD-1 Ö-3) -->
+    <string name="confirm_yes">Evet</string>
+    <string name="confirm_yes_description">Evet. Asistan söylediği işi yapar.</string>
+    <string name="confirm_no">Hayır</string>
+    <string name="confirm_no_description">Hayır. Asistan işi yapmaz.</string>
+
+    <!-- Voice setup screen (G-07): microphone permission and Turkish offline pack -->
+    <string name="home_voice_setup">Sesli komutu hazırla</string>
+    <string name="voice_setup_title">Sesli komut</string>
+    <string name="voice_setup_privacy">Sesinizi yalnız telefonunuzun içinde yazıya çeviririm. Sesiniz internete gönderilmez ve kaydedilmez.</string>
+    <string name="voice_mic_title">1. Mikrofon izni</string>
+    <string name="voice_mic_why">Söylediklerinizi duyabilmem için mikrofon izni gerekiyor. Mikrofonu yalnız siz \"Konuş\" düğmesine dokunduğunuzda açarım. Mikrofon açıkken düğmede \"Dinliyorum\" yazar.</string>
+    <string name="voice_mic_granted">Mikrofon izni verildi.</string>
+    <string name="voice_mic_ask">Mikrofona izin ver</string>
+    <string name="voice_mic_denied">İzin kapalı. Aşağıdaki düğmeye basın. \"İzinler\", sonra \"Mikrofon\" bölümüne girin ve \"Uygulama kullanılırken izin ver\" seçin.</string>
+    <string name="voice_open_app_settings">Uygulama ayarlarını aç</string>
+    <string name="voice_lang_title">2. Türkçe dil paketi</string>
+    <string name="voice_lang_checking">Denetliyorum…</string>
+    <string name="voice_lang_ready">Türkçe dil paketi hazır. İnternet olmadan da sizi anlarım.</string>
+    <string name="voice_lang_unknown">Telefonunuz Türkçe paketin yüklü olup olmadığını söylemiyor. Aşağıdan bir deneme yapın. Olmazsa paketi indirin.</string>
+    <string name="voice_lang_missing">İnternetsiz çalışabilmem için Türkçe dil paketi gerekiyor. Bir kez indirmeniz yeterli. İndirirken yalnız paket telefonunuza gelir; sizden hiçbir bilgi gitmez.</string>
+    <string name="voice_lang_downloading">Türkçe paket iniyor. Bitince \"Yeniden denetle\" düğmesine basın.</string>
+    <string name="voice_lang_not_supported">Bu telefonun internetsiz ses tanıma hizmeti Türkçeyi sunmuyor. Sesinizi internete göndermediğim için şimdilik sesli komut çalışmaz. Aşağıdaki adımları deneyebilirsiniz.</string>
+    <string name="voice_lang_too_old">Bu telefonun Android sürümü internetsiz ses tanımayı desteklemiyor. Sesinizi internete göndermediğim için sesli komut bu telefonda çalışmaz.</string>
+    <string name="voice_download">Türkçe paketi indir</string>
+    <string name="voice_download_started">İndirme başladı. Biraz bekleyin.</string>
+    <string name="voice_download_scheduled">İndirme sıraya alındı. Telefon Wi-Fi\'ye bağlanınca inecek.</string>
+    <string name="voice_download_done">Türkçe paket indi.</string>
+    <string name="voice_download_failed">İndirilemedi. Aşağıdaki adımlarla ayarlardan indirmeyi deneyin.</string>
+    <string name="voice_download_not_possible">Bu telefonda paket buradan indirilemiyor. Aşağıdaki adımlarla ayarlardan indirin.</string>
+    <string name="voice_manual_steps">Ayarlardan indirmek için: Ayarlar uygulamasını açın. En üstteki arama kutusuna \"konuşma tanıma\" ya da \"çevrimdışı\" yazın. Çıkan sayfada Türkçe\'yi bulun ve indirin.</string>
+    <string name="voice_open_voice_settings">Ses ayarlarını aç</string>
+    <string name="voice_recheck">Yeniden denetle</string>
+    <string name="voice_try_title">3. Deneyin</string>
+    <string name="voice_try_hint">Düğmeye dokunun ve \"Ayarları aç\" gibi kısa bir şey söyleyin. İnternetin kapalı olması sorun değil.</string>
+    <string name="voice_try_start">Dokunun ve konuşun</string>
+    <string name="voice_try_listening">Dinliyorum… Konuşun. Mikrofon açık.</string>
+    <string name="voice_try_done">Bitirdim</string>
+    <string name="voice_try_heard">Duyduğum: %1$s</string>
+    <string name="voice_close">Kapat</string>
+    <string name="voice_settings_unavailable">Ayarlar açılamadı. Lütfen Ayarlar uygulamasını kendiniz açın.</string>
+    <!-- G-15: which recognizer is used, and the one-time Whisper model download (V-21). -->
+    <string name="voice_engine_system">Ses tanıma: telefonun kendi internetsiz tanıyıcısı.</string>
+    <string name="voice_engine_whisper">Ses tanıma: telefona indirilen Whisper ses modeli (%1$s). İnternetsiz çalışır.</string>
+    <string name="voice_model_title">2. Ses modeli</string>
+    <string name="voice_model_checking">Denetliyorum…</string>
+    <string name="voice_model_ready">Ses modeli hazır. İnternet olmadan da sizi anlarım.</string>
+    <string name="voice_model_needed">Sizi anlayabilmem için telefona bir ses modeli indirmem gerekiyor. Boyutu yaklaşık %1$d MB. Yalnız bir kez iner. İndirirken sizden ya da telefonunuzdan hiçbir bilgi gitmez. Sesiniz yine internete gönderilmez.</string>
+    <string name="voice_model_wifi_advice">Wi-Fi\'ye bağlıyken indirmenizi öneririm.</string>
+    <string name="voice_model_mobile_data">Şu an Wi-Fi\'ye bağlı değilsiniz. İndirirseniz mobil veriniz kullanılır.</string>
+    <string name="voice_model_download">İndir (%1$d MB)</string>
+    <string name="voice_model_downloading">İndiriyorum: yüzde %1$d. Bu sayfa açık kalsın.</string>
+    <string name="voice_model_cancel">İndirmeyi durdur</string>
+    <string name="voice_model_done">Ses modeli indi. Artık sesli komut verebilirsiniz.</string>
+    <string name="voice_model_failed_network">Ses modeli indirilemedi. İnternet bağlantısını denetleyip yeniden deneyin. İnen kısım saklandı, kaldığı yerden devam eder. Bu arada isterseniz yazarak söyleyebilirsiniz.</string>
+    <string name="voice_model_failed_checksum">İnen dosya bozuk çıktı, sildim. Yeniden deneyin. Bu arada isterseniz yazarak söyleyebilirsiniz.</string>
+    <string name="voice_model_failed_space">Telefonda yeterli boş yer yok. Biraz yer açıp yeniden deneyin. Bu arada isterseniz yazarak söyleyebilirsiniz.</string>
+    <string name="voice_model_unavailable">Bu telefonda internetsiz ses tanıma çalışmıyor. Sesinizi internete göndermediğim için komutları yazarak söyleyebilirsiniz.</string>
+    <string name="voice_model_retry">Yeniden dene</string>
+
+    <!-- Spoken answers (G-08, NFG-20): status, fix steps, speed -->
+    <string name="tts_title">Sesim</string>
+    <string name="tts_checking">Sesim hazırlanıyor…</string>
+    <string name="tts_ready">Türkçe sesim hazır. Söylediklerimi ayrıca yazıyla da gösteririm.</string>
+    <string name="tts_missing">Türkçe konuşabilmem için telefonunuza Türkçe ses indirilmesi gerekiyor. Ücretsizdir. Aşağıdaki düğmeye basın. Açılan ekranda \"Türkçe\" yazısını bulun ve indirin. Sonra buraya dönün. O zamana kadar size yalnız yazıyla cevap veririm.</string>
+    <string name="tts_missing_button">Türkçe sesi indir</string>
+    <string name="tts_not_supported">Telefonunuzda Türkçe konuşabilen bir ses yok. O yüzden şimdilik size yalnız yazıyla cevap veririm. Aşağıdaki düğmeye basın. Açılan ekranda \"Google\" sesini seçin ve Türkçe sesi indirin. Sonra buraya dönün.</string>
+    <string name="tts_init_failed">Telefonunuzun okuma sesi şu an çalışmıyor. O yüzden şimdilik size yalnız yazıyla cevap veririm. Aşağıdaki düğmeyle ses ayarlarını açabilirsiniz.</string>
+    <string name="tts_settings_button">Ses ayarlarını aç</string>
+    <string name="tts_settings_unavailable">Ayarlar açılamadı. Lütfen Ayarlar\'da \"Metin okuma\" bölümüne kendiniz girin.</string>
+    <string name="tts_rate_normal">Normal hızda konuş</string>
+    <string name="tts_rate_slow">Yavaş konuş</string>
+    <string name="tts_rate_selected_suffix"> (seçili)</string>
+    <string name="tts_try">Sesimi dinle</string>
+    <string name="tts_try_text">Merhaba. Ben telefon asistanınızım. Size böyle konuşacağım.</string>
+    <string name="read_aloud">Bu yazıyı sesli oku</string>
+
+    <!-- Shown by Android in the accessibility settings list -->
+    <string name="a11y_service_summary">Telefonu kullanırken size yardım eder.</string>
+    <string name="a11y_service_description">Telefon Asistanı yalnız siz bir iş istediğinizde ekrana bakar, size yol gösterir ya da sizin yerinize dokunur. Ekran fotoğrafı çekmez, şifre okumaz, banka uygulamalarına dokunmaz. Ekrandan gördükleri telefonunuzda kalır.</string>
+
+    <!--
+      G-30: privacy notice and separate consents (NFG-56, NFG-57, NFG-77, NFG-81).
+      Changing the meaning of any privacy_* or a11y_disclosure_* text: bump PrivacyNotice.TEXT_VERSION
+      (users are asked again) and update the fingerprint in PrivacyTextVersionTest.
+      Data controller name/contact: app/veri-sorumlusu.properties only.
+    -->
+    <string name="privacy_title">Gizlilik ve izinler</string>
+    <string name="privacy_intro">Burada bilgilerinizin nerede kaldığını anlatıyorum. Üç ayrı izin var. Her birine ayrı karar verirsiniz. Hiçbirine izin vermeseniz de size yardım ederim.</string>
+    <string name="privacy_stays_title">Telefonunuzda kalanlar</string>
+    <string name="privacy_stays">Sesiniz, ekranınızın görüntüsü, rehberiniz ve mesajlarınız telefonunuzdan çıkmaz. Sesinizi telefonun kendisi yazıya çevirir.</string>
+    <string name="privacy_cloud_title">1. İnternetten yardım (yurt dışı)</string>
+    <string name="privacy_cloud_body">Bazı işleri telefon tek başına çözemez. O zaman isteğinizin yazısını ve ekrandaki düğme adlarını internetteki bir yapay zekâya sorarım. Göndermeden önce adları, numaraları ve mesajları telefonda gizlerim. Yerlerine \"KİŞİ 1\" gibi işaretler koyarım.</string>
+    <string name="privacy_cloud_where">Bu yazılar yurt dışına gider: Google\'a (Gemini) ve gerekirse yedek olarak ABD\'deki Groq\'a. Arada Cloudflare adlı bir aracı sunucudan geçer. Google, ücretsiz hizmete gönderilenleri kendi ürünlerini geliştirmek için kullanabilir; çalışanları bunları okuyabilir.</string>
+    <string name="privacy_cloud_risk">Gizleme dikkatle yapılır ama kusursuz değildir. Nadiren bir ad ya da bilgi gizlenmeden gidebilir. Emin olamadığımda hiç göndermem.</string>
+    <string name="privacy_cloud_no">İzin vermezseniz internete hiçbir şey göndermem. Telefonun kendi bildiği işlerle yardım ederim.</string>
+    <string name="privacy_recipe_title">2. Yaptığımız işleri hatırlamam</string>
+    <string name="privacy_recipe_body">Zor bir işi birlikte bitirdiğimizde, bir dahaki sefere daha hızlı yapmak için adımlarını telefonunuzda saklayabilirim. Adlar, numaralar ve mesajlar saklanmaz. İzin verseniz de her işten sonra ayrıca sorarım. 180 gün kullanılmayan kayıt kendiliğinden silinir.</string>
+    <string name="privacy_research_title">3. Araştırma için ses kaydı</string>
+    <string name="privacy_research_body">Bu uygulama bir öğrenci projesidir. İzin verirseniz, sizi ne kadar doğru anladığımı ölçmek için sesinizi kısa süre telefonunuzda şifreli saklarım. Kayıt telefondan çıkmaz. Ölçüm bitince, en geç 7 gün içinde silinir. Araştırma için gerekli onaylar alınmadan bu kayıt kullanılmaz.</string>
+    <string name="privacy_accept">Kabul ediyorum</string>
+    <string name="privacy_refuse">Kabul etmiyorum</string>
+    <string name="privacy_revoke">İzni geri al</string>
+    <string name="privacy_selected_suffix"> (seçili)</string>
+    <string name="privacy_status_granted">Şu an: izin verdiniz (%1$s).</string>
+    <string name="privacy_status_refused">Şu an: izin vermediniz.</string>
+    <string name="privacy_status_not_asked">Henüz seçmediniz. Seçene kadar izin yok sayılır.</string>
+    <string name="privacy_status_outdated">Bu metin değişti. Lütfen yeniden seçin. Seçene kadar izin yok sayılır.</string>
+    <string name="privacy_change_later">Kararınızı istediğiniz an bu sayfadan değiştirebilirsiniz. Ana ekrandaki \"Gizlilik ve izinler\" düğmesine dokunmanız yeter.</string>
+    <string name="privacy_details_button">Ayrıntılı metni oku</string>
+    <string name="privacy_done">Bitti</string>
+    <string name="data_delete_title">Verilerimi sil</string>
+    <string name="data_delete_what">Bu telefonda uygulamanın sakladığı her şeyi silebilirsiniz: süre kayıtları, verdiğiniz izinler ve internet bağlantı bilgileri. Rehberiniz ve ekranda okunanlar zaten hiçbir yere kaydedilmez.</string>
+    <string name="data_delete_button">Tüm verilerimi sil</string>
+    <string name="data_delete_ask">Emin misiniz? Verdiğiniz tüm izinler de geri alınır ve uygulama sizden yeniden izin ister.</string>
+    <string name="data_delete_yes">Evet, hepsini sil</string>
+    <string name="data_delete_no">Vazgeç</string>
+    <string name="data_delete_done">Tüm verileriniz silindi.</string>
+    <string name="privacy_back">Geri dön</string>
+    <string name="privacy_home_button">Gizlilik ve izinler</string>
+    <string name="privacy_home_pending">İnternetten yardım ve diğer izinler için kararınızı bekliyorum.</string>
+
+    <string name="privacy_details_title">Aydınlatma metni</string>
+    <string name="privacy_details_version">Metin sürümü %1$d, %2$s.</string>
+    <string name="privacy_d_controller_title">Veri sorumlusu</string>
+    <string name="privacy_d_controller">Veri sorumlusu, bu uygulamayı bitirme projesi olarak geliştiren öğrencidir: %1$s. İletişim: %2$s.</string>
+    <string name="privacy_d_data_title">Hangi bilgiler, nerede?</string>
+    <string name="privacy_d_data_device">Telefonunuzda kalır, hiçbir yere gönderilmez: sesiniz, sesinizin yazıya çevrilmiş hâli, ekrandaki bilgilerin tamamı, rehberiniz, gizlenen bilgilerin gerçek karşılıkları, kayıtlı işler, kullanım ölçümleri ve izin kayıtlarınız. Ekran görüntüsü hiç alınmaz.</string>
+    <string name="privacy_d_data_cloud">Yalnız \"İnternetten yardım\" iznini verirseniz ve telefon bir işi kendi başına çözemezse gönderilir: gizlenmiş komut yazısı, ekrandaki düğme ve başlıkların gizlenmiş kısa özeti, yapılabilecek işlemlerin listesi ve açık olan uygulamanın adı (yalnız izin verilen uygulamalardan). Gizlenmiş yazı bile bağlamdan size ait bir bilgi taşıyabileceği için kişisel veri sayılır.</string>
+    <string name="privacy_d_purpose_title">Neden?</string>
+    <string name="privacy_d_purpose">Söylediğiniz işi anlamak ve telefonda adım adım yapmak ya da size göstermek için. Bilgileriniz reklam, satış ya da başka bir amaçla kullanılmaz.</string>
+    <string name="privacy_d_recipients_title">Kimlere, hangi ülkeye?</string>
+    <string name="privacy_d_recipient_google">Google (Gemini API, ücretsiz katman): asıl yapay zekâ. Google veriyi tesisi bulunan herhangi bir ülkede geçici olarak saklayabilir; Türkiye\'de ya da Avrupa Ekonomik Alanı\'nda kalacağının güvencesi yoktur. Ücretsiz katmanda Google gönderilenleri ürünlerini geliştirmek için kullanabilir ve çalışanları okuyabilir. Bu yüzden kişisel bilgiler göndermeden önce gizlenir.</string>
+    <string name="privacy_d_recipient_groq">Groq: yalnız Google\'a ulaşılamazsa kullanılan yedek. Veriler başta ABD olmak üzere yurt dışında işlenir. \"Sıfır veri saklama\" ayarı açık tutulur; Groq gönderilenleri yapay zekâ eğitiminde kullanmaz. Aynı izin ve aynı gizleme kuralları geçerlidir.</string>
+    <string name="privacy_d_recipient_cloudflare">Cloudflare: isteği yapay zekâya ileten aracı sunucu (yurt dışı). Gizli anahtarları telefonda tutmamak için kullanılır. İçerik kaydı tutmayacak biçimde ayarlanmıştır; internet bağlantı adresinizi (IP) görür.</string>
+    <string name="privacy_d_legal_title">Hukuki sebep</string>
+    <string name="privacy_d_legal">Yurt dışına gönderim için hukuki sebep, bu sayfada vereceğiniz açık rızadır (KVKK madde 5 ve 9). Dürüst olalım: 2024\'teki yasa değişikliğinden beri, sürekli tekrarlanan yurt dışı gönderimlerde açık rıza tek başına yeterli sayılmıyor. Bu yüzden asıl önlem, kişisel bilgilerinizin telefonda gizlenmesi ve gönderilmemesidir. Rızanız bunun üstüne eklenen bir güvencedir.</string>
+    <string name="privacy_d_risks_title">Olası riskler</string>
+    <string name="privacy_d_risks">Yurt dışındaki şirketlerde Türkiye\'deki koruma düzeyi olmayabilir. Gizleme kusursuz değildir: nadiren bir ad ya da bilgi gizlenmeden gidebilir ya da gizlenmiş yazıdan size dair bir şey anlaşılabilir. Telefon emin olamadığında isteği hiç göndermez.</string>
+    <string name="privacy_d_retention_title">Ne kadar saklanır?</string>
+    <string name="privacy_d_retention">Telefonunuzda: kullanım ölçümleri (içeriksiz) 30 gün; internete giden gizlenmiş isteklerin denetim kopyası 7 gün; kayıtlı işler siz silene dek, 180 gün kullanılmazsa kendiliğinden silinir; araştırma ses kaydı ölçüm bitince, en geç 7 gün; izin kayıtlarınız (tarih ve metin sürümü) siz silene dek. Yurt dışında: Groq ve aracı sunucu içerik saklamayacak biçimde ayarlıdır; Google\'ın ücretsiz katmandaki saklama süresini Google belirler, biz değiştiremeyiz.</string>
+    <string name="privacy_d_a11y_title">Erişilebilirlik izni ne için?</string>
+    <string name="privacy_d_rights_title">Haklarınız</string>
+    <string name="privacy_d_rights">KVKK madde 11 gereği; verilerinizin işlenip işlenmediğini öğrenme, bilgi isteme, düzeltilmesini ya da silinmesini isteme, itiraz etme ve zarar görürseniz giderilmesini isteme hakkınız vardır. Bunun için yukarıdaki iletişim adresine yazabilirsiniz.</string>
+    <string name="privacy_d_withdraw">İzinlerinizi \"Gizlilik ve izinler\" sayfasından tek dokunuşla geri alabilirsiniz. Geri aldığınız anda internete gönderim durur; asistan telefonun kendi bildiği işlerle çalışmaya devam eder. Uygulamayı kaldırırsanız uygulamanın telefondaki bütün bilgileri silinir.</string>
+
+    <!-- Address book (G-36, V-14: optional permission; NFG-06: reason first; FG-101: ask only on real ambiguity) -->
+    <string name="contacts_permission_title">Rehber izni</string>
+    <string name="contacts_permission_reason">Kişilerinizi adıyla bulabilmem için rehberinize bakmam gerekiyor. Örneğin \"Ayşe\'yi ara\" dediğinizde kimi kastettiğinizi rehberden anlarım.</string>
+    <string name="contacts_permission_privacy">Rehberinizden yalnız kişi adlarına bakarım. Rehberiniz bu telefonda kalır; kaydedilmez, internete gönderilmez. İzin vermezseniz de asistan çalışır; kişiyi ekranda birlikte ararız.</string>
+    <string name="contacts_permission_allow">Rehbere izin ver</string>
+    <string name="contacts_permission_not_now">Şimdi değil</string>
+    <string name="contacts_permission_denied_steps">İzin kapalı. Aşağıdaki düğmeye basın. \"İzinler\", sonra \"Kişiler\" bölümüne girin ve \"İzin ver\" seçin.</string>
+    <string name="contacts_granted">Rehber izni verildi.</string>
+    <string name="contacts_no_permission">Rehberinize bakma izni vermediğiniz için kişiyi rehberden bulamıyorum. İsterseniz ekranda birlikte arayalım.</string>
+    <string name="contacts_choose">Rehberde birden çok kişi var. Hangisi: %1$s?</string>
+    <string name="contacts_too_many">Rehberde bu adla %1$d kişi var. Soyadını da söyler misiniz?</string>
+    <string name="contacts_not_found">Rehberde bu adla kimseyi bulamadım. Adını bir daha söyler misiniz?</string>
+
+    <!-- G-37: clarification rules (call, message, settings). Names never take a case ending. -->
+    <string name="clarify_confirm_call">%1$s kişisini arayayım mı?</string>
+    <string name="clarify_confirm_call_inexact">Rehberde en yakın kişi %1$s. Onu arayayım mı?</string>
+    <string name="clarify_calling">%1$s için arama ekranını açıyorum.</string>
+    <string name="clarify_confirm_message">%1$s kişisine %2$s ile mesaj yazayım mı?</string>
+    <string name="clarify_confirm_message_inexact">Rehberde en yakın kişi %1$s. Ona %2$s ile mesaj yazayım mı?</string>
+    <string name="clarify_messaging">%1$s için mesaj ekranını açıyorum.</string>
+    <string name="clarify_sms_label">Mesajlar</string>
+    <string name="clarify_whom_call">Kimi arayayım?</string>
+    <string name="clarify_whom_message">Kime mesaj yazayım?</string>
+    <string name="clarify_choose_message_app">Mesajı nereden yazayım: %1$s?</string>
+    <string name="clarify_app_not_installed">%1$s telefonunuzda yüklü değil.</string>
+    <string name="clarify_still_not_found">Kişiyi yine bulamadım. Baloncuğa dokunup adını ve soyadını söyleyerek yeniden deneyin.</string>
+    <string name="clarify_opening_permission">Kişiyi bulmam için rehber izni gerekiyor. İzin ekranını açıyorum.</string>
+    <string name="clarify_confirm_permission">Rehber izni ekranını açayım mı?</string>
+    <string name="clarify_confirm_volume_up">Sesi açayım mı?</string>
+    <string name="clarify_confirm_volume_down">Sesi kısayım mı?</string>
+    <string name="clarify_confirm_volume_show">Ses ayarını göstereyim mi?</string>
+    <string name="clarify_confirm_display">Ekran ayarlarını açayım mı?</string>
+    <string name="clarify_volume_up">Sesi açıyorum.</string>
+    <string name="clarify_volume_down">Sesi kısıyorum.</string>
+    <string name="clarify_volume_show">Ses ayarını gösteriyorum.</string>
+    <string name="clarify_brightness">Ekran ayarlarını açıyorum. Parlaklığı oradaki çubukla ayarlayabilirsiniz.</string>
+    <string name="clarify_text_size">Ekran ayarlarını açıyorum. Yazı boyutunu \"Yazı tipi boyutu\" bölümünden değiştirebilirsiniz.</string>
+    <string name="device_dialer_opened">Arama ekranı açıldı. Aramak için yeşil düğmeye basın.</string>
+    <string name="device_message_opened">Mesaj ekranı açıldı. Mesajınızı yazıp kendiniz gönderin.</string>
+    <string name="device_volume_done">Tamam, ses ayarlandı.</string>
+    <string name="device_screen_opened">Ekran ayarları açıldı.</string>
+    <string name="device_permission_opened">İzin verdikten sonra komutunuzu yeniden söyleyin.</string>
+    <string name="device_no_number">Bu kişinin rehberde telefon numarası yok.</string>
+
+    <!-- G-34/G-35: cloud (language model through the proxy). Short, honest, no technical terms. -->
+    <string name="cloud_no_consent">Bu iş için internet yardımı gerekiyor, izin vermediniz.</string>
+    <string name="cloud_not_configured">Bu iş için internet yardımı gerekiyor ama bu telefonda henüz kurulmadı. Bildiğim işlerle devam edebilirim.</string>
+    <string name="cloud_quota_exhausted">İnternet yardımı şu an dolu, bildiğim işlerle devam edebilirim.</string>
+    <string name="cloud_unavailable">İnternete şu an ulaşamadım. Hiçbir şey yapmadım; biraz sonra yeniden deneyebilirsiniz.</string>
+    <string name="cloud_unauthorized">İnternet yardımının erişim kodu kabul edilmedi. Hiçbir şey yapmadım.</string>
+    <string name="cloud_private_data">Ekranda ya da sözünüzde gizli bilgi var, bunu internete soramam.</string>
+    <string name="cloud_not_understood">Cevabı anlayamadım, hiçbir şey yapmadım.</string>
+    <string name="cloud_plan_not_runnable">Bu işi henüz kendim yapamıyorum.</string>
+    <string name="bubble_label_cloud">İnternet</string>
+    <string name="bubble_description_cloud">İnternet yardımına soruyorum. Yalnız gizlenmiş bilgi gidiyor.</string>
+    <string name="cloud_setup_home_button">İnternet yardımı bağlantısı</string>
+    <string name="cloud_setup_title">İnternet yardımı bağlantısı</string>
+    <string name="cloud_setup_body">Bu bölümü kurulumu yapan kişi doldurur. Sunucu adresi ve erişim kodu girilmezse asistan yalnız telefonun içinde çalışır; internete hiçbir şey gitmez.</string>
+    <string name="cloud_setup_status_on">Bağlı sunucu: %1$s</string>
+    <string name="cloud_setup_status_off">Şu an kapalı: sunucu girilmedi.</string>
+    <string name="cloud_setup_address">Sunucu adresi</string>
+    <string name="cloud_setup_code">Erişim kodu</string>
+    <string name="cloud_setup_save">Kaydet</string>
+    <string name="cloud_setup_saved">Kaydedildi. İnternet yardımı, gizlilik izni verildiyse kullanılır.</string>
+    <string name="cloud_setup_bad_address">Adres kabul edilmedi. Yalnız https:// ile başlayan ve .workers.dev ile biten adres girilebilir.</string>
+    <string name="cloud_setup_bad_code">Erişim kodu en az 12 harf ya da rakam olmalı; boşluk ve işaret olmamalı.</string>
+    <string name="cloud_setup_remove">Bağlantıyı kaldır</string>
+    <string name="cloud_setup_removed">Bağlantı kaldırıldı. Asistan yalnız telefonun içinde çalışır.</string>
+    <string name="cloud_setup_back">Geri</string>
+</resources>

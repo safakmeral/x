@@ -1,0 +1,16 @@
+# Cloudflare Worker config for the proxy (G-33). Free plan only.
+# Secrets (GEMINI_API_KEY, GROQ_API_KEY, ACCESS_CODES) are NEVER written here;
+# they are set with `npx wrangler secret put <NAME>`.
+name = "yasli-asistan-vekil"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+workers_dev = true
+preview_urls = false
+
+# Privacy: no Workers Logs, no invocation logs, no traces.
+[observability]
+enabled = false
+
+[observability.logs]
+enabled = false
+invocation_logs = false

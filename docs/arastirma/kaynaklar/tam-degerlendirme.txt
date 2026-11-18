@@ -1,0 +1,540 @@
+
+BST401 BİTİRME PROJESİ
+
+Yaşlılar İçin Sesli Android Asistanı
+Erişilebilirlik hizmeti ve dil modeliyle risk dereceli onaylı görev yürütme: literatür değerlendirmesi ve proje çerçevesi
+Üniversite
+Trakya Üniversitesi
+Ders
+BST401 Bitirme Projesi (Hafta-1 revize teslimi)
+Öğrenci
+Şafak Meral
+Öğrenci numarası
+1232606027
+Danışman
+Doç. Dr. Murat Topaloğlu
+Dönem
+2026–2027 Güz
+Tarih
+4 Kasım 2026
+
+1. Giriş
+Akıllı telefon; haberleşmenin, sağlık randevusunun, devlet hizmetlerinin ve bankacılığın ortak kapısı oldu. Yaşlı kullanıcılar ise çok katmanlı menülerde yönlerini kaybediyor, yalnızca simgeyle gösterilen düğmelerin anlamını çıkaramıyor ve takıldıklarında yardım isteyebilecekleri kişiye her zaman ulaşamıyor (Gao vd., 2024; H. Zhang vd., 2025; Yu ve Chattopadhyay, 2024).
+Son iki yılda dil modeliyle çalışan mobil ajanlar ekranı okuyup kullanıcı adına dokunabilir hâle geldi (Wen vd., 2024; C. Zhang vd., 2025). Ne var ki yaşlıların gerçek komutlarıyla sınanan en iyi model görevlerin yarısını tamamlayamadı (Zhan vd., 2026), güvenlik ölçütünün ana değerlendirmesinde hiçbir ajanın yüksek riskli görevlerdeki ret oranı %70'i aşmadı (Lee vd., 2026) ve ekrana eklenen sahte pop-up'lar ajanları büyük oranda yanılttı (Y. Zhang vd., 2025). İncelediğim 25 kaynak arasında Türkçe konuşan yaşlılarla telefon asistanı ya da mobil ajan değerlendiren bir çalışmaya rastlamadım; bu bir yokluk kanıtı değil, yalnızca taramamın kapsamına ilişkin bir gözlem.
+Projenin amacı, yaşlıların sesle verdiği komutu anlayan, ekrandaki durumu Android erişilebilirlik hizmetiyle okuyan, yapılacak işlemin riskini ayrı bir kural katmanında derecelendiren ve işlemi ya adım adım göstererek ("Ben yapayım") ya da kullanıcı adına yaparak ("Sen yap") yürüten bir Android asistanı geliştirmektir. Dil modeli yalnızca eylem planlanırken devreye girer; kişisel veri buluta çıkmadan önce maskelenir ve yüksek riskli işlemde onay gelmezse işlem yapılmaz (sessizlik, "hayır" anlamına gelir).
+Bu belge, projenin literatür temelini ve çerçevesini ortaya koyar. Aşağıdaki araştırma soruları, literatürdeki boşluklardan türetilmiştir ve ikinci dönemde yaşlı katılımcılarla yapılacak kullanıcı çalışmasında yanıtlanacaktır.
+1.1 Araştırma soruları
+<w:tab w:val="left" w:pos="700"/></w:tabs><w:spacing w:after="120" w:line="300"/><w:ind w:left="700" w:hanging="700"/><w:jc w:val="both"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve">AS1	Eksik veya kısa Türkçe komutlarda tek bir netleştirme sorusu soran asistan, soru sormadan doğrudan işlem yapan sürüme göre görev başarısını ve niyetin doğru anlaşılma oranını artırıyor mu? (Alt ölçüm: Türkçe yaşlı konuşmasında kelime hata oranı.)
+<w:tab w:val="left" w:pos="700"/></w:tabs><w:spacing w:after="120" w:line="300"/><w:ind w:left="700" w:hanging="700"/><w:jc w:val="both"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve">AS2	"Sen yap" kipi ile "Ben yapayım" kipi, yaşlıların görevi sonradan yardımsız tamamlama oranını ve süresini nasıl farklılaştırıyor?
+<w:tab w:val="left" w:pos="700"/></w:tabs><w:spacing w:after="120" w:line="300"/><w:ind w:left="700" w:hanging="700"/><w:jc w:val="both"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve">AS3	Risk dereceli onay akışı (düşük: anlat; orta: göster ve bekle; yüksek: dur ve sor, sessizlik "hayır" sayılır), yaşlıların istemedikleri bir işlemin gerçekleşme oranını düşürüyor mu ve onay istemleri yaşlılarca anlaşılıyor mu?
+Belgenin geri kalanı şöyle ilerler: 2. bölümde literatür taramasının yöntemi, 3. bölümde 25 çalışmanın değerlendirmesi, 4. bölümde bulguların tasarım kararlarına ve ölçümlere dönüşümü, 5. bölümde önerilen sistem, 6. bölümde kullanıcı çalışması, etik kurul ve KVKK planı, 7. bölümde iki dönemlik iş-zaman planı, 8. bölümde riskler, 9. bölümde yapay zekâ kullanım beyanı yer alır; kaynakça en sonda.
+2. Yöntem
+Kaynaklar; ACM Digital Library, arXiv, ACL Anthology, Frontiers ve AAAI gibi çevrim içi akademik veri tabanlarında ve yayıncı sitelerinde yapılan aramalarla bulundu. Seçim için üç ölçüt kullandım: (1) 2024–2026 arasında yayımlanmış olması, (2) yaşlılar için telefon ya da sesli asistan tasarımını, mobil arayüz ajanlarını, ajan güvenliğini ve gizliliğini ya da görev belleğini konu alması, (3) tam metnine ulaşılabilmesi.
+Seçilen 25 çalışmanın türleri şöyle dağılıyor: dergi makalesi 4, konferans bildirisi 15, atölye bildirisi ya da poster özeti 4, ön baskı 2; yayın yılına göre 2024'te 6, 2025'te 14, 2026'da 5 çalışma var. Çalışmaları projeyle ilişkilerine göre üç gruba ayırdım: doğrudan ilişkili (yaşlı kullanıcı ve telefon ya da asistan; 7 çalışma), tek bir katmanı destekleyen bileşen çalışmaları (13 çalışma) ve arka plan çalışmaları (5 çalışma).
+Her çalışmanın tam metnini okuyup amaç, yöntem, bulgu ve sınırlılıklarını çıkardım ve sayısal bulguları metindeki değerlerle karşılaştırdım. Yayıncı sürümüne erişemediğim çalışmalarda arXiv sürümünü okudum; okunan sürüm Excel arşivindeki "Okunan sürüm" sütununda yazıyor ve sayılar okunan sürümden alınmıştır.
+Değerlendirmeyi beş temada topladım: yaşlılar için telefon yardımı ve öğretici sistemler; mobil arayüz ajanları ve ölçütleri; görev belleği ve bilgi erişimi; güvenlik ve gizlilik; sesli etkileşim, açıklama ve yaşlı beklentileri. Çalışmaların ayrıntılı karşılaştırması Tablo 1'de, ayrıca ekteki Excel arşivinde yer alıyor.
+3. Literatür değerlendirmesi
+Değerlendirilen 25 çalışma beş temada toplandı. Her tema kısa bir girişle başlıyor, ardından çalışmaların amaç, yöntem, bulgu ve sınırlılıkları anlatılıyor. Çalışmaların yan yana karşılaştırması bu bölümün sonundaki Tablo 1'de.
+3.1 Yaşlılar için telefon yardımı ve öğretici sistemler
+Bu temadaki çalışmalar yaşlının kendi telefonunda takıldığında nasıl yardım alabileceğini inceliyor; ortak noktaları, yardımın bağlama (ekrana, uygulamaya, aileye) bağlanması ve dokunma ile sesin birlikte kullanılması.
+Gao vd. (2024), yaşlıların bir uygulamanın ortasında takıldıklarında doğru öğreticiyi bulmasını kolaylaştıran EasyAsk'ı geliştirdi. Tasarım, 16 yaşlıyla yürütülen bir biçimlendirici çalışmayla (14 uygulamadan 240 soru) kuruldu; sistem ekranda beliren bir 'sor' düğmesini, sesli soruyu, parmakla işaretlenen ögeyi ve açık olan uygulamanın bağlamını tek bir sorguda birleştiriyor. Arka planda iFlytek ses tanıma, erişilebilirlik hizmeti, sorguyu düzenleyen GPT-4 ve 578 öğreticilik bir koleksiyonda FAISS araması çalışıyor. 18 yaşlıyla yapılan karşılaştırmada doğru öğretici bulma oranı %98,94 oldu; iki hazır arama aracında bu oran %36,17 ve %59,57'de kaldı. Arama süresi 22 saniyeden 11 saniyeye indi, algılanan zihinsel yük 3,39 ve 3,22 puandan 1,78 puana düştü. Bağlamı ve sorgu düzenlemeyi çıkarılan sürüm %68,09'da kaldığı için bu iki bileşenin katkısı açıkça görülüyor. Sınırlılıklar: öğretici sayısı kısıtlı, her sorguya tek sonuç dönüyor, bulut kullanımı gizlilik riski taşıyor ve çalışma Çince konuşan yaşlılarla yapıldı.
+Yu ve Chattopadhyay (2024), yaşlıların özellik dolu mobil arayüzlerde aradığını bulmakta zorlanmasının nedenini seçenek fazlalığında arıyor. İlk çalışmada 56 katılımcı (28 yaşlı, 28 genç) altı Android uygulamasının ekran görüntüleri üzerinde görev yaptı. İlgili üç seçenek görsel olarak öne çıkarıldığında yaşlılar özelliği genç yetişkinlerle benzer bir hızda buldu; seçeneğin bağlamıyla birlikte vurgulanması ve ağırlıklı yakınlaştırma yalnızca vurgulamaya göre daha verimliydi ve yaşlıların en çok beğendiği yollar oldu. İkinci çalışmada geliştirilen Nav Nudge, sesli soruyu dil modeliyle anahtar sözcüklere çevirip cümle kodlayıcıyla ekrandaki ögelerle eşleştiriyor ve benzerliği yüksek en fazla üç ögeyi vurguluyor. 60 yaş üstü 10 katılımcıyla yapılan denemede sistem arama uzayını 19 kez daralttı ve 18 durumda aranan özellik seçilen ögeler arasındaydı. Sınırlılıklar: ilk çalışma çevrim içi yapıldı ve etkileşimli uygulama yerine ekran görüntüsü kullandı, grup başına 28 kişilik örneklem yalnızca büyük etkileri saptayabiliyor, ses girişi konuşma tanıma hatalarına açık ve çıktı yalnızca görsel.
+Chen ve Mu (2025), yaşlı kullanıcılar için, isteneni onlar adına yapabilen ya da adım adım gösterebilen AgeMate'i tanıtıyor. GPT-4o'ya dayanan sistem her turda ekran görüntüsünü ve XML dökümünü girdi olarak alıyor; çıktısı bir gözlem, bir düşünce, bir eylem ve bir özet metninden oluşuyor; giriş ve çıkışta metin ile ses desteklenebiliyor. 'Otomatik yürütme' ve 'öğretici' olmak üzere iki kip var, öğretici kipte rehberlik ayrıntısı üç düzeyde ayarlanıyor. Yapılan işlemler yerel bir bilgi tabanına yazılıyor ve aynı uygulama için sonraki sorgularda isteme ekleniyor. Silme ya da ödeme gibi riskli işlemlerde sarı bir uyarı çıkıyor ve devam etmek için kullanıcının 'Biliyorum' düğmesine basması gerekiyor; yanlış dokunuş yok sayılıp uyarı veriliyor; tek tıkla çalışan bir acil durdurma düğmesi bulunuyor. Çalışma bir sistem tanıtımıdır: kullanıcı çalışması ve başarım ölçümü içermiyor. Yazarlar sınırlılık olarak eylemler arasındaki yaklaşık 20 saniyelik gecikmeyi, lehçelere yeterince uyum sağlamayan ses tanımayı ve ekran görüntülerinin dış bir API'ye gönderilmesinin doğurduğu gizlilik riskini belirtiyor.
+H. Zhang vd. (2025), telefon kullanmayı öğrenen yaşlıya hem genç aile üyelerinin hem de bir sohbet botunun destek verdiği WePilot'u önerdi. 11 yaşlı ve 10 genç aile üyesiyle yapılan biçimlendirici çalışmanın ardından geliştirilen sistem, Kotlin ile yazılmış bir erişilebilirlik hizmeti ve GPT-4o üzerine kurulu; 'adım adım' ve 'tek tıkla' olmak üzere iki yardım kipi sunuyor, sık yapılan işlemleri bir işlev kitaplığında saklıyor ve gizlilik gerektiren adımlarda otomasyonu durduruyor. Yanlış dokunuşta titreşim ve sesli uyarı veriliyor. 12 yaşlı–aile üyesi çiftiyle yapılan değerlendirmede işlem doğruluğu %93,8 ölçüldü, botun yönlendirdiği çözümlerin tamamı (25/25) başarılı oldu, aile üyesinin harcadığı süre %42 azaldı (ortalama 34,34 saniyeden 20,00 saniyeye); adım adım kipini 12 yaşlının 11'i seçti. Sınırlılıklar: yalnızca simgeyle gösterilen düğmeler (≡, ⋮) ve tutarsız metaforlar hataların ana kaynağıydı; çalışma tek bir kültürde ve kısa bir laboratuvar oturumunda yapıldı; yaşlıların görev süresindeki değişim anlamlı çıkmadı.
+Li vd. (2025), yaşlıların yeni bir uygulamayı deneme-yanılma yoluyla öğrenmesini destekleyen, artırılmış gerçeklik tabanlı ExplorAR'ı geliştirdi. HoloLens 2 üzerinde çalışan sistem, AppAgent ile çıkarılan bir işlem ağacına dayanarak doğru dokunuşu yeşil, hatalı dokunuşu kırmızı çerçeveyle gösteriyor, bir yardım düğmesi sunuyor ve 20 saniye hareketsizlikte uyarı veriyor. Ortalama yaşı 65,6 olan 18 yaşlı video, AR talimatı ve ExplorAR koşullarını karşılaştırdı. Öğrenme sırasında en kısa süre AR talimatında (80,9 sn; video 112,9 sn, ExplorAR 109,2 sn) ölçüldü; ancak öğrenmeden sonra yardımsız tamamlama süresi ExplorAR'da en kısaydı (18,3 sn; AR talimatında 34,4 sn), hata sayısı en azdı (7; AR talimatında 18) ve kullanılabilirlik puanı en yüksekti. Yani adım adım izletmek öğrenmeyi hızlandırıyor ama kalıcılığı azaltıyor. Sınırlılıklar: örneklem küçük, özel donanım gerekiyor ve ölçümler telefonun kendi ekranında değil AR ortamında yapıldı.
+Sharifi vd. (2026), yaşlıların teknik sorunlarını anlatma biçimini inceledi. 27 yaşlıyla yürütülen çevrim içi günlük çalışmasında sorular dört kalıba ayrıldı: ayrıntıya boğulan, eksik, aşırı belirli ve yetersiz belirli anlatımlar. Bu sorunları gidermek için kurulan GPT-4o tabanlı few-shot istem zinciri önce bağlamı netleştirmek için sorular soruyor, sonra soruyu yeniden ifade ediyor ve bir çözüm üretiyor. Yeniden ifade edilmiş sorular otomatik çözüm doğruluğunu %35'ten %69'a çıkardı; yardımcı rolündeki 48 genç yetişkin yeniden ifade edilmiş soruyu %93,7 oranında anladı (özgün soruda %65,8) ve 34 yaşlı ortaya çıkan çözümlerin %94,7'sini uygulanabilir buldu. Yazarlar ayrıca yaşlı üslubunu taklit eden 514 örneklik sentetik bir veri kümesi (STAQ) yayımladı. Sınırlılıklar: yaşlı örneklemi küçük, kendi isteğiyle katılan, İngilizce konuşan ve akıllı cihaz deneyimi olan kişilerden oluşuyor.
+3.2 Mobil arayüz ajanları ve ölçütleri
+Bu temadaki çalışmalar dil modelinin telefonu nasıl kullanabileceğini ve bunun nasıl ölçüldüğünü gösteriyor. Yaşlı kullanıcıyı merkeze alan tek çalışma ElderBench; diğerleri sistemin teknik temelini oluşturuyor.
+G. Liu vd. (2025), dil modeliyle çalışan telefon arayüzü ajanlarına ilişkin kapsamlı bir derleme yayımladı. Çalışma, betik tabanlı otomasyonun üç zayıflığını (sınırlı genellik, yüksek bakım yükü, zayıf niyet anlama) ortaya koyuyor; ajan çerçevelerini tek ajan, çok ajan ve planla-sonra-uygula olarak, modelleme yaklaşımlarını ise istem mühendisliği ve eğitim temelli (denetimli ince ayar, pekiştirmeli öğrenme) yöntemler olarak sınıflıyor ve veri kümeleriyle ölçütleri gözden geçiriyor. Açık sorunlar olarak veri kümesi çeşitliliği, cihaz üzerinde çalışma verimliliği, kullanıcıya uyum ve güvenlik sıralanıyor; otomatik değerlendirmenin pahalı ve el emeğine bağımlı olduğu, tek adımlı ölçütlerdeki başarının uzun görevlere taşınmadığı ve ajanların kalıcı bir uzun süreli belleğe sahip olmadığı vurgulanıyor. Bu bir derleme olduğu için yeni bir deney içermiyor ve metinde yaşlı kullanıcılara özgü bir bölüm bulunmuyor; bu nedenle yaşlılara yönelik tasarım kararları için başka kaynaklarla birlikte okunmalı.
+C. Zhang vd. (2025), çok kipli bir dil modelinin telefon uygulamalarını bir insan gibi dokunup kaydırarak kullanmasını sağlayan AppAgent'ı sunuyor. Ajan uygulamayı bazen kendi keşfiyle, bazen bir insanın gösterimini izleyerek öğreniyor, her arayüz ögesinin işlevini bir belgeye yazıyor ve sonraki görevlerde bu belgeyi isteme ekliyor. GPT-4 ile 10 uygulamada 50 görev denendi. Ham eylem uzayında başarı %2,2'de kaldı; yazarların tasarladığı eylem uzayıyla bu oran belge olmadan %48,9'a çıktı. Ajan uygulamayı kendi başına keşfettiğinde %73,3, bir insanın gösterimini izlediğinde %84,4, belge elle yazıldığında %95,6 elde edildi. Sınırlılıklar: değerlendirme 10 uygulama ve 50 görevle sınırlı, çok parmaklı hareketler desteklenmiyor ve çalışma yaşlı kullanıcı içermiyor.
+Wen vd. (2024), uygulama başına elle kurulum gerektirmeden Android görevlerini dil modeliyle yürüten AutoDroid'i sunuyor. Sistem arayüzü HTML benzeri sıkıştırılmış bir metne çeviriyor, uygulamayı önceden rastgele gezerek bir arayüz geçiş grafiği çıkarıyor ve bu bilgiyi gömme tabanlı bir bellekten isteme ekliyor; kişisel veriyi maskeleyen bir süzgeç ve riskli eylemlerde onay isteyen bir adım da içeriyor. 13 uygulamada 158 görevden oluşan DroidTask üzerinde GPT-4 ile görev tamamlama %71,3, eylem doğruluğu %90,9 olarak ölçüldü; makalenin ifadesiyle bu oran, GPT-4 temelli yöntemlere göre %36,4–39,7 daha yüksek, ortalama sorgu maliyeti ise %51,7 daha düşük. Sınırlılıklar: adım başına gecikmenin büyük kısmı dil modeli çağrısından geliyor (%42,1–87,1) ve gizlilik ile güvenlik önlemleri eylem doğruluğunu %92,9'dan %89,9'a, görev tamamlamayı %75,4'ten %69,9'a düşürdü.
+J. Wang vd. (2024), uzun işlem dizilerinde ajanın yönünü kaybetmesini azaltmak için üç ajanlı bir yapı öneriyor: planlama ajanı geçmiş işlemleri özetliyor, karar ajanı bir sonraki eylemi seçiyor, yansıtma ajanı eylemin işe yarayıp yaramadığını denetliyor; ekrandaki odak içeriği tutan bir bellek birimi de var. Algı için OCR, GroundingDINO ve Qwen-VL tabanlı araçlar, karar için GPT-4V kullanılıyor. Android (İngilizce) ve HarmonyOS (İngilizce dışı) ortamlarında 88 komutla yapılan deneylerde başarı öncülüne göre %30'dan fazla arttı; İngilizce dışı ortamda gelişmiş komutlarda başarı %20'den %55'e çıktı. Planlama ajanı çıkarıldığında temel ve gelişmiş komut başarısı 88,6 ve 61,4'ten 59,1 ve 29,5'e düştü. Sınırlılıklar: sistem GPT-4V'ye ve uzun bir araç zincirine bağımlı; GPT-4V ajan çerçevesi olmadan kullanıldığında temel ve gelişmiş komutlarda sırasıyla yalnızca %2,7 ve %0,9 başarı sağladı.
+Rawles vd. (2025), gerçek Android uygulamalarında ajanları sınayan AndroidWorld ortamını kurdu: 20 uygulamada 116 görev. Her görevin başlangıç durumu, başarı denetimi ve temizleme adımı sistem durumuna bakarak programatik olarak yazıldı; görev parametreleri rastgele üretildiği için aynı görevin sınırsız sayıda varyantı elde edilebiliyor. M3A, GPT-4 Turbo üzerinde çalışırken erişilebilirlik ağacını girdi aldığında görevlerin %30,6'sını, ekran görüntüsü ve Set-of-Mark etiketleriyle ise %25,4'ünü tamamladı; insan başarısı %80,0, uyarlanan SeeAct ise %15,5 oldu. M3A görev başına ortalama 3,9 dakika harcadı (insanın yaklaşık üç katı). Sınırlılıklar: rastgele tohumlar arasında başarı %26,3–33,2 aralığında oynuyor, ajanlar görev ve arayüz değişikliklerine duyarlı kalıyor ve makale yaşlı kullanıcıların komutlarını ele almıyor.
+Zhan vd. (2026), mobil ajanları yaşlıların gerçek komutlarıyla değerlendiren ElderBench'i yayımladı. 59–84 yaşlarındaki 28 yaşlıdan 20 uygulama için 249 komut toplandı; 130 görev çevrim içi, 119 görev çevrim dışı alt kümede değerlendirildi. Komutların %78,31'i 20 karakterden kısaydı, %19,28'i dolaylı anlatım, %12,85'i belirsiz gönderme içeriyordu ve %38,15'i eksik belirtilmişti. En iyi sonuç %49,80 ile Gemini-3-Flash'ta kaldı; onu Qwen3-VL-Plus (%47,39) ve AutoGLM (%36,55) izledi, hiçbir model %50'ye ulaşamadı. Komutların önce normalleştirilmesi AutoGLM'in başarısını yaklaşık 37'den 61'e çıkardı; yani sorun büyük ölçüde komutun dili. Sınırlılıklar: komutlar yalnızca Çince ve tek turlu görevlerden oluşuyor, çalışma henüz hakem sürecinden geçmemiş bir ön baskı.
+3.3 Görev belleği ve bilgi erişimi
+Bu çalışmalar, ajanın daha önce gördüğü ekranları, tamamladığı görevleri ya da dış eğiticileri bellek olarak kullanmasını inceliyor; projedeki kayıt-tekrar ve görev kütüphanesi katmanlarının dayanağıdır.
+Guan vd. (2025), uygulama keşfinden çıkan parçalı arayüz geçiş grafiklerini yapılandırılmış bir bilgi grafiğine ve vektör veri tabanına dönüştürüp ajanın karar anında sorguladığı KG-RAG yöntemini öneriyor. Yöntem, 12 İngilizce Android uygulamasında 162 görevden oluşan DroidTask'ta GPT-4 ile AutoDroid'e karşı sınandı (Wen vd. bu kıyaslamayı farklı bir uygulama ve görev sayısıyla tanıtıyor; sayıları her makalenin bildirdiği biçimde verdim): başarı %66,94'ten %75,8'e, karar doğruluğu %76,53'ten %84,6'ya yükseldi ve görev başına adım sayısı ortalama 4,5'ten 4,1'e geriledi. Yazarlar ayrıca Çin mobil ekosistemi için 30 uygulamada 300 görevli KG-Android-Bench'i ve HarmonyOS'ta 150 görevli KG-Harmony-Bench'i yayımladı. HarmonyOS'ta Mobile-Agent-v2'ye eklenince başarı %41,9'dan %55,4'e çıktı; yani yöntem başka ajanlara takılabiliyor. Sınırlılıklar: kazanç keşfe ayrılan süreyle sınırlı (karmaşık bir uygulamada yaklaşık dört saatte doygunluğa ulaşıyor), her uygulama için ayrı bir bilgi tabanı kurmak gerekiyor ve değerlendirme yaşlı kullanıcı verisi olmadan yapıldı.
+Xu vd. (2025), web eğiticilerinden yararlanan bir GUI ajanı geliştirdi. Yaklaşık 2,6 milyon eğitici (MINT, OmniCorpus, WikiHow) E5 gömmeleriyle aranıyor, ilk üç sonuç getiriliyor ve küçük bir model bu eğiticiler üzerinden o anki görev için kısa bir 'yönerge' üretiyor; model getirilen eğiticinin ilgili olup olmadığına da karar veriyor ve denetimli ince ayar ile ret örneklemeli ince ayarla eğitiliyor. AndroidWorld'de Qwen2.5-VL-7B'nin görev başarı oranı 22,0'dan 35,3'e, 72B sürümünün 35,0'dan 45,7'ye çıktı; ham eğiticiyi olduğu gibi eklemek (sıradan RAG) ise 22,4 ve 37,5 verdi. Sınırlılıklar: yalnızca Qwen-VL ailesi denendi ve yönerge üretimi gecikme ekliyor.
+Z. Z. Wang vd. (2025), ajanın tamamladığı görevlerden 'iş akışları' damıtıp bunları sonraki görevlerde rehber olarak kullanmasına dayanan Agent Workflow Memory'yi (AWM) öneriyor. İş akışları ya önceden elde edilmiş örneklerden (çevrim dışı) ya da test sırasında ajanın kendi başarılı yürütmelerinden (çevrim içi) dil modeliyle çıkarılıp belleğe ekleniyor; kural tabanlı bir çıkarım yöntemi de denendi ve WebArena'da benzer sonuç verdi. GPT-4 (gpt-4-0613) ile WebArena'da başarı %23,5'ten %35,5'e (göreli %51,1), Mind2Web'de göreli %24,6 arttı ve görevler daha az adımda çözüldü; çevrim içi sürüm görev, site ve alan değişimlerinde de temel yöntemi 8,9–14,0 puan geçti. Sınırlılıklar: deneyler yalnızca web ajanlarıyla yapıldı, Android'de denenmedi; yazarlar çıkarılan iş akışlarının her zaman doğru olmadığını ve yanlış iş akışlarının başarıyı düşürebildiğini belirtiyor. Bu çalışmayı projeme doğrudan bir yöntem olarak değil, kayıt-tekrar fikrinin genel çerçevesi olarak alıyorum.
+3.4 Güvenlik ve gizlilik
+Bu temadaki çalışmalar, ekranı okuyup işlem yapan bir ajanın hangi yollarla yanıltılabileceğini ve kişisel verinin nerede sızabileceğini ölçüyor.
+Lee vd. (2026), mobil cihaz kontrol eden ajanların güvenli davranışını ölçmek için MobileSafetyBench'i oluşturdu: 13 uygulamada, 100 düşük riskli ile 100 yüksek riskli görev ve 50 dolaylı istem enjeksiyonlu olmak üzere 250 görev. Ajanın kullanıcıdan onay istemesi güvenli davranış sayılıyor. GPT-4o düşük riskli görevlerde hedefe %82, yüksek riskli görevlerde %60 oranında ulaştı ve yüksek riskli görevlerin yalnızca %31'ini reddetti; Claude-3.5'in ret oranı %64'e çıktı, ancak ana değerlendirmede hiçbir ajanın yüksek riskli görevlerdeki ret oranı %70'i aşmadı. Güvenlik odaklı düşünce zinciri istemi GPT-4o'nun ret oranını %6'dan %36'ya yükseltti; görüntü içermeyen görev alt kümesinde ayrıca denenen o1 ajanı bu istemle %86 ret oranına ulaştı, ama yanıt süresi GPT-4o'nun yaklaşık dört katından fazlaydı. Reddetme ile yararlılık arasında ödünleşim var: Phi-4 yüksek riskli görevlerin %67'sini reddetti ama düşük riskli görevlerde hedefe ulaşma oranı %3'te kaldı. Sınırlılıklar: bir modelin riski soru-cevapta fark etme oranı %92 iken ajan ortamında bu oran %36'ya düşüyor (GPT-4o); görüntü girdisini desteklemeyen modeller için görev alt kümesi kullanıldı.
+Y. Zhang, Yu ve Yang (2025), görsel-dil modeliyle çalışan bilgisayar ajanlarının ekrana yerleştirilmiş sahte pop-up'lara ne kadar kolay kandığını inceledi. İnsanın rahatça yok sayabileceği, ajanın dikkatini çekmek üzere tasarlanmış pop-up'lar OSWorld'ün 50 ve VisualWebArena'nın 72 görevine eklendi ve beş kapalı kaynaklı model sınandı. Ortalama saldırı başarısı %86 oldu, görev başarısı %47 azaldı; pop-up'a tıklama, OSWorld'deki saldırılı eylemlerin %92,7'sini, VisualWebArena'dakilerin %73,1'ini oluşturdu. Ajana pop-up'ları yok saymasını söylemek ya da ekrana ek bir reklam uyarısı koymak gibi basit savunmalar saldırı başarısını göreli olarak en fazla %25 azalttı; bilgi bandındaki 'OK' ifadesi 'ADVERTISEMENT' ile değiştirildiğinde de saldırı başarısı %55'in üzerinde kaldı. Sınırlılıklar: yalnızca kapalı kaynaklı modeller denendi ve ortamlar masaüstü ile web; mobil ekranlara aktarım ayrıca sınanmalı.
+Green vd. (2025), kişisel ajan olarak çalışan akıl yürütme modellerinin 'düşünce izlerine' kullanıcının özel bilgisinin ne kadar sızdığını ölçtü. 8 milyar ile 600 milyardan fazla parametreli 17 model, AirGapAgent-R (4.160 istem) ve AgentDAM ölçütleriyle sınandı. Modeller düşünce izinde özel veriyi %19,10–78,02 oranında kullanıyor; izdeki bilgi nihai cevaba ortalama %5,55 oranında sızıyor; istem enjeksiyonuyla izden alan çıkarma ortalama %24,7'ye (s1.1 modelinde %49,5) ulaşıyor. Test anı hesaplama bütçesi artırıldığında cevap gizliliği 9,85 puan artarken iz gizliliği 12,35 puan azalıyor. Önerilen RANA yöntemi (akıl yürüt, anonimleştir, yanıtla) gizliliği ortalama 3,13 puan artırırken yararı 8,13 puan düşürdü. Sınırlılıklar: deneylerin büyük bölümü açık kaynaklı modellerle yapıldı (kapalı kaynaklı modeller yalnızca küçük bir kısımda denendi) ve ana analiz tam bir ajan düzeneğinde değil, sondaj düzeneğinde yapıldı.
+Kaliappan vd. (2024), CHI 2024 'HCI ve Yaşlanma' atölyesine sundukları görüş yazısında yaşlılara yönelik teknoloji literatürünü dil modelleri açısından yeniden ele alıyor. Metin; teknolojiye erişim ve dijital uçurum, akıllı sağlık izleme, dijital okuryazarlık ve güvenlik başlıkları altında önceki çalışmaları özetliyor. Yazarlara göre dil modelleri doğal konuşmayla erişilebilirliği artırabilir, ilaç hatırlatması ve beslenme önerileriyle sağlık izlemeyi destekleyebilir ve yaşlıları dolandırıcılık girişimlerine karşı uyarabilir. Aynı zamanda yanlış bilgi üretme (halüsinasyon), güven düzeyinin gösterilmemesi, doğru istem yazma gereksinimi, kişisel verinin açığa çıkması ve yanlış tanı riski sıralanıyor. Bu metin bir deney değildir: sayısal bulgu içermiyor, görüşler literatür özetine ve yazarların değerlendirmesine dayanıyor ve altı sayfalık bir atölye bildirisiyle sınırlı.
+3.5 Sesli etkileşim, açıklama ve yaşlı beklentileri
+Son tema, asistanın nasıl konuşması gerektiğine ve yaşlıların ondan ne beklediğine dair bulguları topluyor; konuşma tanıma doğruluğu da burada.
+van Dijk vd. (2025), yaşlı konuşmasında hazır konuşma tanıma modellerinin klinik kullanıma yeterli olup olmadığını sınadı. 65 yaş üstü 10 Hollandalı katılımcının Welzijn.AI sohbet robotuyla konuşması 199 parçaya (toplam 11 dakika 15 saniye) bölündü; sekiz açık ağırlıklı model karşılaştırıldı: beş Whisper sürümü (small, medium, large-v2, large-v3, large-v3-turbo), Voxtral-Mini-3B ve iki ince ayarlı model. En iyisi large-v3 oldu: kelime hata oranı yazım kurallarına göre 0,12, normalleştirilmiş metinde 0,06. Turbo sürümü biraz geride kaldı (0,16 ve 0,08) ama parça başına 1,43 saniyede çalıştı; large-v3 3,41 saniye sürdü. İnce ayarlı modeller geride kaldı (0,40 ve 0,49). Çıktılarda konuşmada geçmeyen ifadeler de görüldü. Sınırlılıklar: örneklem çok küçük, dil Hollandaca, süreler telefonda değil bir MacBook Pro M1'de ölçülmüş; Türkçe için sonuç sunmuyor.
+Mahmood vd. (2025), yaşlıların sağlık öz yönetimine destek olan bir sesli asistanı yaşlılarla birlikte tasarladı. Beş aşamalı süreçte önce 21 yaşlıyla (66–94 yaş; 4 çift birlikte görüşüldüğü için 17 veri noktası) yapılan görüşmelerde iki ana sorun belirlendi: sağlık farkındalığı ve ilaç uyumu. Ardından Alexa'ya GPT-4 bağlanarak doktorun muayene sonrası özetini anlatan ve kişiye özgü ilaç hatırlatıcıları öneren bir prototip kuruldu; 65–88 yaşlarında 10 kişiyle üç birlikte tasarım atölyesi yapıldı, prototip yenilendi ve 5 kişiyle ev içi doğrulama çalışması yürütüldü. Katılımcıların tümü görevleri tamamladı ve SUS ortalaması 85 çıktı. Ortaya çıkan ilkeler şunlar: bilgiyi hiyerarşik sun, son sözü kullanıcıya bırak, bir sorunun ardına başka ifade ekleme, karmaşık soruları tek ve basit sorulara böl ve kişisel bilgi isterken nedenini açıkla. Sınırlılıklar: örneklem küçük ve tek bir toplum merkezi ile çevresinden geliyor, hafif bilişsel bozukluğu olan bireyleri kapsamıyor (yazarlara göre), ev içi doğrulama yalnızca 5 kişiyle ve sahte doktor özetleriyle yapıldı, alan sağlıkla sınırlı ve prototip Alexa platformuna bağlı.
+Irfan, Kuoppamäki ve Skantze (2024), yaşlıların sohbet eden arkadaş robotlardan beklentilerini katılımcı tasarım atölyeleriyle inceledi. Dört atölyede 6–8'er kişilik gruplarla toplam 28 İsveççe konuşan yaşlı (66–86 yaş, ortalama 74,5) bulundu. Bir araştırmacı Furhat robotunu GPT-3.5 (text-davinci-003) ile yalnızca iki dakika gösterdi; ardından altı günlük yaşam senaryosu üzerinden odak grup tartışmaları yürütüldü ve metinler tematik olarak çözümlendi. Yaşlılar robotun yalnızken konuşmayı etkin biçimde sürdürmesini, sosyal ortamlarda geri çekilmesini, önceki konuşmaları hatırlamasını, gizliliğin korunmasını ve öğrendiği veri üzerinde kontrol sağlamasını, bilgi ve günlük hatırlatma vermesini ve empati göstermesini bekliyor. Bulgulardan dil modelleri için öneriler türetilmiş. Sınırlılıklar: katılımcılar robotla doğrudan konuşmadı, yalnızca gösterimi izledi; sonuçlar kendi bildirimlerine dayanıyor ve İsveççe bağlamıyla sınırlı.
+An vd. (2025), sağlığı hedefleyen konuşmalı ajan çalışmalarını yaşlılar açısından PRISMA yöntemiyle taradı; 72 makale (78 çalışma) incelendi. Yaşlıların beklentileri işlevsellik, doğal konuşma, kişiselleştirme ve kullanıcı kontrolü başlıklarında toplandı. Kabul düzeyini bildiren 15 çalışmanın 11'inde kabul düşük bulundu; öne çıkan kaygılar gizlilik (kaygıları bildiren 9 çalışmanın tümünde), bağımlılık, maliyet, damgalanma ve kullanılabilirlikti. Sağlık üzerindeki etkiyi bildiren çalışmaların 26'sı olumlu, 8'i nötr, 2'si olumsuz sonuç verdi. Sınırlılıklar: derleme sağlık alanıyla sınırlı, telefon kullanımını kapsamıyor ve bir ön baskı.
+Mathur, Rahman ve Desai (2026a), sesli asistanın 'uyumluluk' (agreeableness) düzeyinin açıklamaların algılanışını nasıl değiştirdiğini sınadı. 60–83 yaşlarında (ortalama 65,97) 70 ABD'li yaşlı katılımcı, 2×2×2 karışık bir desenle ses klipleri eklenmiş etkileşimli hikâye panolarını dinledi: kurgusal asistan Robin'in uyumluluğu yüksek ya da düşüktü (gruplar arası); açıklama ya konuşma geçmişine ya da gerçek zamanlı çevre verisine dayanıyordu ve bağlam rutin hatırlatma ya da acil durumdu (denekler içi). Yüksek uyumlu asistan daha benimsenebilir (ortanca 5,75'e karşı 5,25), daha empatik, daha sevimli ve daha güvenilir bulundu; algılanan zekâ değişmedi. Bu üstünlük rutin bağlamda daha geniş, acil durumda daha dardı; gerçek zamanlı çevre açıklamaları geçmişe dayalı olanlardan daha çok beğenildi ve kendisi de uyumlu olan yaşlılar düşük uyumlu asistanı daha sert eleştirdi. Sınırlılıklar: tek bir kişilik boyutu ve ikili manipülasyon, tek bir yapay ses, kurgusal senaryolar ve altı sayfalık poster özeti; gerçek ortamda uzun süreli kullanım sınanmadı.
+Mathur, Zubatiy vd. (2026b), yaşlıların bir dil modeli asistanından hangi açıklamayı hangi durumda istediğini 'hızlı flört' (speed dating) yöntemiyle inceledi. 65–78 yaşlarında (ortalama 72,2) 23 katılımcı (11 çift ve bir bireysel katılımcı; çiftlerde ilk partnerin hepsinde hafif bilişsel bozukluk vardı) dört açıklama kaynağını, yani konuşma geçmişini, çevre verisini, etkinlik çıkarımını ve güven yüzdesini, rutin hatırlatma ve acil durum senaryolarında değerlendirdi. Rutin hatırlatmada konuşma geçmişine dayalı açıklama, acil durumda çevre verisine dayalı açıklama en çok tercih edildi; güven yüzdesi her iki durumda da en az beğenilen açıklamaydı. Katılımcılar açıklamanın tek seferlik değil çok turlu ve katmanlı olmasını istedi. Sınırlılıklar: senaryolar düşük sadakatli ve kurgusal; çalışma ev içi sesli asistanlara ilişkin, telefon ajanına değil.
+
+Tablo 1
+Değerlendirilen 25 çalışmanın karşılaştırması
+No
+Kaynak
+Tür
+Platform
+Yaş aralığı; katılımcı
+Ses mi dokunma mı?
+Güvenlik önlemi
+Temel bulgu
+Sınırlılık
+Yaşlılar için telefon yardımı ve öğretici sistemler
+1
+Gao vd. (2024)
+Dergi
+Android
+56–76 (ort. 66–67); 16 + 18 yaşlı
+Ses + dokunma
+Hayır
+Doğru öğretici bulma %98,94 (hazır arama araçları %36,17 ve %59,57); arama süresi 22 sn → 11 sn
+Öğretici sayısı sınırlı, tek sonuç dönüyor; Çinli yaşlılarla yapıldı
+2
+Yu ve Chattopadhyay (2024)
+Konferans
+Android (mobil arayüz)
+Yaşlı ortanca 62; ikinci çalışmada 60+; 28 yaşlı + 28 genç; 10 yaşlı
+Ses + görsel ipucu
+Hayır
+Üç seçenek vurgulanınca yaşlılar özelliği gençlerle benzer hızda buldu; 19 daraltmanın 18'inde hedef özellik içerideydi
+Çevrim içi çalışma, ekran görüntüleri; küçük örneklem; ses tanıma sorunları
+3
+Chen ve Mu (2025)
+Atölye bildirisi
+Android
+—; Kullanıcı çalışması yok
+Metin + ses
+Evet
+Başarım ölçümü yok; eylemler arası gecikme yaklaşık 20 sn
+Kullanıcı çalışması yok; lehçelere uyumsuz ses tanıma; ekran görüntüsü dış API'ye gidiyor
+4
+H. Zhang vd. (2025)
+Dergi
+Android
+62–78 (biçimlendirici); 66–80 (değerlendirme); 11 yaşlı + 10 genç aile üyesi; 12 çift
+Ses + dokunma
+Evet
+İşlem doğruluğu %93,8; aile üyesinin harcadığı süre %42 azaldı; 12 yaşlıdan 11'i adım adım kipi seçti
+Tek kültür, kısa laboratuvar oturumu; yalnızca simgeli düğmeler hata kaynağı
+5
+Li vd. (2025)
+Konferans
+AR (HoloLens 2) + Android uygulama
+Ortalama 65,6; 18 yaşlı
+Dokunma + AR
+Hayır
+Yardımsız tamamlama 18,3 sn (AR talimatı 34,4 sn); hata 7'ye karşı 18; en yüksek kullanılabilirlik puanı
+Küçük örneklem, özel donanım, ölçüm AR ortamında
+6
+Sharifi vd. (2026)
+Konferans
+Uygulamadan bağımsız (metin sorgu)
+60+; 27 yaşlı (günlük) + 48 genç yardımcı + 34 yaşlı
+Metin
+Hayır
+Otomatik çözüm doğruluğu %35 → %69; yardımcılar yeniden ifadeyi %93,7 anladı (özgün %65,8)
+Küçük, gönüllü, İngilizce konuşan, cihaz deneyimli örneklem
+Mobil arayüz ajanları ve ölçütleri
+7
+G. Liu vd. (2025)
+Dergi (derleme)
+Telefon (Android)
+—; Derleme
+—
+Kısmen
+Açık sorunlar: veri çeşitliliği, cihaz üzerinde verimlilik, kullanıcıya uyum, güvenlik
+Yeni deney yok; yaşlı kullanıcıya özgü bölüm yok
+8
+C. Zhang vd. (2025)
+Konferans
+Android
+—; Katılımcı yok (10 uygulama, 50 görev)
+Metin görev tarifi + ekran
+Hayır
+Başarı %2,2'den %48,9'a (eylem uzayı), en iyi durumda %95,6'ya (elle yazılmış belge) çıktı; keşif %73,3, gösterim %84,4
+10 uygulama, 50 görev; çok parmaklı hareket yok
+9
+Wen vd. (2024)
+Konferans
+Android
+—; Katılımcı yok (13 uygulama, 158 görev)
+Metin komut
+Evet
+Görev tamamlama %71,3 (eylem doğruluğu %90,9); sorgu maliyeti %51,7 azaldı
+Gecikmenin büyük kısmı LLM çağrısı; güvenlik önlemleri doğruluğu düşürdü
+10
+J. Wang vd. (2024)
+Konferans
+Android + HarmonyOS
+—; Katılımcı yok (88 komut)
+Metin komut + ekran
+Hayır
+Öncülüne göre %30'dan fazla iyileşme; İngilizce dışı gelişmiş komutlarda %20 → %55
+GPT-4V ve uzun araç zincirine bağımlı
+11
+Rawles vd. (2025)
+Konferans
+Android
+—; Katılımcı yok (116 görev, 20 uygulama)
+Metin komut
+Hayır
+En iyi ajan %30,6; insan %80,0; erişilebilirlik ağacı girdisi (%30,6) ekran işaretlemesinden (%25,4) iyi
+Rastgele tohuma göre başarı %26,3–33,2 oynuyor; yaşlı komutu yok
+12
+Zhan vd. (2026)
+Ön baskı
+Android
+59–84; 28 yaşlı; 249 komut
+Yaşlılardan toplanan komutlar
+Hayır
+Hiçbir model %50'yi geçmedi (en iyi %49,80); komutların %78,31'i 20 karakterden kısa, %38,15'i eksik
+Yalnızca Çince, tek turlu görevler; ön baskı
+Görev belleği ve bilgi erişimi
+13
+Guan vd. (2025)
+Konferans
+Android + HarmonyOS
+—; Katılımcı yok (DroidTask 162 görev; yeni ölçütler 300 + 150 görev)
+Metin komut
+Hayır
+DroidTask'ta başarı %66,94 → %75,8, karar doğruluğu %76,53 → %84,6, ortalama adım 4,5 → 4,1 (AutoDroid'e karşı)
+Kazanç keşif süresine bağlı (yaklaşık 4 saatte doygunluk); her uygulama için ayrı bilgi tabanı gerekiyor; yaşlı verisi yok
+14
+Xu vd. (2025)
+Konferans
+Android + web
+—; Katılımcı yok
+Metin komut + ekran
+Hayır
+AndroidWorld görev başarı oranı 22,0 → 35,3 (7B), 35,0 → 45,7 (72B); sıradan RAG 22,4 ve 37,5
+Yalnızca Qwen-VL ailesi; yönerge üretimi gecikme ekliyor
+15
+Z. Z. Wang vd. (2025)
+Konferans
+Web
+—; Katılımcı yok (Mind2Web, WebArena)
+Metin komut
+Hayır
+WebArena %23,5 → %35,5 (göreli +%51,1); Mind2Web göreli +%24,6; daha az adım
+Yalnızca web; Android'de denenmedi; yanlış iş akışı başarıyı düşürebilir
+Güvenlik ve gizlilik
+16
+Lee vd. (2026)
+Konferans
+Android
+—; Katılımcı yok (250 görev, 13 uygulama)
+Metin komut
+Evet
+GPT-4o yüksek riskli görevlerin yalnızca %31'ini reddetti; ana değerlendirmede hiçbir ajan %70'i geçmedi; güvenlik odaklı istem %6 → %36
+Risk fark etme soru-cevapta %92, ajan ortamında %36; bazı modellerde görüntü girdisi yok
+17
+Y. Zhang vd. (2025)
+Konferans
+Masaüstü + web
+—; Katılımcı yok (50 + 72 görev)
+Metin komut + ekran
+Evet
+Ortalama saldırı başarısı %86; görev başarısı %47 azaldı; saldırı varken eylemlerin %92,7'si pop-up'a tıklamaydı (OSWorld)
+Yalnızca kapalı kaynaklı modeller; mobil değil
+18
+Green vd. (2025)
+Konferans
+Kişisel ajan (metin)
+—; Katılımcı yok (17 model)
+Metin
+Evet
+Düşünce izinde özel veri kullanımı %19,10–78,02; izden cevaba sızıntı ortalama %5,55
+Deneyler çoğunlukla açık kaynaklı modellerle; ana analiz sondaj düzeneğinde
+19
+Kaliappan vd. (2024)
+Atölye bildirisi
+Kavramsal
+—; Deney yok (görüş yazısı)
+—
+Kısmen
+Fırsatlar: erişilebilirlik, sağlık izleme, dijital okuryazarlık; riskler: halüsinasyon, gizlilik
+Deney değil; sayısal bulgu yok; altı sayfa
+Sesli etkileşim, açıklama ve yaşlı beklentileri
+20
+van Dijk vd. (2025)
+Atölye bildirisi
+Konuşma tanıma (klinik uygulama)
+65+; 10 yaşlı; 199 konuşma parçası
+Ses
+Hayır
+En iyisi large-v3: kelime hata oranı 0,12 (normalize 0,06). Turbo 0,16 (0,08) ile biraz geride ama 1,43 sn; large-v3 3,41 sn. İnce ayarlı modeller geride (0,40 ve 0,49)
+Çok küçük örneklem (yaklaşık 11 dk), Hollandaca; süreler telefonda değil MacBook Pro M1'de ölçülmüş
+21
+Mahmood vd. (2025)
+Konferans
+Akıllı hoparlör (Alexa)
+66–94 (görüşme); 65–88 (atölye); 21 + 10 + 5 yaşlı
+Ses
+Kısmen
+Tüm katılımcılar görevleri tamamladı; SUS ortalaması 85
+Küçük, tek merkezli örneklem; ev içi doğrulama 5 kişiyle ve sahte özetlerle; Alexa'ya bağlı
+22
+Irfan vd. (2024)
+Dergi
+Robot (Furhat)
+66–86 (ort. 74,5); 28 yaşlı
+Ses
+Kısmen
+Beklentiler: hatırlama, kişiselleştirme, gizlilik ve veri kontrolü, hatırlatma, empati
+Katılımcılar robotla doğrudan konuşmadı (2 dk gösterim); İsveççe
+23
+An vd. (2025)
+Ön baskı (derleme)
+Sağlık odaklı konuşmalı ajanlar
+—; 72 makale (78 çalışma)
+—
+Kısmen
+Kabul düzeyi bildirilen 15 çalışmanın 11'inde düşük; en sık kaygı gizlilik; sağlık etkisi çoğunlukla olumlu (26 olumlu, 8 nötr, 2 olumsuz)
+Sağlık odaklı; telefon kullanımı kapsam dışı; ön baskı
+24
+Mathur, Rahman ve Desai (2026a)
+Poster özeti
+Ev içi sesli asistan (hikâye panosu)
+60–83 (ort. 65,97); 70 yaşlı
+Ses (kayıtlı klipler)
+Hayır
+Uyumlu asistan daha güvenilir, empatik, sevimli; acil durumda üstünlük azaldı; algılanan zekâ değişmedi
+Tek kişilik boyutu, tek yapay ses, kurgusal senaryo; 6 sayfa
+25
+Mathur, Zubatiy vd. (2026b)
+Konferans
+Ev içi sesli asistan (hikâye panosu)
+65–78 (ort. 72,2); 23 yaşlı (11 çift + 1 kişi)
+Ses / senaryo
+Hayır
+Rutinde konuşma geçmişi, acilde çevre verisi açıklaması en iyi; güven yüzdesi her ikisinde en kötü
+Düşük sadakatli kurgusal senaryolar; telefon ajanı değil
+Not. Yaş aralığındaki “—” işareti çalışmanın yaşlı katılımcı içermediğini ya da yaşın bildirilmediğini gösterir. Güvenlik önlemi sütunu, sistemde onay, uyarı ya da maskeleme gibi bir önlemin bulunup bulunmadığını belirtir.
+
+4. Literatürden projeye çıkarımlarım
+Aşağıda, okuduğum çalışmalardan çıkardığım bulguları altı başlıkta topladım. Her başlıkta bulgunun hangi tasarım kararına dönüştüğünü, kararın nasıl sınanacağını belirtiyorum; özet eşleşme Tablo 2'de.
+4.1 Komutu anlama ve netleştirme
+ElderBench'te yaşlı komutlarının %78'i 20 karakterden kısaydı, %38'i eksikti; en başarılı model bile görevlerin yarısına ulaşamadı, komutlar normalleştirilince ise başarı belirgin biçimde yükseldi (Zhan vd., 2026). Sharifi vd. (2026) de yaşlıların sorularındaki eksikliğin ve aşırı ayrıntının netleştirme sorusu ile yeniden ifade yoluyla giderilebildiğini gösterdi. Bu yüzden asistan komutu anlayamadığında tahmin yürütüp işlem yapmayacak: tek bir kısa soru soracak, anladığını bir cümleyle geri okuyacak ve yaşlı onaylamadan işleme başlamayacak. Konuşma tanıma için Whisper'ın boyut–hız dengesi (van Dijk vd., 2025) ile Türkçe yaşlı konuşmasındaki hata oranı benim ölçmem gereken bilinmeyenler; transkripti geri okutmak ayrıca uydurma çıktılara karşı ikinci bir güvence.
+4.2 Yardım kipi: yönlendirmek ve yapmak
+AgeMate işi yapan ve öğreten iki kipi bir arada sunuyor (Chen ve Mu, 2025); WePilot'ta adım adım yardımı 12 yaşlının 11'i seçti (H. Zhang vd., 2025). ExplorAR ise adım adım izletmenin öğrenmeyi hızlandırdığını ama kalıcılığı düşürdüğünü, deneme-yanılmaya izin vermenin sonradan yardımsız tamamlamayı iyileştirdiğini gösterdi (Li vd., 2025). Bu nedenle iki kipi şöyle tanımlıyorum: "Ben yapayım" kipinde asistan yalnızca ekranda doğru ögeyi vurgular ve sesle yönlendirir, dokunmayı yaşlı yapar; rehberlik ayrıntısı kullanıcı öğrendikçe azalır. "Sen yap" kipinde asistan işlemi yapar, yaşlı izler ve her an durdurabilir. Hangi kipin yardımsız tamamlamayı artırdığı AS2 ile ölçülecek.
+4.3 Ekranı okuma ve görev belleği
+AndroidWorld'de erişilebilirlik ağacı girdisi ekran işaretlemesinden daha iyi sonuç verdi (Rawles vd., 2025); AutoDroid de arayüzü sıkıştırılmış bir metne çevirip sorguları en iyileyerek ortalama sorgu maliyetini %51,7 azalttı (Wen vd., 2024). Projem ekranı bu yüzden erişilebilirlik hizmetiyle okuyacak. Karar üç katmanlı olacak: önce kural, olmazsa daha önce kaydedilmiş görev tarifi (AppAgent'ta gösterimden öğrenme %84,4 başarı verdi; C. Zhang vd., 2025), en son dil modeli. Kayıtlı görevler vektör aramasıyla bulunacak (Guan vd., 2025; Xu vd., 2025) ve yeni bir görev başarıyla bitince kütüphaneye yalnızca kullanıcının onayıyla eklenecek. Z. Z. Wang vd. (2025) bu fikrin genel çerçevesini web için gösterdi; Android'e uygulanabilirliği kendi ölçümlerimle sınanacağı için bir kazanım iddiasında bulunmuyorum.
+4.4 Güvenlik ve gizlilik
+Lee vd. (2026) ana değerlendirmede hiçbir ajanın yüksek riskli görevlerde %70'in üzerinde ret oranına ulaşamadığını, Y. Zhang vd. (2025) ise sahte pop-up'ların ajanları ortalama %86 oranında yanılttığını gösterdi. Bu yüzden riskin değerlendirilmesini dil modeline bırakmıyorum: işlemin riski ayrı ve kural tabanlı bir sınıflandırıcıyla belirleniyor (düşük: anlat; orta: göster ve bekle; yüksek: dur ve sor), yüksek riskte sessizlik "hayır" sayılıyor. Ekrandaki metin komut değil veri olarak ele alınıyor. Green vd. (2025) düşünce izlerinin ayrı bir sızıntı yüzeyi olduğunu gösterdiği için buluta yalnızca maskelenmiş ekran özeti gidecek ve düşünce izi saklanmayacak; parola alanları hiç okunmayacak, banka uygulamaları engellenecek. Kaliappan vd. (2024) ve An vd. (2025) yaşlıların gizlilik ve yanlış bilgi kaygısını öne çıkarıyor; AgeMate'in tek dokunuşluk acil durdurması (Chen ve Mu, 2025) her ekranda erişilebilir bir durdurma düğmesi için örnek oldu.
+4.5 Konuşma biçimi ve açıklama
+Mahmood vd. (2025) tek seferde tek basit soru sorulmasını, son sözün kullanıcıda kalmasını ve kişisel bilgi istenirken nedeninin söylenmesini önerdi. Mathur, Zubatiy vd. (2026b) güven yüzdesi gibi sayısal açıklamaların yaşlılarca en az beğenildiğini, Mathur, Rahman ve Desai (2026a) ise sıcak bir tonun rutin durumlarda yarar sağladığını ama acil durumda açıklığın daha önemli olduğunu bildirdi. Asistanın cümleleri bu yüzden kısa, tek soruluk ve yüzde ya da olasılık içermeyecek; rutin işlerde sıcak, riskli ve acil durumlarda sade ve net olacak.
+4.6 Veri ve kullanıcı kontrolü
+Irfan vd. (2024), yaşlıların öğrenilen veri üzerinde kontrol beklediğini; An vd. (2025) ise gizlilik kaygısının kabulü düşüren başlıca etkenlerden olduğunu bildirdi. Projede kayıtlar cihazda tutulacak, kullanıcı kendi görev kayıtlarını görüp silebilecek, yetkilendirdiği bir aile üyesi ise yalnızca ayarları (örneğin kullanılabilecek uygulamalar) yönetebilecek.
+Literatürdeki oranlar başka dillerde, başka kültürlerde ve başka cihazlarda elde edildi. Bu yüzden onları yalnızca başlangıç varsayımı sayıyor, sistemimin başarısı hakkında iddiayı kendi ölçümlerim çıkana kadar ileri sürmüyorum.
+Tablo 2
+Literatür bulgusundan tasarım kararına ve ölçüme
+Literatür bulgusu
+Tasarım kararı
+Nasıl ölçülecek
+Yaşlı komutları kısa, eksik ve dolaylı; en iyi model %50'yi geçemedi (Zhan vd., 2026). Dil modeliyle yeniden ifade edilen sorular otomatik çözüm doğruluğunu %35'ten %69'a çıkardı (Sharifi vd., 2026).
+Eksik komutta tek netleştirme sorusu, anlaşılanı geri okuma, onay.
+AS1: netleştirmeli ve netleştirmesiz sürüm; görev başarısı, niyetin doğru anlaşılma oranı, ek tur sayısı.
+Hollandaca yaşlı konuşmasında sekiz modelden en iyisi Whisper large-v3 oldu (kelime hata oranı 0,12; normalleştirilmiş 0,06); turbo 0,16 ile biraz geride ama parça başına 1,43 sn (large-v3: 3,41 sn); ince ayarlı modeller geride kaldı; uydurma çıktı gözlendi (van Dijk vd., 2025).
+Cihazda çalışacak Whisper sürümlerinin (small, medium, turbo) Türkçede karşılaştırılması; ince ayarlı modele güvenmeden önce ölçüm; transkripti geri okutma.
+Türkçe yaşlı konuşma örneğinde kelime hata oranı ve süre; geri okumayla yakalanan hata sayısı.
+Adım adım izletme öğrenmeyi hızlandırıyor, kalıcılığı düşürüyor (Li vd., 2025); 12 yaşlıdan 11'i adım adım yardımı seçti (H. Zhang vd., 2025).
+İki kip: "Ben yapayım" (vurgula ve yönlendir, azalan rehberlik) ve "Sen yap".
+AS2: yardımsız tamamlama oranı, süre, hata sayısı, kip tercihi.
+Erişilebilirlik ağacı girdisi ekran işaretlemesinden iyi (%30,6 ve %25,4; Rawles vd., 2025).
+Ekranı erişilebilirlik hizmetiyle oku.
+Hedef ögenin ağaçta bulunamadığı ekranların oranı; adım başına süre.
+Gösterimi izleyerek öğrenme %84,4 başarı verdi (C. Zhang vd., 2025); KG-RAG başarıyı AutoDroid'in %66,94'ünden %75,8'e çıkardı (Guan vd., 2025).
+Üç katman: kural, kayıt-tekrar, dil modeli; görev kütüphanesi vektör aramasıyla.
+Her katmanda çözülen görev oranı; dil modeli çağrı sayısı ve maliyeti.
+Ana değerlendirmede yüksek riskli görevlerde hiçbir ajanın ret oranı %70'i aşmadı (Lee vd., 2026).
+Kural tabanlı risk sınıflandırıcı; yüksek riskte dur ve sor, sessizlik "hayır".
+AS3: riskli görev setinde yanlışlıkla gerçekleşen işlem oranı.
+Sahte pop-up'lar ajanları ortalama %86 yanılttı (Y. Zhang vd., 2025).
+Ekran metni güvenilmez veri; beklenmedik pop-up'ta işlemi durdur.
+Hazırlanan sahte pop-up senaryolarında asistanın yanlış tıklama oranı.
+Talimata rağmen modeller düşünce izinde en az bir özel veri alanını %19–78 oranında kullandı (Green vd., 2025); AutoDroid kişisel veriyi maskeledi (Wen vd., 2024).
+Buluta yalnızca maskelenmiş özet; düşünce izi saklanmaz; parola alanı okunmaz.
+Buluta giden isteklerin günlük denetimiyle maskesiz kişisel veri sayısı.
+Tek soru, son söz kullanıcıda (Mahmood vd., 2025); güven yüzdesi en az beğenilen açıklama (Mathur, Zubatiy vd., 2026b).
+Kısa, tek soruluk, yüzde içermeyen cümleler.
+Onay istemlerinin anlaşılırlığı (5'li ölçek) ve SUS.
+Gizlilik kaygısı ve veri kontrolü beklentisi yüksek (An vd., 2025; Irfan vd., 2024).
+Kayıtlar cihazda; kullanıcı görür ve siler.
+Gizlilik rahatlığı (5'li ölçek); silme isteği testi.
+Eylemler arası gecikme yaklaşık 20 sn (Chen ve Mu, 2025); gecikmenin %42–87'si dil modeli çağrısı (Wen vd., 2024).
+Kural ve kayıt-tekrar önce; beklerken sesli bilgi.
+Adım başına ortalama süre; beklerken görevi bırakan katılımcı oranı.
+5. Önerilen sistem
+5.1 Akış
+Şekil 1
+Önerilen asistanın akışı: sesli komuttan doğrulamaya
+
+Şekil 1, önerdiğim akışı gösteriyor. Yaşlı komutu sesle verir (1); asistan eksik ya da belirsiz komutta tek bir soru sorar ve anladığını geri okur (2). Ardından ekran, erişilebilirlik hizmetiyle okunur; parola alanları atlanır, banka uygulamaları engellenir, kişisel veriler maskelenir (3). Sonraki adım üç katmanlı olarak planlanır: önce kurallar, sonra kayıtlı görev tarifleri, en son bulutaki dil modeli (4). Planlanan eylem, dil modelinden bağımsız çalışan bir kural katmanında risk açısından sınıflandırılır (5) ve riskine göre anlatılır, gösterilip beklenir ya da onaya sunulur (6). Onaydan sonra eylem ya kullanıcıya yönlendirme olarak ("Ben yapayım") ya da kullanıcı adına dokunma ve yazma olarak ("Sen yap") uygulanır (7). Son olarak ekranın beklenen durumda olup olmadığı denetlenir (8); değilse asistan durur, tek bir soru sorar ve yeniden planlar. Acil durdurma her aşamada erişilebilirdir.
+5.2 Risk dereceleri
+Risk derecelerinin başlangıç sınıflandırması Tablo 3'te. Bu sınıflandırma kural tabanlıdır ve kullanıcı çalışmasının sonuçlarına göre revize edilecektir.
+Tablo 3
+Risk derecelerinin başlangıç sınıflandırması
+Derece
+Örnek işlemler
+Asistanın davranışı
+Düşük
+Ayarı gösterme, saat ya da hava durumu sorma, bir uygulamayı açma
+Ne yapacağını anlatır ve yapar.
+Orta
+Mesaj gönderme, arama başlatma, uygulama içinde form doldurma
+Yapacağını gösterir, onay bekler; onay gelmezse yapmaz.
+Yüksek
+Para ya da ödeme, silme, parola ve hesap değişikliği, doğrulama kodu içeren ekranlar
+Durur ve sorar; sessizlik "hayır" sayılır. Banka uygulamaları baştan engelli.
+
+5.3 Teknik mimari
+Şekil 2
+Önerilen mimari: cihaz içi bileşenler ve buluta giden tek yol
+
+Şekil 2, aynı sistemin bileşenlerini ve veri sınırını gösteriyor. Telefon tarafında beş bileşen çalışır: konuşma tanıma ve sesli yanıt, kaplama arayüzü, aile ayarları, asistan çekirdeği ve erişilebilirlik hizmeti. Görev belleği (yerel vektör dizini ve SQLite) ile güvenlik filtresi de cihazdadır. Buluta giden tek yol güvenlik filtresinden geçer: filtre parola alanlarını okumaz, banka uygulamalarını engeller ve kişisel veriyi maskeler; buluta yalnızca maskelenmiş ekran özeti gider ve dönen şey bir eylem önerisidir. Vekil sunucu dil modeli anahtarını telefondan uzakta tutar. Dil modeli yalnızca kural ve kayıtlı görev tarifleri sonuç vermediğinde çağrılır; önerilen eylem telefonda yeniden risk sınıflandırmasından geçer, çünkü risk kararı dil modeline bırakılmaz.
+5.4 Kapsam kararı: SMS doğrulama kodunun okunması
+Başlangıçtaki tasarımda bildirim erişimiyle SMS doğrulama kodlarını okumayı düşünüyordum. Bu özelliği kapsamdan çıkardım. Gerekçelerim: (i) çekirdek akış için zorunlu değil; kodu kullanıcı ekranda görüp kendisi girebilir; (ii) doğrulama kodları dolandırıcılığa en açık grup olan yaşlılar için en hassas verilerden biridir ve sahte pop-up ile istem enjeksiyonuna açık bir ajana bu erişim verilirse zarar büyür (Y. Zhang vd., 2025; Lee vd., 2026); (iii) bildirim erişimi ve SMS izinleri mağaza politikaları açısından ek denetim gerektirir.
+Bunun yerine asistan, ekranda doğrulama kodu ya da "kimseyle paylaşmayın" türü bir ifade gördüğünde hiçbir işlem yapmaz ve yalnızca kullanıcıyı uyarır. Ekran metnindeki rakam dizileri bu bağlamda maskelenir; kod dil modeline gönderilmez ve günlüğe yazılmaz.
+5.5 Platform politikası notu
+Uygulama APK olarak kişisel ve aile kullanımı için dağıtılacak; ancak ileride Google Play'de yayımlanırsa erişilebilirlik hizmeti Play politikasına tabi olur. Google Play Console Yardım sayfasına göre erişilebilirlik API'siyle bir uygulamanın kendi başına eylem başlatması, planlaması ve yürütmesi kesinlikle yasaktır; insanın tanımladığı sabit bir betiği izleyen kural tabanlı otomasyon ise yasak değildir. Yasaktan yalnızca, doğrulanmış erişilebilirlik aracı olarak işaretlenen ve yalnızca engelli kişilere yardım amacıyla çalışan uygulamalar muaftır; genel amaçlı asistanlar bu muafiyete girmez. Erişilebilirlik aracı olmayan uygulamalar için ayrıca uygulama içinde, menüye girmeden görülen bir bilgilendirme ve kullanıcının açıkça onay vermesi gerekir; API 31 ve üzerini hedefleyen uygulamalar Play Console'da bir beyan formu doldurur (Google, t.y.). Dil modelinin eylem planladığı "Sen yap" kipi sabit bir betik olmadığı için bu yasakla çakışabilir; yaşlılara yardım amacının muafiyet kapsamına girip girmeyeceğine Google karar verir ve ben bu konuda bir varsayımda bulunmuyorum. Mağaza yayını düşünülürse bu konu ayrıca değerlendirilecektir. Bildirim erişimi ve SMS izinlerine ilişkin politikaları bu belgede incelemedim.
+6. Kullanıcı çalışması, etik kurul ve KVKK planı
+6.1 Kullanıcı çalışmasının tasarımı
+Kullanıcı çalışması ikinci dönemde, etik onay koşuluyla yapılacaktır. Aşağıdaki tasarım bir öneridir ve danışmanla görüştükten sonra kesinleşecektir.
+Tablo 4
+Önerilen kullanıcı çalışmasının tasarımı
+Başlık
+Plan
+Katılımcılar
+65 yaş ve üzeri, Türkçe konuşan, kendi akıllı telefonunu kullanan gönüllüler. Hedef 16 kişi, en az 12 kişi. Ulaşım kanalları: aile çevresi, yaşlı merkezleri ve üniversite çevresi; kanallar etik başvurusunda kesinleşir.
+Desen
+Denekler içi: her katılımcı iki kipi de dener, sıra dengelenir. Katılımcı başına iki oturum, her biri yaklaşık 40 dakika; oturumlar arasında en az bir gün.
+Görevler
+Kip başına 4 görev (kişi arama, mesaj yazma, ayar değiştirme, hava durumu gibi). Test telefonu, test hesapları ve kurgusal içerik kullanılır; gerçek banka ya da ödeme işlemi yapılmaz.
+Ölçümler
+Görev başarısı, süre, hata sayısı, ikinci denemede yardımsız tamamlama, SUS, onay istemlerinin anlaşılırlığı (5'li ölçek), izin veren katılımcılarda ses kaydından kelime hata oranı.
+Karşılaştırmalar
+AS1: netleştirmeli ve netleştirmesiz sürüm. AS2: "Sen yap" ve "Ben yapayım" kipleri. AS3: kurgusal riskli senaryolarda yanlışlıkla gerçekleşen işlem oranı ve anlaşılırlık.
+Çözümleme
+Betimsel istatistik ve küçük örneklem için parametrik olmayan testler; yaş ve telefon deneyimi ayrı raporlanır.
+
+6.2 Etik kurul süreci
+Yaşlı katılımcılarla yapılacak çalışma, insan katılımcılı araştırma olduğu için etik değerlendirme gerektirebilir; ses kaydı da kişisel veridir. Bitirme projesi kapsamında hangi kurula, hangi formlarla ve hangi takvimle başvurulacağını henüz bilmiyorum. Bu konuyu danışmanım Doç. Dr. Murat Topaloğlu ile görüşüp ona göre karar vereceğim. Görüşmeden önce iki yolu hazırladım:
+Yol A (başvuru gerekiyorsa): Araştırma protokolünü, bilgilendirilmiş onam formunu, aydınlatma metnini ve veri saklama ve silme planını hazırlayıp başvuruyu Güz döneminde ileteceğim. Onay gelmeden yaşlı katılımcılardan veri toplamayacağım.
+Yol B (başvuru yapılmayacaksa ya da onay dönemde alınamayacaksa): Yaşlı katılımcılardan veri toplamayacağım. AS1–AS3'ü sistem düzeyinde, hazırladığım komut seti, riskli görev seti ve sahte pop-up senaryolarıyla yanıtlayacağım; kullanıcı çalışmasını sınırlılık olarak raporlayacağım.
+Danışmanla görüşmede şu soruları netleştireceğim: insan katılımcılı çalışma için bu bitirme projesinde etik onay zorunlu mu, hangi kurula başvuruluyor, başvuru ve toplantı takvimi nedir, genç yetişkin gönüllülerle yapılan geliştirme testleri için de onay gerekir mi?
+Karar çıkana kadar yaşlı katılımcılardan tez verisi toplanmayacaktır; geliştirme sürecindeki testler yazar ve danışmanın uygun gördüğü gönüllü yetişkinlerle yapılacaktır. Seçilen yola göre iş-zaman planı güncellenecektir.
+6.3 KVKK ve veri yönetimi
+Ses kayıtları ve katılımcıya ait diğer bilgiler 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında kişisel veridir. Planım şöyledir; ayrıntılar etik kurul ve üniversitenin kişisel verileri koruma birimiyle netleştirilecektir ve bu metin hukuki görüş değildir.
+Tablo 5
+Kişisel veri ve KVKK planı
+Konu
+Plan
+Toplanacak veri
+Yaş aralığı, görev sonuçları ve süreleri, anket yanıtları; ses kaydı yalnızca kelime hata oranı için ve yalnızca katılımcı ayrıca izin verirse. Ad ve iletişim bilgisi sonuç verisinden ayrı tutulur; sonuç dosyalarında kod kullanılır.
+Hukuki dayanak ve bilgilendirme
+Açık rıza ve aydınlatma metni (KVKK m.5 ve m.10). Katılımcı istediği an, gerekçe göstermeden çalışmadan çekilebilir ve verisinin silinmesini isteyebilir.
+Saklama ve erişim
+Ses kaydı yalnızca katılımcının telefonunda, şifreli depolamada tutulur; kelime hata oranı hesaplanıp transkript kontrol edildikten sonra silinir. Sonuç verilerine yalnızca ben ve danışman erişir; saklama süresi etik karara göre kesinleşir.
+Ses işleme ve yurt dışı aktarım
+Çalışma sırasında ses tanıma cihaz üzerinde çalışan bir modelle yapılır ve ses buluta gönderilmez. Android'in yerleşik tanıyıcısı çevrimiçi modda sesi sunucuya gönderebileceği için çalışma sırasında kullanılmaz. Dil modeline yalnızca maskelenmiş metin gider; katılımcının gerçek hesapları ve kişisel içeriği kullanılmaz (KVKK m.9).
+Savunmasız grup
+Gönüllülük baskısız sağlanır; katılımcı yanında bir yakını bulunabilir; oturum yorulma belirtisinde ara verir ya da sonlanır; olumsuz bir deneyimde destek için kişi bilgisi verilir.
+
+7. İş-zaman planı (Güz ve Bahar)
+Plan iki haftalık aşamalardan oluşur. Güz tarihleri akademik takvime göredir: ara sınavlar 7–15 Kasım 2026, yarıyıl sonu sınavları 26 Aralık 2026–10 Ocak 2027. Bu belge 4 Kasım'da hazırlandığı ve ara sınavlar çalışmayı kısıtladığı için final öncesinde kullanılabilir süre yaklaşık altı haftadır; kalan işleri Ocak–Şubat'a bıraktım. Güz 3 final sınavlarına denk geldiği için 12 gündür; Güz 5'ten sonra Bahar başlayana kadar kalan süre tampondur. Bahar takvimi henüz yayımlanmadığı için o dönemi hafta numaralarıyla yazdım ve 14 haftalık dönem varsaydım. Etik kurul konusu danışmanla görüşüldükten sonra seçilecek yola (Bölüm 6.2) göre güncellenecektir.
+Tablo 6
+İki haftalık aşamalara bölünmüş iş-zaman planı
+Aşama
+Tarih
+Çalışma
+Çıktı
+Güz 0
+4–15 Kasım
+Revize belgenin teslimi; danışmanla görüşme (etik kurul kararı, kapsam, takvim); geliştirme ortamının hazırlanması. Ara sınavlar nedeniyle 7–15 Kasım'da yalnızca okuma ve not.
+Revize belge; etik kararı
+Güz 1
+16–29 Kasım
+Android iskeleti: erişilebilirlik hizmeti ile ekran okuma, kaplama arayüzü, sesli yanıt; konuşma tanıma modellerinin (cihazda çalışan Whisper sürümleri) ön karşılaştırması. Yol A seçildiyse etik başvurusunun hazırlanması.
+Çalışan iskelet; başvuru taslağı
+Güz 2
+30 Kasım–13 Aralık
+Niyet netleştirme ve geri okuma; kural tabanlı risk sınıflandırıcı; banka uygulaması engeli ve parola alanı atlama; ilk iç testler. Yol A'da başvurunun iletilmesi.
+Netleştirme ve risk katmanı
+Güz 3
+14–25 Aralık
+Görev kütüphanesi (vektör arama) ve kayıt-tekrar; vekil sunucu, Gemini bağlantısı ve maskeleme; kurul geri bildirimine yanıt.
+Üç katmanlı karar; maskeleme
+Final
+26 Aralık–10 Ocak
+Yarıyıl sonu sınavları; proje çalışması yalnızca ara rapor taslağı düzeyinde.
+Ara rapor taslağı
+Güz 4
+11–24 Ocak
+"Ben yapayım" ve "Sen yap" kipleri; doğrulama adımı.
+İki kip
+Güz 5
+25 Ocak–7 Şubat
+Sahte pop-up, istem enjeksiyonu ve riskli görev güvenlik testleri; hata düzeltme; ara rapor ve Bahar planının güncellenmesi.
+Güvenlik test raporu; ara rapor
+Bahar 1
+1–2. hafta
+Etik onayın ya da Yol B kararının doğrulanması; görev seti, ölçekler ve katılımcı çağrısı; pilot hazırlığı.
+Hazır protokol
+Bahar 2
+3–4. hafta
+Pilot (2–3 yaşlı) ve düzeltmeler.
+Pilot raporu
+Bahar 3–4
+5–8. hafta
+Ana kullanıcı çalışması (hedef 16 katılımcı, iki oturum); Yol B'de laboratuvar ölçümleri.
+Ham veri
+Bahar 5
+9–10. hafta
+Veri çözümlemesi: görev başarısı, süre, yardımsız tamamlama, SUS, kelime hata oranı.
+Çözümleme tabloları
+Bahar 6
+11–12. hafta
+Bulguların yazımı ve tartışma; sınırlılıkların belirtilmesi.
+Tez taslağı
+Bahar 7
+13–14. hafta
+Son düzeltmeler, teslim ve sunum; ses kayıtlarının planlandığı gibi silinmesi.
+Teslim; veri silme
+
+8. Riskler
+Başlıca riskler ve önlemlerim şunlar: Güz'de kullanılabilir süre yaklaşık altı hafta olduğu için kapsamı üç katmanlı karar, risk sınıflandırıcı ve iki kiple sınırladım, kalan işleri Ocak'a ve Bahar'a bıraktım. Etik kurul onayı gecikir ya da başvuru yapılmazsa yazılımı komut seti, riskli görev seti ve sahte pop-up testleriyle laboratuvarda değerlendirecek, kullanıcı çalışmasını sınırlılık olarak raporlayacağım. Yeterli yaşlı katılımcı bulunamazsa hedefi 16 kişi, alt sınırı 12 kişi tutup çağrıyı birden çok kanaldan yapacağım. Dil modeli maliyeti ve gecikmesi için kural ve kayıt-tekrar katmanlarını öne alıp çağrıları günlük bütçeyle sınırlayacağım; Android sürümleri ve üreticiler arasındaki erişilebilirlik farkları için en az iki farklı markada test yapacağım. Türkçe yaşlı konuşmasında tanıma hatası olasılığına karşı her komutu geri okuyup onaylatacak, yazarak girme seçeneğini sunacağım. Dil modelinin yanlış eylem önermesi riskine karşı risk sınıflandırıcıyı dil modelinden bağımsız tutacak ve Google Play politikası nedeniyle dağıtımı APK ile sınırlayacağım.
+9. Yapay zekâ kullanım beyanı
+Bu belgenin hazırlanmasında Anthropic'in Claude yapay zekâ asistanından yararlandım. Claude'u şu aşamalarda kullandım: literatür aramasında ve makale seçiminde; makalelerin tam metinlerinden amaç, yöntem, bulgu ve sınırlılıkların çıkarılmasında; paragraf taslaklarının, tabloların ve şekillerin hazırlanmasında; Excel arşivinin oluşturulmasında; dil bilgisi, noktalama ve APA 7 biçim denetiminde.
+Üretilen metinleri ve sayısal bulguları kaynak PDF'lerle karşılaştırarak kontrol ettim, gerekli yerleri düzelttim ve belgenin son hâline ben karar verdim. Proje fikrine, kapsam kararlarına ve veri koruma yaklaşımına kendim karar verdim; yapay zekâ bu kararlar için seçenekler ve gerekçeler sundu. Belgenin metnini, tablolarını ve şekillerini kaynak makalelerden bu çalışma için yeniden hazırladım; başka bir öğrencinin metnini kullanmadım. Belgenin içeriğinden, kaynakların doğruluğundan ve sözlü savunmadan ben sorumluyum.
+Kaynakça
+An, J., Yi, S., Lyu, Y., Liu, H., & Zhang, Y. (2025). Conversational agents for older adults' health: A systematic literature review. arXiv. https://doi.org/10.48550/arXiv.2503.23153
+Chen, L., & Mu, Y. (2025). Bridging the digital divide: Empowering elderly smartphone users with intelligent and human-centered design in AgeMate. In Proceedings of the 1st Workshop for Research on Agent Language Models (REALM 2025) (pp. 327–333). Association for Computational Linguistics. https://doi.org/10.18653/v1/2025.realm-1.23
+Gao, W., Du, K., Luo, Y., Shi, W., Yu, C., & Shi, Y. (2024). EasyAsk: An in-app contextual tutorial search assistant for older adults with voice and touch inputs. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 8(3), Article 102. https://doi.org/10.1145/3678516
+Google. (t.y.). Use of the AccessibilityService API. Google Play Console Help. Erişim tarihi: 2 Kasım 2026, https://support.google.com/googleplay/android-developer/answer/10964491
+Green, T., Gubri, M., Puerto, H., Yun, S., & Oh, S. J. (2025). Leaky thoughts: Large reasoning models are not private thinkers. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (pp. 26507–26529). Association for Computational Linguistics. https://doi.org/10.18653/v1/2025.emnlp-main.1347
+Guan, Z., Li, J. C. L., Hou, Z., Zhang, P., Xu, D., Zhao, Y., Wu, M., Chen, J., Nguyen, T.-T., Xian, P., Ma, W., Qin, S., Chesi, G., & Wong, N. (2025). KG-RAG: Enhancing GUI agent decision-making via knowledge graph-driven retrieval-augmented generation. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (pp. 5396–5405). Association for Computational Linguistics. https://doi.org/10.18653/v1/2025.emnlp-main.274
+Irfan, B., Kuoppamäki, S., & Skantze, G. (2024). Recommendations for designing conversational companion robots with older adults through foundation models. Frontiers in Robotics and AI, 11, Article 1363713. https://doi.org/10.3389/frobt.2024.1363713
+Kaliappan, S., Anand, A. S., Saha, K., & Karkar, R. (2024, Mayıs). Exploring the role of LLMs for supporting older adults: Opportunities and concerns [Atölye bildirisi]. CHI 2024 Workshop on HCI and Aging: New Directions, New Principles, Honolulu, HI, ABD. https://doi.org/10.48550/arXiv.2411.08123
+Lee, J., Hahm, D., Choi, J. S., Knox, W. B., & Lee, K. (2026). MobileSafetyBench: Evaluating safety of autonomous agents in mobile device control. Proceedings of the AAAI Conference on Artificial Intelligence, 40(44), 37565–37573. https://doi.org/10.1609/aaai.v40i44.41090
+Li, J., Qiu, L., Wu, Z., Chen, Q., Wang, Z., & Fan, M. (2025). ExplorAR: Assisting older adults to learn smartphone apps through AR-powered trial-and-error with interactive guidance. In Proceedings of the 33rd ACM International Conference on Multimedia (MM '25). ACM. https://doi.org/10.1145/3746027.3755578
+Liu, G., Zhao, P., Liang, Y., Liu, L., Guo, Y., Xiao, H., Lin, W., Chai, Y., Han, Y., Ren, S., Wang, H., Liang, X., Wang, W., Wu, T., Lu, Z., Chen, S., Li, L., Wang, H., Xiong, G., . . . Li, H. (2025). LLM-powered GUI agents in phone automation: Surveying progress and prospects. Transactions on Machine Learning Research. https://openreview.net/forum?id=yWQqoi1G1K
+Mahmood, A., Cao, S., Stiber, M., Antony, V. N., & Huang, C.-M. (2025). Voice assistants for health self-management: Designing for and with older adults. In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI '25) (Article 511). ACM. https://doi.org/10.1145/3706598.3713839
+Mathur, N., Rahman, H., & Desai, S. (2026a). "Who wants to be nagged by AI?": Investigating the effects of agreeableness on older adults' perception of LLM-based voice assistants' explanations [Genişletilmiş özet]. CHI '26, Barselona, İspanya. ACM. https://doi.org/10.1145/3772363.3798685
+Mathur, N., Zubatiy, T., Rozga, A., Forlizzi, J., & Mynatt, E. D. (2026b). Sometimes you need facts, and sometimes a hug: Understanding older adults' preferences for explanations in LLM-based conversational AI systems. In Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26). ACM. https://doi.org/10.1145/3772318.3790812
+Rawles, C., Clinckemaillie, S., Chang, Y., Waltz, J., Lau, G., Fair, M., Li, A., Bishop, W., Li, W., Campbell-Ajala, F., Toyama, D., Berry, R., Tyamagundlu, D., Lillicrap, T., & Riva, O. (2025). AndroidWorld: A dynamic benchmarking environment for autonomous agents. In The Thirteenth International Conference on Learning Representations (ICLR 2025). https://proceedings.iclr.cc/paper_files/paper/2025/hash/01a83bc2f2732a58e6aa731e659e7101-Abstract-Conference.html
+Sharifi, H., Shomee, H. H., Lamar, M., Medya, S., & Chattopadhyay, D. (2026). Helping the helper: LLM-assisted problem articulation for older adults seeking technology support. In Proceedings of the 28th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS '26). ACM. https://doi.org/10.1145/3797867.3829031
+van Dijk, B., Kuiper, T., Aoulad si Ahmed, S., Lefebvre, A., Johnson, J., Duin, J., Mooijaart, S., & Spruit, M. (2025). Out of the box, into the clinic? Evaluating state-of-the-art ASR for clinical applications for older adults. In Proceedings of the Fourth Workshop on Bridging Human–Computer Interaction and Natural Language Processing (HCI+NLP) (pp. 72–78). Association for Computational Linguistics. https://aclanthology.org/2025.hcinlp-1.7/
+Wang, J., Xu, H., Jia, H., Zhang, X., Yan, M., Shen, W., Zhang, J., Huang, F., & Sang, J. (2024). Mobile-Agent-v2: Mobile device operation assistant with effective navigation via multi-agent collaboration. In Advances in Neural Information Processing Systems (Vol. 37, pp. 2686–2710). Curran Associates. https://proceedings.neurips.cc/paper_files/paper/2024/hash/0520537ba799d375b8ff5523295c337a-Abstract-Conference.html
+Wang, Z. Z., Mao, J., Fried, D., & Neubig, G. (2025). Agent workflow memory. In Proceedings of the 42nd International Conference on Machine Learning (PMLR Vol. 267, pp. 63897–63911). https://proceedings.mlr.press/v267/wang25bx.html
+Wen, H., Li, Y., Liu, G., Zhao, S., Yu, T., Li, T. J.-J., Jiang, S., Liu, Y., Zhang, Y., & Liu, Y. (2024). AutoDroid: LLM-powered task automation in Android. In Proceedings of the 30th Annual International Conference on Mobile Computing and Networking (MobiCom '24). ACM. https://doi.org/10.1145/3636534.3649379
+Xu, R., Ma, K., Yu, W., Zhang, H., Ho, J. C., Yang, C., & Yu, D. (2025). Retrieval-augmented GUI agents with generative guidelines. In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics. https://aclanthology.org/2025.emnlp-main.902/
+Yu, J. E., & Chattopadhyay, D. (2024). Reducing the search space on demand helps older adults find mobile UI features quickly, on par with younger adults. In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI '24) (Article 23). ACM. https://doi.org/10.1145/3613904.3642796
+Zhan, W., Shaqu, Q., Liu, Y., Zhang, P., Liu, J., Lam, K. H., Gu, N., Hu, Z., & Lu, T. (2026). ElderBench: Benchmarking autonomous mobile agents for older adults. arXiv. https://doi.org/10.48550/arXiv.2609.04850
+Zhang, C., Yang, Z., Liu, J., Li, Y., Han, Y., Chen, X., Huang, Z., Fu, B., & Yu, G. (2025). AppAgent: Multimodal agents as smartphone users. In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI '25) (Article 70). ACM. https://doi.org/10.1145/3706598.3713600
+Zhang, H., Zhang, P., Chen, Y., Guo, M., Gu, H., Lu, T., & Gu, N. (2025). WePilot: Integrating younger family members and chatbot to support older adults learning smartphone usage. Proceedings of the ACM on Human-Computer Interaction, 9(7), Article CSCW522. https://doi.org/10.1145/3757703
+Zhang, Y., Yu, T., & Yang, D. (2025). Attacking vision-language computer agents via pop-ups. In Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) (pp. 8387–8401). Association for Computational Linguistics. https://doi.org/10.18653/v1/2025.acl-long.411
+
+[Belgede 3 gömülü görsel var: ['word/media/', 'word/media/28ebbcfcf8ffa0464240d4e3d685f14f154985d0.png', 'word/media/fe763b27044410ff3036ea8e2686b357a93d4be2.png']]

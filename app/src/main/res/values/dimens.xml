@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Overlay sizes (G-06). NFG-03: touch targets far above the 48dp minimum. -->
+<resources>
+    <dimen name="bubble_size">96dp</dimen>
+    <dimen name="bubble_border">4dp</dimen>
+    <dimen name="bubble_edge_margin">4dp</dimen>
+    <dimen name="bubble_drag_slop">16dp</dimen>
+    <dimen name="overlay_elevation">8dp</dimen>
+    <dimen name="stop_min_width">220dp</dimen>
+    <dimen name="stop_height">88dp</dimen>
+    <dimen name="stop_bottom_margin">32dp</dimen>
+    <dimen name="stop_corner">44dp</dimen>
+    <dimen name="type_height">72dp</dimen>
+    <dimen name="type_gap">16dp</dimen>
+    <!-- Yes/no buttons above "Yazarak söyle" (UD-1 Ö-3): two 150dp buttons fit a 360dp-wide phone -->
+    <dimen name="confirm_height">88dp</dimen>
+    <dimen name="confirm_min_width">150dp</dimen>
+    <dimen name="confirm_gap">16dp</dimen>
+
+    <!-- Caption next to the bubble (G-08, NFG-04) -->
+    <dimen name="caption_max_width">340dp</dimen>
+    <dimen name="caption_gap">8dp</dimen>
+    <dimen name="caption_padding">16dp</dimen>
+    <dimen name="caption_corner">16dp</dimen>
+</resources>
